@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>采购降本 · 日清日结看板</title><style>/*__STYLES__*/</style></head>
+<body>
+<header class="topbar shell">
+ <div class="topline"><div class="identity"><div class="brand-mark" aria-hidden="true">采</div><div><strong>采购降本管理</strong><small>PROCUREMENT PERFORMANCE</small></div></div><div class="topmeta"><span><i class="live-dot"></i>原始工作簿快照 · 非实时同步</span><button id="methodBtn" class="ghost">数据与口径 ↗</button></div></div>
+ <div class="nav-wrap" role="region" aria-label="看板页面导航" tabindex="0"><nav class="nav" aria-label="主导航"><button class="active" data-view="overview" aria-current="page"><em>01</em>部门总览</button><button data-view="owners"><em>02</em>负责人进度</button><button data-view="plan"><em>03</em>行动计划</button><button data-view="suppliers"><em>04</em>供应商明细</button></nav></div>
+</header>
+<main class="shell">
+ <div class="hero"><div><p class="eyebrow" id="eyebrow">DAILY EXECUTION · PROCUREMENT</p><h1 id="pageTitle">采购降本，进展一目了然。</h1><p id="pageDesc">目标分解到人，计划落到供应商，成果逐项确认。</p></div><div class="snapshot-tag">数据截至<strong id="asofLabel"></strong></div></div>
+ <div class="filters" aria-label="全局筛选"><label>采购范围<select id="workstreamFilter"><option value="all">全部采购</option><option value="BOM">BOM</option><option value="non-BOM">non-BOM</option></select></label><label>责任人<select id="ownerFilter"><option value="all">全部负责人</option></select></label><label>周计划基准日<input type="date" id="weekAnchor" aria-describedby="weekHint"></label><div class="filter-end"><span class="scope" id="scopeLabel"></span><button id="resetBtn" class="ghost">重置筛选</button></div></div>
+ <div id="app" aria-live="polite"></div>
+ <footer class="page-footer"><div id="sourceFooter"></div><div>金额：人民币万元 · 周期：周一至周日 · <span id="weekHint">切换周仅改变排期窗口</span></div></footer>
+</main>
+<dialog class="dialog" id="detailDialog" aria-labelledby="detailTitle"><div class="dialog-head"><h2 id="detailTitle">供应商详情</h2><button data-close="detailDialog" class="ghost" aria-label="关闭供应商详情">✕</button></div><div class="dialog-body" id="detailBody"></div></dialog>
+<dialog class="dialog" id="methodDialog" aria-labelledby="methodTitle"><div class="dialog-head"><h2 id="methodTitle">数据、口径与设计说明</h2><button data-close="methodDialog" class="ghost" aria-label="关闭数据与口径">✕</button></div><div class="dialog-body" id="methodBody"></div></dialog>
+<div id="toast" class="toast hidden" role="status"></div>
+<script id="dataset" type="application/json">/*__DATA__*/</script>
+<script>/*__SCRIPT__*/</script>
+</body></html>

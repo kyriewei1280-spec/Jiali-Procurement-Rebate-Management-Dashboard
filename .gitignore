@@ -1,0 +1,25 @@
+# Local data and temporary artifacts
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+*.pdf
+source_extract.json
+qa/
+tmp/
+temp/
+outputs/
+dist/
+node_modules/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+.codex/
+.agents/
+.playwright/
+browser-profile/
