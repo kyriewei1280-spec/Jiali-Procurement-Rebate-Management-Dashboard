@@ -20,7 +20,7 @@
 
 - Missing values are null/unknown, never automatically zero.
 - Separate assigned target, negotiated result, signed agreement, finance confirmation, and actual realization. Do not infer one from another.
-- H-column target completion dates are deadlines, not negotiation appointments.
+- I-column target completion dates are deadlines, not negotiation appointments.
 - Show eligible sample coverage next to on-time rates. A past deadline with no actual date means completion needs confirmation, not proven business delay.
 - non-BOM missing data does not mean zero. Do not call BOM-only coverage a complete department result.
 - PMO action status counts remain separate from supplier negotiation completion.
@@ -48,3 +48,7 @@ For UI changes, verify 1440px, 1920px, and 390px: no page-level overflow; tables
 - Repository push, Pages deployment, and live website validation are distinct states. Report only verified outcomes.
 - Keep tokens and authentication material outside tracked files and console output.
 - Do not add a permissive license without an explicit licensing decision.
+
+## Typography update
+
+The user requires a minimum of 21 CSS pixels for all visible text, including table cells, controls, chips, help text, dialogs, footer, and mobile layouts. Preserve larger headings. Never shrink type to fit a table; use local horizontal scrolling. Verify computed text sizes in every view and dialog.

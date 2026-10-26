@@ -19,16 +19,16 @@ def main():
     date.fromisoformat(meta['asOf'])
     check(len({r['id'] for r in rows}) == len(rows), 'Duplicate record IDs')
     check(len(rows) == summary['supplierCount'], 'Supplier count mismatch')
-    check(abs(sum(r['targetAmount'] for r in rows) - summary['targetAmount']) < 0.01, 'Target total mismatch')
+    check(abs(sum(r['targetAmount'] for r in rows if r['targetAmount'] is not None) - summary['targetAmount']) < 0.01, 'Target total mismatch')
     for owner in summary['owners']:
         selected = [r for r in rows if r['owner'] == owner['owner']]
         check(len(selected) == owner['count'], f'Owner count mismatch: {owner["owner"]}')
-        check(abs(sum(r['targetAmount'] for r in selected) - owner['targetAmount']) < 0.01, 'Owner target mismatch')
+        check((owner['targetAmount'] is None and all(r['targetAmount'] is None for r in selected)) or (owner['targetAmount'] is not None and abs(sum(r['targetAmount'] for r in selected if r['targetAmount'] is not None) - owner['targetAmount']) < 0.01), 'Owner target mismatch')
     for key in ('lastWeek', 'thisWeek', 'nextWeek'):
         week = summary[key]
         selected = [r for r in rows if r['plannedDate'] and week['start'] <= r['plannedDate'] <= week['end']]
         check(len(selected) == week['plannedCount'], f'Week count mismatch: {key}')
-        check(abs(sum(r['targetAmount'] for r in selected) - week['targetAmount']) < 0.01, 'Week target mismatch')
+        check(abs(sum(r['targetAmount'] for r in selected if r['targetAmount'] is not None) - week['targetAmount']) < 0.01, 'Week target mismatch')
     check(all(r.get('locator') for r in rows), 'Source locator missing')
     actuals = [r['actualAmount'] for r in rows if r['actualAmount'] is not None]
     check(len(actuals) == summary['actualAmountFilled'], 'Actual fill count mismatch')
