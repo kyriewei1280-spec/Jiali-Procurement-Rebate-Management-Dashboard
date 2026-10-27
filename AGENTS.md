@@ -41,6 +41,7 @@
 - Format monetary amounts with zero decimals and percentages with one decimal; calculate using unrounded source values.
 - Hide Excel letter prefixes in visible supplier column headings; retain source locators in details. Use 返利目标 for the source F-column business label. Owner coverage and recorded-rebate cards have no secondary drilldown links; retain the achievement-rate link.
 - Keep numeric master-table values right-aligned. Wide tables have synchronized top horizontal scrolling and left/right controls; avoid scroll synchronization closing an unchanged sort-menu anchor.
+- Provide the global Browser/Mobile presentation switch. Browser uses the approved 67% zoom; Mobile uses normal zoom, readable touch-friendly cards and expandable supplier fields. Both modes share data, sorting, pagination, exports and current selections. Do not reset filters or dialogs when toggling. Auto-select Mobile at <=767px only when there is no manual preference; optional local storage must never be required to use the page.
 - At 390px, use readable horizontal bar rows and local table scrolling. Do not shrink chart labels until unreadable.
 
 ## Validation
@@ -59,4 +60,4 @@ For UI changes, verify 1440px, 1920px, and 390px: no page-level overflow; tables
 
 ## Typography update
 
-The latest user request overrides the earlier minimum physical text size: default presentation must match the former page viewed at 67% browser zoom. Keep the existing base type scale and apply root CSS zoom .67; review at 100% browser zoom. Preserve responsive layout, local table scrolling, keyboard controls and correctly positioned menus at this scale.
+Browser presentation matches the former page viewed at 67% browser zoom. Keep its existing base type scale and root CSS zoom .67; review at 100% browser zoom. Mobile overrides root zoom to 1 with 16px body/controls, smaller secondary labels and 44px touch targets. Preserve responsive layout, keyboard controls, correctly positioned menus and equivalent data access in both modes.

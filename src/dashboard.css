@@ -145,3 +145,133 @@ tbody tr:hover>td{background:#2b3d2e}
 .scroll-navigation{display:flex;align-items:center;gap:10px;padding-bottom:7px}.scroll-navigation .table-top-scroll{flex:1;min-width:0}
 .scroll-navigation button{flex-shrink:0;width:38px;min-height:32px;height:32px;padding:0;background:#1d2c21;color:var(--text);border-color:#47604d;border-radius:5px;line-height:1}
 .table-top-scroll::-webkit-scrollbar{height:14px}.table-top-scroll::-webkit-scrollbar-track{background:#172019;border-radius:5px}.table-top-scroll::-webkit-scrollbar-thumb{background:#617a67;border-radius:5px}
+
+
+/* Mobile is an explicit mode; Browser retains the approved 67% presentation. */
+.presentation-switch{display:inline-flex;gap:4px;padding:4px;background:#101a12;border:1px solid var(--border);border-radius:12px;flex-shrink:0}
+.presentation-switch button{border:0;background:transparent;color:var(--muted);min-height:44px;padding:8px 14px;white-space:nowrap}
+.presentation-switch button[aria-pressed=true]{background:var(--green);color:var(--bg);font-weight:650}
+.mobile-table-view{display:none}
+html[data-presentation=mobile]{zoom:1;--gutter:16px}
+html[data-presentation=mobile] body{font-size:16px;line-height:1.55}
+html[data-presentation=mobile] .shell{max-width:600px;margin-inline:auto;width:100%;padding-inline:16px}
+html[data-presentation=mobile] .topbar{position:sticky;top:0;padding-top:env(safe-area-inset-top);z-index:20}
+html[data-presentation=mobile] .topline{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:12px;padding-bottom:10px}
+html[data-presentation=mobile] .identity{gap:9px;margin:0;flex:1}
+html[data-presentation=mobile] .brand-mark{width:32px;height:32px;font-size:17px}
+html[data-presentation=mobile] .identity strong{font-size:17px;white-space:nowrap;letter-spacing:0}
+html[data-presentation=mobile] .identity small{display:none}
+html[data-presentation=mobile] .topmeta{display:flex;gap:0}
+html[data-presentation=mobile] .topmeta>span{display:none}
+html[data-presentation=mobile] .presentation-switch{padding:3px;gap:2px}
+html[data-presentation=mobile] .presentation-switch button{font-size:14px;padding:6px 9px;min-height:44px}
+html[data-presentation=mobile] .nav{gap:4px;padding-bottom:10px}
+html[data-presentation=mobile] .nav button{min-height:44px;font-size:15px;padding:8px 12px}
+html[data-presentation=mobile] .nav em{display:inline;font-size:14px;margin-right:5px}
+html[data-presentation=mobile] main{padding-top:22px;padding-bottom:32px}
+html[data-presentation=mobile] .hero{display:block;margin-bottom:20px}
+html[data-presentation=mobile] h1{font-size:28px;line-height:1.3;letter-spacing:0}
+html[data-presentation=mobile] h2{font-size:22px;line-height:1.4}
+html[data-presentation=mobile] h3{font-size:19px}
+html[data-presentation=mobile] .hero p{font-size:15px;line-height:1.6}
+html[data-presentation=mobile] .eyebrow{font-size:12px;letter-spacing:.08em}
+html[data-presentation=mobile] .snapshot-tag{display:flex;gap:6px;margin-top:12px;font-size:13px;text-align:left;align-items:center}
+html[data-presentation=mobile] .snapshot-tag strong{font-size:13px;margin:0}
+html[data-presentation=mobile] button,html[data-presentation=mobile] input,html[data-presentation=mobile] select{font-size:16px;min-height:44px}
+html[data-presentation=mobile] .filters{display:grid;grid-template-columns:minmax(0,1fr);padding:14px;gap:14px;margin-bottom:20px}
+html[data-presentation=mobile] :is(.filters label,.field-label,.scope){font-size:14px;min-width:0}
+html[data-presentation=mobile] .filters select{width:100%;min-width:0;font-size:16px}
+html[data-presentation=mobile] .filter-end{grid-column:auto;justify-content:space-between;gap:10px;width:100%}
+html[data-presentation=mobile] .kpis,html[data-presentation=mobile] .mini-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+html[data-presentation=mobile] .kpi{padding:15px 13px;border-radius:12px}
+html[data-presentation=mobile] .kpi .label{font-size:14px}
+html[data-presentation=mobile] .kpi .value{font-size:27px;margin-top:10px;line-height:1.25;overflow-wrap:anywhere}
+html[data-presentation=mobile] .kpi .value small{font-size:13px;display:inline-block;margin-left:4px}
+html[data-presentation=mobile] .kpi .foot{font-size:13px;line-height:1.5;margin-top:10px;min-height:0}
+html[data-presentation=mobile] .metric-link{font-size:inherit;min-height:44px;max-width:100%}
+html[data-presentation=mobile] .overview-section{margin:26px 0 30px;padding-top:22px}
+html[data-presentation=mobile] .overview-heading{display:flex;flex-direction:column;align-items:stretch;gap:12px;margin-bottom:16px}
+html[data-presentation=mobile] .overview-heading h2{font-size:25px}
+html[data-presentation=mobile] .overview-heading label,html[data-presentation=mobile] .overview-heading select{width:100%;min-width:0}
+html[data-presentation=mobile] .overview-heading>.chip{align-self:flex-start}
+html[data-presentation=mobile] .metric-group-title{font-size:17px;margin:20px 0 12px;padding-left:10px}
+html[data-presentation=mobile] .guide-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+html[data-presentation=mobile] .guide-intro{padding:18px}
+html[data-presentation=mobile] .guide-card{padding:20px 16px;gap:14px}
+html[data-presentation=mobile] .guide-number{font-size:27px}
+html[data-presentation=mobile] .guide-card strong{font-size:18px}
+html[data-presentation=mobile] .guide-description{font-size:14px;margin-top:8px;line-height:1.6}
+html[data-presentation=mobile] .guide-arrow{display:none}
+html[data-presentation=mobile] :is(.notice,.panel-note,.section-head p,.master-heading p,.subtle){font-size:14px;line-height:1.6}
+html[data-presentation=mobile] .notice{padding:14px}
+html[data-presentation=mobile] .section{margin-top:24px}
+html[data-presentation=mobile] .section-head{margin-bottom:12px;display:block}
+html[data-presentation=mobile] .person-banner{gap:12px;margin-bottom:18px;align-items:flex-start}
+html[data-presentation=mobile] .person-banner h2{font-size:21px}
+html[data-presentation=mobile] .person-banner p{font-size:14px}
+html[data-presentation=mobile] .person-banner .avatar{width:40px;height:40px;font-size:18px}
+html[data-presentation=mobile] .period-controls{display:grid;grid-template-columns:minmax(0,1fr);padding:16px;gap:14px}
+html[data-presentation=mobile] .period-controls select{min-width:0;width:100%}
+html[data-presentation=mobile] .table-scroll,html[data-presentation=mobile] .table-scroll-strip{display:none!important}
+html[data-presentation=mobile] .mobile-table-view{display:block;padding:12px}
+html[data-presentation=mobile] .table-panel{padding:0;background:transparent;overflow:visible}
+html[data-presentation=mobile] .table-tools{display:flex;flex-direction:row;align-items:center;gap:12px;padding:12px;flex-wrap:wrap}
+html[data-presentation=mobile] .table-count{font-size:14px}
+html[data-presentation=mobile] .table-tools button{font-size:14px;padding:8px 10px;min-height:44px}
+html[data-presentation=mobile] .mobile-sort-controls{display:flex;align-items:flex-end;gap:10px;margin-bottom:14px}
+html[data-presentation=mobile] .mobile-sort-controls label{flex:1;min-width:0;display:grid;gap:5px;font-size:13px;color:var(--muted)}
+html[data-presentation=mobile] .mobile-sort-controls select{width:100%;max-width:100%;font-size:16px;min-width:0;padding:9px}
+html[data-presentation=mobile] .mobile-sort-controls button{padding:9px;white-space:nowrap;font-size:14px}
+html[data-presentation=mobile] .mobile-card-list{display:grid;gap:14px}
+html[data-presentation=mobile] .mobile-record-card{background:#111812;border:1px solid var(--border);border-radius:12px;padding:16px;min-width:0;overflow-wrap:anywhere}
+html[data-presentation=mobile] .mobile-record-card:nth-child(even){background:#1b261e}
+html[data-presentation=mobile] .mobile-record-heading{padding-bottom:12px;border-bottom:1px solid var(--border);font-size:17px;line-height:1.55}
+html[data-presentation=mobile] .mobile-record-heading .row-action{font-size:18px;line-height:1.5;font-weight:650;max-width:100%;min-height:44px}
+html[data-presentation=mobile] .mobile-record-heading .cell-sub{font-size:14px;margin-top:3px}
+html[data-presentation=mobile] .mobile-record-kind{display:block;color:var(--muted);font-size:13px}
+html[data-presentation=mobile] .mobile-record-category{display:flex;align-items:baseline;gap:10px;font-size:13px;color:var(--muted);margin-top:6px;flex-wrap:wrap}
+html[data-presentation=mobile] .mobile-record-category .cell-sub{font-size:13px}
+html[data-presentation=mobile] .mobile-record-status{margin-top:12px;font-size:14px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+html[data-presentation=mobile] .mobile-record-status .cell-sub{margin:0;font-size:13px}
+html[data-presentation=mobile] .chip{font-size:13px;min-height:24px}
+html[data-presentation=mobile] .mobile-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px;margin:16px 0 0}
+html[data-presentation=mobile] .mobile-fact{min-width:0;overflow-wrap:anywhere}
+html[data-presentation=mobile] .mobile-fact dt{font-size:13px;color:var(--muted);margin-bottom:4px}
+html[data-presentation=mobile] .mobile-fact dd{font-size:16px;color:var(--text);margin:0;min-height:24px;white-space:pre-line}
+html[data-presentation=mobile] .mobile-fact .cell-sub{font-size:13px;margin-top:5px}
+html[data-presentation=mobile] .textbtn,html[data-presentation=mobile] .row-action{font-size:16px;min-height:44px;white-space:normal;overflow-wrap:anywhere}
+html[data-presentation=mobile] .owner-link{white-space:normal}
+html[data-presentation=mobile] :is(.mobile-next-step,.mobile-strategies){margin-top:16px;font-size:15px;line-height:1.65}
+html[data-presentation=mobile] :is(.mobile-next-step,.mobile-strategies) h4{font-size:14px;color:var(--muted);font-weight:500;margin:0 0 8px}
+html[data-presentation=mobile] .leverage-tags{gap:8px}
+html[data-presentation=mobile] .leverage-tag{font-size:14px;padding:8px 10px;line-height:1.5}
+html[data-presentation=mobile] button.leverage-tag{min-height:44px}
+html[data-presentation=mobile] .mobile-record-more{border-top:1px solid var(--border);margin-top:16px;padding-top:6px}
+html[data-presentation=mobile] .mobile-record-more summary{cursor:pointer;color:var(--green);padding:12px 0;min-height:44px;font-size:15px}
+html[data-presentation=mobile] .table-pagination{font-size:14px;padding:14px 12px;align-items:center;flex-wrap:wrap;gap:10px}
+html[data-presentation=mobile] .table-pagination button{min-height:44px;min-width:44px;font-size:16px}
+html[data-presentation=mobile] .empty{padding:24px 14px;font-size:15px}
+html[data-presentation=mobile] .dialog{width:min(560px,calc(100% - 20px));max-height:calc(100dvh - 24px);border-radius:14px}
+html[data-presentation=mobile] .dialog-head{padding:14px;gap:10px;align-items:center}
+html[data-presentation=mobile] .dialog-head h2{font-size:20px;line-height:1.4}
+html[data-presentation=mobile] .dialog-head button{width:44px;min-height:44px;padding:0}
+html[data-presentation=mobile] .dialog-body{padding:14px;overflow-wrap:anywhere}
+html[data-presentation=mobile] .dialog-body :is(p,li){font-size:14px;line-height:1.6}
+html[data-presentation=mobile] .dialog-body h3{font-size:18px}
+html[data-presentation=mobile] .dialog-body .mini-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+html[data-presentation=mobile] .mini-kpi{padding:12px;border-radius:10px}
+html[data-presentation=mobile] .mini-kpi label{font-size:13px;margin-bottom:6px}
+html[data-presentation=mobile] .mini-kpi b{font-size:18px}
+html[data-presentation=mobile] .dialog-body .details-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}
+html[data-presentation=mobile] .details-grid label{font-size:13px}
+html[data-presentation=mobile] .details-grid b{font-size:16px}
+html[data-presentation=mobile] .segmented{gap:6px}
+html[data-presentation=mobile] .segmented button{font-size:14px;padding:8px 10px;min-height:44px}
+html[data-presentation=mobile] .source-box{font-size:12px;line-height:1.6;word-break:break-word}
+html[data-presentation=mobile] .history-item{font-size:15px;padding-left:12px}
+html[data-presentation=mobile] .leverage-value{font-size:36px}
+html[data-presentation=mobile] .inline-link{font-size:inherit;min-height:0}
+html[data-presentation=mobile] .sort-menu{max-width:calc(100vw - 24px);width:300px}
+html[data-presentation=mobile] .page-footer{font-size:12px;gap:8px;line-height:1.6;margin-top:26px}
+html[data-presentation=mobile] .toast{font-size:14px}
+@media(max-width:359px){html[data-presentation=mobile] .kpis{grid-template-columns:minmax(0,1fr)}html[data-presentation=mobile] .topline{display:block}html[data-presentation=mobile] .topmeta{margin-top:10px}}
