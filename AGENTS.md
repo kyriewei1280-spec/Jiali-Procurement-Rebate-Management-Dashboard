@@ -23,7 +23,7 @@
 - Recorded achievement may aggregate known results against assigned targets, with explicit result and target coverage. Preserve null source amounts; V formula zeros are not evidence of negotiation or a zero rebate.
 - Separate assigned target, negotiated result, signed agreement, finance confirmation, and actual realization. Do not infer one from another.
 - I-column target completion dates are deadlines, not negotiation appointments.
-- A past deadline with no actual date means completion needs confirmation, not proven business delay. The user removed the on-time column and secondary gray annotations from the owner overview.
+- A past deadline with no actual date means completion needs confirmation, not proven business delay. The latest user request restores deadline compliance as a second traffic-light column, using all suppliers due by the snapshot date as its denominator. Missing evidence stays explicit.
 - non-BOM missing data does not mean zero. Do not call BOM-only coverage a complete department result.
 - PMO action status counts remain separate from supplier negotiation completion.
 - Retain unresolved source discrepancies. Do not invent suppliers, owners, dates, targets, or achievements to reconcile totals.
@@ -36,10 +36,10 @@
 - Filters must update all relevant summaries and tables consistently. Clearly label any whole-source note that does not follow owner filters.
 - Keep keyboard navigation, visible focus, semantic controls, dialog Escape handling, CSV blank preservation, and CSV formula-injection protection.
 - Every table column has a compact funnel icon beside the heading, opening ascending/descending/default sorting. Do not restore column filter inputs. Preserve typed numeric sorting, empty values and export across pagination. Alternate row background colors, including sticky supplier cells.
-- Overview has overall/BOM/non-BOM sections, each with two rows of four metric boxes. Only the actual negotiated rebate amount is clickable and opens the same supplier master layout as 04. The uniform target rebate/receipt ratio is 3.6%; keep the Excel reconciliation in documentation, not on this page. P/Q/R blank flags stay visually blank and generate no tags.
+- Overview has overall/BOM/non-BOM sections, each with two rows of four metric boxes. Only the actual negotiated rebate amount is clickable and opens the same supplier master layout as 04. Show the actual aggregate target/receipt ratio for every scope, with a small bottom-right note that the original ratio was 3.6%. P/Q/R blank flags stay visually blank and generate no tags.
 - Use 策略 instead of 抓手 or 谈判规划; name 04 供应商返利清单. Hide the global filter bar on 00/01/04 and ignore saved global filters there. Retain global filters on 02/03. Do not restore the top-right data-method button.
 - Format monetary amounts with zero decimals and percentages with one decimal; calculate using unrounded source values.
-- Hide Excel letter prefixes in visible supplier column headings; retain source locators in details. Use 返利目标 for the source F-column business label. Owner coverage and recorded-rebate cards have no secondary drilldown links; retain the achievement-rate link.
+- Hide Excel letter prefixes in visible supplier column headings; retain source locators in details. Use 返利目标 for the source F-column business label. Remove the selected-owner banner and personal KPI cards; retain the achievement-rate link in the owner table.
 - Keep numeric master-table values right-aligned. Wide tables have synchronized top horizontal scrolling and left/right controls; avoid scroll synchronization closing an unchanged sort-menu anchor.
 - Provide the global Browser/Mobile presentation switch. Browser uses the approved 67% zoom; Mobile uses normal zoom, readable touch-friendly cards and expandable supplier fields. Both modes share data, sorting, pagination, exports and current selections. Do not reset filters or dialogs when toggling. Auto-select Mobile at <=767px only when there is no manual preference; optional local storage must never be required to use the page.
 - At 390px, use readable horizontal bar rows and local table scrolling. Do not shrink chart labels until unreadable.
@@ -57,6 +57,12 @@ For UI changes, verify 1440px, 1920px, and 390px: no page-level overflow; tables
 - Repository push, Pages deployment, and live website validation are distinct states. Report only verified outcomes.
 - Keep tokens and authentication material outside tracked files and console output.
 - Do not add a permissive license without an explicit licensing decision.
+
+## Traffic lights
+
+- Owner compliance: denominator is suppliers with planned completion on/before the snapshot date. Numerator has an actual completion date on/before both the deadline and snapshot. Green exactly 100%, yellow >=80% and <100%, red <80%; no eligible suppliers gray. Never round before threshold comparison.
+- Supplier priority: already negotiated with a known below-target amount is yellow (including explicit zero); no negotiation evidence and deadline strictly before the snapshot is red; completed by deadline and amount >= positive target is green. Future completion dates, missing required fields, pending future deadlines and late completed/achieved records are gray with a reason.
+- Use a second column and full-row tint, including sticky cells and Mobile cards. Keep textual labels, reason, typed sorting, and alternate shades. Empty project match shows only 无 in project content.
 
 ## Typography update
 
