@@ -4,7 +4,7 @@
 
 - Maintain the procurement rebate dashboard and its supporting documentation.
 - Default to Chinese for user-facing content and change summaries.
-- Keep the three user-requested primary views: negotiation overview, owner progress, and daily/weekly progress. Supplier detail is a shared drilldown dialog.
+- Keep the five user-requested views in order: 00 guide, 01 negotiation overview, 02 owner progress, 03 daily/weekly progress, and 04 supplier master. Owner and period supplier lists share the master columns and link to 04. Supplier detail remains a shared drilldown dialog.
 - Read README.md, docs/METRICS.md, and docs/DATA.md before changing calculations or data.
 
 ## Editing and build
@@ -23,7 +23,7 @@
 - Recorded achievement may aggregate known results against assigned targets, with explicit result and target coverage. Preserve null source amounts; V formula zeros are not evidence of negotiation or a zero rebate.
 - Separate assigned target, negotiated result, signed agreement, finance confirmation, and actual realization. Do not infer one from another.
 - I-column target completion dates are deadlines, not negotiation appointments.
-- Show eligible sample coverage next to on-time rates. A past deadline with no actual date means completion needs confirmation, not proven business delay.
+- A past deadline with no actual date means completion needs confirmation, not proven business delay. The user removed the on-time column and secondary gray annotations from the owner overview.
 - non-BOM missing data does not mean zero. Do not call BOM-only coverage a complete department result.
 - PMO action status counts remain separate from supplier negotiation completion.
 - Retain unresolved source discrepancies. Do not invent suppliers, owners, dates, targets, or achievements to reconcile totals.
@@ -35,6 +35,12 @@
 - Keep the page fluid; do not introduce a narrow centered max-width wrapper.
 - Filters must update all relevant summaries and tables consistently. Clearly label any whole-source note that does not follow owner filters.
 - Keep keyboard navigation, visible focus, semantic controls, dialog Escape handling, CSV blank preservation, and CSV formula-injection protection.
+- Every table column has a compact funnel icon beside the heading, opening ascending/descending/default sorting. Do not restore column filter inputs. Preserve typed numeric sorting, empty values and export across pagination. Alternate row background colors, including sticky supplier cells.
+- Overview has overall/BOM/non-BOM sections, each with two rows of four metric boxes. Only the actual negotiated rebate amount is clickable and opens the same supplier master layout as 04. The uniform target rebate/receipt ratio is 3.6%; keep the Excel reconciliation in documentation, not on this page. P/Q/R blank flags stay visually blank and generate no tags.
+- Use 策略 instead of 抓手 or 谈判规划; name 04 供应商返利清单. Hide the global filter bar on 00/01/04 and ignore saved global filters there. Retain global filters on 02/03. Do not restore the top-right data-method button.
+- Format monetary amounts with zero decimals and percentages with one decimal; calculate using unrounded source values.
+- Hide Excel letter prefixes in visible supplier column headings; retain source locators in details. Use 返利目标 for the source F-column business label. Owner coverage and recorded-rebate cards have no secondary drilldown links; retain the achievement-rate link.
+- Keep numeric master-table values right-aligned. Wide tables have synchronized top horizontal scrolling and left/right controls; avoid scroll synchronization closing an unchanged sort-menu anchor.
 - At 390px, use readable horizontal bar rows and local table scrolling. Do not shrink chart labels until unreadable.
 
 ## Validation
@@ -53,4 +59,4 @@ For UI changes, verify 1440px, 1920px, and 390px: no page-level overflow; tables
 
 ## Typography update
 
-The user requires a minimum of 21 CSS pixels for all visible text, including table cells, controls, chips, help text, dialogs, footer, and mobile layouts. Preserve larger headings. Never shrink type to fit a table; use local horizontal scrolling. Verify computed text sizes in every view and dialog.
+The latest user request overrides the earlier minimum physical text size: default presentation must match the former page viewed at 67% browser zoom. Keep the existing base type scale and apply root CSS zoom .67; review at 100% browser zoom. Preserve responsive layout, local table scrolling, keyboard controls and correctly positioned menus at this scale.
