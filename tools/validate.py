@@ -33,6 +33,20 @@ def main():
     actuals = [r['actualAmount'] for r in rows if r['actualAmount'] is not None]
     check(len(actuals) == summary['actualAmountFilled'], 'Actual fill count mismatch')
     check(bool(actuals) or summary['actualAmount'] is None, 'Missing actuals incorrectly represented as zero')
+    check(not actuals or abs(sum(actuals)-summary['actualAmount']) < .01, 'Actual total mismatch')
+    for row in rows:
+        amount, target = row['actualAmount'], row['targetAmount']
+        expected = amount/target if amount is not None and target else None
+        check(row['achievementRate'] == expected, 'Supplier achievement mismatch')
+        check(row['actualAmount'] is not None or row['achievementRate'] is None, 'Blank actual converted to zero achievement')
+        for key in ('claims', 'qualityRecords', 'projects'):
+            linked = row[key]
+            check(all(x.get('locator') and x.get('matchMethod') for x in linked), 'Linked record provenance missing')
+            check(len({x['locator'] for x in linked}) == len(linked), 'Duplicated linked source row')
+        check(all(x['region'] in ('广东','温州','丽水') for x in row['claims']), 'Unknown claim region')
+        results = [h for h in row['history'] if h['kind'] == '谈判结果']
+        check(len(results) <= 1, 'Snapshot result double counted in history')
+        check(not results or results[0]['amount'] == amount, 'History result mismatch')
     check(meta['displayDivisor'] == 10000 and meta['currency'] == 'CNY', 'Unexpected amount unit')
     index = (ROOT / 'index.html').read_text(encoding='utf-8')
     check(index == render(), 'index.html is stale; run python tools/build.py')

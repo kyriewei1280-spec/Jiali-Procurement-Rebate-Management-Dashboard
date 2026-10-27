@@ -45,3 +45,39 @@ th,td{padding:20px 24px}.supplier-table td:first-child{min-width:420px}
  .dialog-head button{flex-shrink:0}.dialog-body{padding:18px}.dialog-body .details-grid{grid-template-columns:minmax(0,1fr)}
  .pagination{flex-wrap:wrap}.source-box{word-break:break-word}.topbar{position:relative}
 }
+
+/* Three-module negotiation dashboard. Keep the established 21px minimum. */
+.kpis{align-items:stretch}.kpi .value{color:var(--green);font-size:40px}
+.kpi .foot{min-height:3em}.metric-link{font-size:inherit;font-weight:inherit;line-height:inherit;color:var(--green);border:0;background:none;padding:0;text-align:left;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:8px}
+.metric-link:hover,.textbtn:hover,.row-action:hover{color:#a4f4ab;text-decoration:underline}
+.status-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.status-card{display:flex;flex-direction:column;gap:18px;text-align:left;background:var(--surface);padding:22px 24px;border-radius:12px;min-width:0}
+.status-card span{font-size:21px;color:var(--muted)}.status-card strong{font-size:34px;font-weight:650}.status-card small{font-size:21px;color:var(--muted);font-weight:400}
+.status-card.selected{border-color:var(--green);background:var(--greenbg)}
+.category-sub{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid var(--border);padding:15px 0}
+.category-card .bar{margin-top:24px}.category-card .textbtn{white-space:normal}
+.clue-links{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin-top:10px}.clue-links button{font-size:21px}
+.owner-link{white-space:nowrap}.detail-summary{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.inline-link{font:inherit;display:inline;border:0;background:none;color:var(--green);padding:0;min-height:0;white-space:normal;text-decoration:underline;text-underline-offset:4px}
+.period-controls{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end}.period-controls label{max-width:100%}
+.period-controls select{min-width:230px}.tab-toolbar{align-items:flex-end;gap:18px;margin-top:20px}
+.tab-toolbar label{min-width:0;max-width:100%}.tab-toolbar select{max-width:100%}
+.next-step{min-width:360px;max-width:520px}.next-step .cell-sub{overflow-wrap:anywhere}
+.history-table{min-width:1700px}.history-copy{min-width:520px;max-width:760px;white-space:pre-line}
+.claims-table{min-width:1550px}.claim-reason{min-width:480px;max-width:720px;white-space:pre-line}
+.quality-table{min-width:1750px}.projects-table{min-width:1400px}.projects-table td{min-width:160px;max-width:400px;overflow-wrap:anywhere}
+.history-item{border-left:2px solid var(--green);padding:8px 0 8px 20px;margin:22px 0}.history-item p{margin-top:10px;white-space:pre-line}
+.dialog{width:min(1250px,calc(100% - 32px));overflow-x:hidden}.wide-dialog{width:min(1440px,calc(100% - 32px))}
+.dialog-body{min-width:0}.dialog-body .table-scroll{margin-top:20px}.dialog-body td,.dialog-body th{font-size:21px}
+.dialog-body .mini-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.dialog-body .bar-label b{font-size:21px}
+.dialog-body .segmented{margin-bottom:24px}.dialog-head h2{overflow-wrap:anywhere;min-width:0}.dialog-head button{flex-shrink:0}
+.scope{overflow-wrap:anywhere}.page-footer>div{min-width:0;overflow-wrap:anywhere}.panel,.section-head>div{min-width:0}
+@media(min-width:1700px){.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:1000px){.status-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.workstream-block{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:767px){
+ .status-grid{grid-template-columns:minmax(0,1fr)}.period-controls{display:grid;grid-template-columns:minmax(0,1fr)}
+ .period-controls select{width:100%;min-width:0}.tab-toolbar{display:flex;flex-direction:column;align-items:stretch}.tab-toolbar label,.tab-toolbar select{width:100%}
+ .dialog-body .mini-kpis{grid-template-columns:minmax(0,1fr)}.dialog-head{gap:10px}.dialog-head h2{font-size:24px}
+ .kpi .value{font-size:38px}.person-banner{align-items:flex-start}.person-banner>div{min-width:0}
+ .category-sub{flex-direction:column;gap:5px}.search-box{margin-top:0}.status-card{padding:20px}
+}

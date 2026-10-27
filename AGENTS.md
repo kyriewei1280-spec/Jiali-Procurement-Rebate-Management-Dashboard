@@ -4,7 +4,7 @@
 
 - Maintain the procurement rebate dashboard and its supporting documentation.
 - Default to Chinese for user-facing content and change summaries.
-- Keep the four primary views: department overview, owner progress, action plan, and supplier detail.
+- Keep the three user-requested primary views: negotiation overview, owner progress, and daily/weekly progress. Supplier detail is a shared drilldown dialog.
 - Read README.md, docs/METRICS.md, and docs/DATA.md before changing calculations or data.
 
 ## Editing and build
@@ -19,6 +19,8 @@
 ## Metric rules
 
 - Missing values are null/unknown, never automatically zero.
+- Negotiated results are T/U/V in the 2026-10-27 main sheet. F is the reference rebate target and I is the target completion date. Owner achievement uses assigned rebate targets, not annual purchase amounts.
+- Recorded achievement may aggregate known results against assigned targets, with explicit result and target coverage. Preserve null source amounts; V formula zeros are not evidence of negotiation or a zero rebate.
 - Separate assigned target, negotiated result, signed agreement, finance confirmation, and actual realization. Do not infer one from another.
 - I-column target completion dates are deadlines, not negotiation appointments.
 - Show eligible sample coverage next to on-time rates. A past deadline with no actual date means completion needs confirmation, not proven business delay.
