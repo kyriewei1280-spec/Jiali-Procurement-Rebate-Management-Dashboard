@@ -55,6 +55,7 @@ function trafficBadge(t){return `<span class="traffic-badge traffic-${t.color}">
 const TRAFFIC_LEGEND='<div class="traffic-legend"><span>● 绿灯：按期完成且达标</span><span>● 黄灯：已谈未达标</span><span>● 红灯：超期无谈判记录</span><span>● 灰色：待确认</span></div>';
 
 let drillGroups=new Map(),drillIndex=0;
+const overviewDrills=new Map();
 function drillButton(rows,label,cls='textbtn'){const key=String(++drillIndex);drillGroups.set(key,rows.map(r=>r.id));return `<button class="${cls}" data-drill="${key}">${label}</button>`}
 const kpi=(label,value,foot,action='')=>`<article class="kpi"><div class="label">${label}</div><div class="value">${value}</div><div class="foot">${foot}</div>${action}</article>`;
 function metrics(rs){const m=stats(rs);return `<div class="kpis">${kpi('负责返利目标',money(m.target)+'<small>万元</small>',`${m.targetFilled} / ${m.n} 家已分配；${m.n-m.targetFilled} 家待补`)}${kpi('供应商谈判覆盖',`${m.talked}<small>/ ${m.n} 家</small>`,`已记录谈判比例 ${percent(ratio(m.talked,m.n))}`)}${kpi('已记录谈成返利',money(m.recorded)+'<small>万元</small>',`${m.amountFilled} 家已填金额；${m.n-m.amountFilled} 家未回填`)}${kpi('已记录目标达成率',drillButton(rs,percent(m.rate),'metric-link'),`已记录返利 ÷ 已分配返利目标${m.n>m.targetFilled?'；目标尚未全覆盖':''}`)}</div>`}
@@ -119,18 +120,61 @@ function overviewMetrics(rows){
 }
 function overviewBlocks(rs){return ['总体','BOM','non-BOM'].map((name,index)=>{
  const rows=name==='总体'?rs:categoryRows(rs,name),v=overviewMetrics(rows),{m,target,done}=v;
+ const link=(kind,label,large=false)=>overviewDrillButton(rows,kind,label,large);
  const missingMolds=rows.filter(r=>r.substream==='non-BOM 模具'&&!num(r.targetAmount)).length;
  const otherMissing=m.n-m.targetFilled-missingMolds;
- const targetNotes=[`${m.unscheduled} 家待排期`,...(missingMolds?[`${missingMolds} 家模具目标待拆解`]:[]),...(otherMissing?[`${otherMissing} 家目标待补`]:[])];
- const targetDetail=target.reserve>0?`含模具目标 ${money(target.reserve)} 万元待拆解`:target.partialPools.length?'模具目标尚未拆分至当前品类':target.missingPools.length?'模具汇总目标待补':`${m.targetFilled} 家已分配目标`;
- const targetRatio=num(v.targetRate)?`占入库金额 <strong>${percent(v.targetRate)}</strong>`:'占入库金额比例待补';
- const overallRatio=num(v.overallRate)?`占总返利目标 <strong>${percent(v.overallRate)}</strong>`:'整体返利进度待回填';
- const cohortRatio=!done.length?'暂无已谈记录':num(v.cohortRate)?`已谈供应商目标达成率 <strong>${percent(v.cohortRate)}</strong>`:'已谈供应商目标达成率待补';
- const cohortDetail=!done.length?'有谈判记录后计算达成率':v.cohortComplete?`已谈成 ${money(sum(done,'actualAmount'))} / 原定目标 ${money(v.doneTarget)} 万元`:`${done.filter(r=>!num(r.targetAmount)).length} 家目标待补；${done.filter(r=>!num(actual(r))).length} 家结果待补`;
+ const targetNotes=[`${link('unscheduled',m.unscheduled)} 家待排期`,...(missingMolds?[`${link('missing-mold',missingMolds)} 家模具目标待拆解`]:[]),...(otherMissing?[`${link('missing-target',otherMissing)} 家目标待补`]:[])];
+ const targetDetail=target.reserve>0?`含模具目标 ${link('pool',money(target.reserve))} 万元待拆解`:target.partialPools.length?'模具目标尚未拆分至当前品类':target.missingPools.length?'模具汇总目标待补':`${link('assigned',m.targetFilled)} 家已分配目标`;
+ const targetRatio=num(v.targetRate)?`占入库金额 ${link('receipt-ratio',percent(v.targetRate))}`:'占入库金额比例待补';
+ const overallRatio=num(v.overallRate)?`占总返利目标 ${link('overall-rate',percent(v.overallRate))}`:'整体返利进度待回填';
+ const cohortRatio=!done.length?'暂无已谈记录':num(v.cohortRate)?`已谈供应商目标达成率 ${link('cohort-rate',percent(v.cohortRate))}`:'已谈供应商目标达成率待补';
+ const cohortDetail=!done.length?'有谈判记录后计算达成率':v.cohortComplete?`已谈成 ${link('cohort-amount',money(sum(done,'actualAmount')))} / 原定目标 ${link('cohort-target',money(v.doneTarget))} 万元`:`${link('cohort-missing-target',done.filter(r=>!num(r.targetAmount)).length)} 家目标待补；${link('cohort-missing-result',done.filter(r=>!num(actual(r))).length)} 家结果待补`;
  const card=(key,label,value,ratioText,note)=>`<article class="kpi overview-kpi" data-metric="${key}"><div class="label">${label}</div><div class="value">${value}</div><div class="foot"><div class="overview-ratio">${ratioText}</div><div class="overview-note">${note}</div></div></article>`;
  const amountValue=v.results.length?drillButton(v.results,money(v.amount)+'<small>万元</small>','metric-link'):'待回填';
- return `<section class="overview-section" data-overview="${name}"><div class="overview-heading"><div><span class="eyebrow">${String(index+1).padStart(2,'0')} / NEGOTIATION</span><h2>${name}</h2></div>${name!=='总体'?`<label class="field-label">分类筛选<select data-category="${name}" aria-label="${name}分类筛选">${categoryOptions(name)}</select></label>`:''}</div><h3 class="metric-group-title">总目标</h3><div class="kpis overview-metrics">${card('target','返利金额目标',money(target.total)+(num(target.total)?'<small>万元</small>':''),targetRatio,targetDetail)}${card('suppliers','需谈判供应商',m.n+'<small>家</small>',targetNotes.join(' · '),'按 Excel 目标完成时间统计排期')}</div><h3 class="metric-group-title">总进度</h3><div class="kpis overview-metrics">${card('amount','已谈成返利金额',amountValue,overallRatio,v.results.length?`${v.results.length} 家已填结果 · 点击金额查看明细`:'实际返利金额尚未回填')}${card('talked','已谈判供应商',done.length+'<small>家</small>',cohortRatio,cohortDetail)}</div></section>`
+ return `<section class="overview-section" data-overview="${name}"><div class="overview-heading"><div><span class="eyebrow">${String(index+1).padStart(2,'0')} / NEGOTIATION</span><h2>${name}</h2></div>${name!=='总体'?`<label class="field-label">分类筛选<select data-category="${name}" aria-label="${name}分类筛选">${categoryOptions(name)}</select></label>`:''}</div><h3 class="metric-group-title">总目标</h3><div class="kpis overview-metrics">${card('target','返利金额目标',num(target.total)?link('target',money(target.total)+'<small>万元</small>',true):money(target.total),targetRatio,targetDetail)}${card('suppliers','需谈判供应商',link('suppliers',m.n+'<small>家</small>',true),targetNotes.join(' · '),'按 Excel 目标完成时间统计排期')}</div><h3 class="metric-group-title">总进度</h3><div class="kpis overview-metrics">${card('amount','已谈成返利金额',amountValue,overallRatio,v.results.length?`${link('results',v.results.length)} 家已填结果 · 点击数字查看明细`:'实际返利金额尚未回填')}${card('talked','已谈判供应商',link('talked',done.length+'<small>家</small>',true),cohortRatio,cohortDetail)}</div></section>`
  }).join('')}
+
+const OVERVIEW_DRILL_TITLES={target:'返利目标构成', 'receipt-ratio':'目标占入库金额比例',pool:'模具未拆解目标',suppliers:'需谈判供应商',unscheduled:'待排期供应商','missing-mold':'模具目标待拆解供应商','missing-target':'其他目标待补供应商',assigned:'已分配目标供应商','overall-rate':'整体返利进度',talked:'已谈判供应商','cohort-rate':'已谈供应商目标达成率','cohort-amount':'已谈供应商返利金额','cohort-target':'已谈供应商原定目标',results:'已填写返利结果供应商','cohort-missing-target':'已谈供应商目标待补','cohort-missing-result':'已谈供应商结果待补'};
+function overviewDrillButton(rows,kind,label,large=false){
+ const key=String(overviewDrills.size+1);overviewDrills.set(key,{ids:rows.map(r=>r.id),kind});
+ return `<button type="button" class="${large?'metric-link':'overview-number-link'}" data-overview-drill="${key}" data-drill-kind="${kind}" aria-label="查看${esc(OVERVIEW_DRILL_TITLES[kind])}数据表">${label}</button>`;
+}
+function overviewDrillRows(rows,kind){
+ const filters={unscheduled:r=>!r.plannedDate,'missing-mold':r=>r.substream==='non-BOM 模具'&&!num(r.targetAmount),'missing-target':r=>r.substream!=='non-BOM 模具'&&!num(r.targetAmount),assigned:r=>num(r.targetAmount),talked:started,'cohort-rate':started,'cohort-target':started,'cohort-amount':r=>started(r)&&num(actual(r)),results:r=>num(actual(r)),'cohort-missing-target':r=>started(r)&&!num(r.targetAmount),'cohort-missing-result':r=>started(r)&&!num(actual(r))};
+ if(kind==='pool'){const ids=new Set(overviewTarget(rows).includedPools.flatMap(p=>p.memberIds));return rows.filter(r=>ids.has(r.id))}
+ return filters[kind]?rows.filter(filters[kind]):rows;
+}
+function overviewDrill(key){
+ const entry=overviewDrills.get(key);if(!entry)return;
+ const rows=entry.ids.map(id=>DATA.records.find(r=>r.id===id)).filter(Boolean),v=overviewMetrics(rows),kind=entry.kind;
+ const selected=overviewDrillRows(rows,kind),s=overviewMetrics(selected),title=OVERVIEW_DRILL_TITLES[kind];
+ const amount=x=>num(x)?money(x)+' 万元':'待回填',target=x=>num(x)?money(x)+' 万元':'待补';
+ let cards=[['供应商数量',selected.length+' 家'],['已分配返利目标',target(s.target.assigned)],['已记录谈成返利',amount(s.amount)]],note='',reconciliation='';
+ const fullTarget=['target','receipt-ratio','overall-rate'].includes(kind);
+ if(fullTarget){
+  cards=[['完整返利目标',target(v.target.total)],['入库金额',amount(v.receipt)],['已记录谈成返利',amount(v.amount)],['对应比例',kind==='overall-rate'?percent(v.overallRate):percent(v.targetRate)]];
+  note=kind==='overall-rate'?'整体返利进度 = 已记录谈成返利 ÷ 完整返利目标。下表保留分母范围内全部供应商，结果空白仍为空白。':kind==='receipt-ratio'?'目标占入库金额比例 = 完整返利目标 ÷ 本范围入库金额。下表保留同范围供应商的目标与入库金额。':'完整返利目标 = 已分配供应商目标 + 未拆解目标池余额。未拆解目标单独列示，不分摊到供应商。';
+  const components=[['已分配供应商目标',v.target.assigned,`${META.primarySheet} · 本范围 F 列合计`],...v.target.includedPools.filter(p=>p.remaining>0).map(p=>[`${p.label}未拆解目标`,p.remaining,`${p.locator} · 汇总目标减已分配额`]),['完整返利目标合计',v.target.total,'以上项目按未舍入金额汇总']];
+  reconciliation=`<div class="panel table-panel overview-reconciliation">${table(['目标构成','金额 / 万元','来源与计算'],components.map(([label,value,source])=>`<tr><td>${esc(label)}</td><td class="num" data-sort="${value??''}">${money(value)}</td><td>${esc(source)}</td></tr>`).join(''),'返利目标构成','target-components')}</div>`;
+ }
+ if(kind==='pool'){
+  const pools=v.target.includedPools,total=pools.reduce((n,p)=>n+p.totalAmount,0),allocated=pools.reduce((n,p)=>n+(sum(DATA.records.filter(r=>p.memberIds.includes(r.id)),'targetAmount')??0),0);
+  cards=[['相关供应商',selected.length+' 家'],['模具汇总目标',target(total)],['已分配目标',target(allocated)],['尚未拆解金额',target(v.target.reserve)]];
+  note=`尚未拆解金额 = max(0, 模具汇总目标 − 已分配目标)。来源：${pools.map(p=>p.locator+'；'+p.formula).join(' / ')}。下表供应商目标为空时保持为空，不均摊目标。`;
+ }
+ if(['talked','cohort-rate','cohort-target','cohort-amount'].includes(kind)){
+  const cohort=overviewMetrics(v.done);
+  cards=[['已谈供应商',v.done.length+' 家'],['该批原定返利目标',target(v.doneTarget)],['该批已谈成返利',amount(cohort.amount)],['该批目标达成率',v.done.length?percent(v.cohortRate):'暂无已谈记录']];
+  note='已谈供应商目标达成率 = 同一批供应商已谈成返利 ÷ 该批原定目标。目标或结果缺失时不补零，不能将其与整体返利进度混用。';
+ }
+ const notes={suppliers:'当前分类范围内全部需谈判供应商。',unscheduled:'仅列目标完成时间尚未填写的供应商；目标完成时间是截止时间，不是预约谈判日期。','missing-mold':'仅列模具范围内供应商返利目标尚未拆解的记录。','missing-target':'仅列非模具范围内返利目标尚未填写的记录。',assigned:'仅列已经填写供应商返利目标的记录。',results:'仅列截至快照日已经填写有效返利结果的供应商，包含明确填写的零返利。','cohort-missing-target':'仅列已开展谈判但原定目标尚未填写的供应商。','cohort-missing-result':'仅列已开展谈判但实际返利金额尚未填写的供应商。'};
+ note=notes[kind]||note;
+ $('contributionTitle').textContent=title+' · 数据明细';
+ $('contributionBody').innerHTML=`<div class="mini-kpis">${cards.map(([label,value])=>`<div class="mini-kpi"><label>${esc(label)}</label><b>${esc(value)}</b></div>`).join('')}</div><p class="overview-drill-note">${esc(note)}</p>${reconciliation}<p class="overview-drill-count">本清单 ${selected.length} 家供应商 · 数据截至 ${dateText(ASOF)}</p>${masterTable(selected,title+'供应商清单')}`;
+ enhanceTables($('contributionBody'));$('contributionBody').scrollTop=0;
+ if(!$('contributionDialog').open)$('contributionDialog').showModal();
+ requestAnimationFrame(syncTableScrollbars);
+}
 function bindOverviewFilters(){document.querySelectorAll('[data-category]').forEach(el=>el.onchange=()=>{const key=el.dataset.category,top=window.scrollY;categorySelection[key]=el.value;render();document.querySelector(`[data-category="${key}"]`).focus({preventScroll:true});window.scrollTo(0,top)})}
 
 const LEVERAGE_RULES={
@@ -219,7 +263,7 @@ function enhanceTables(root){for(const t of root.querySelectorAll('table:not([da
 }requestAnimationFrame(syncTableScrollbars)}
 
 
-function render(){closeSortMenu();document.querySelector('.filters').classList.toggle('hidden',!['owners','plan'].includes(state.view));drillGroups=new Map();drillIndex=0;const rs=base(),titles={guide:['降本看板功能说明','从整体目标到每日执行，通过四个板块逐层查看。'],suppliers:['供应商返利清单','全部供应商清单、基本资讯与谈判策略。'],overview:['采购整体谈判进展','从返利目标到已谈成果，逐层查看供应商贡献。'],owners:['负责人谈判进展','以负责的返利目标为分母，按日期追踪谈判与下一步。'],plan:['每日与每周推进进度','按目标完成时间查看任务、负责人和计划返利金额。']};$('pageTitle').textContent=titles[state.view][0];$('pageDesc').textContent=titles[state.view][1];$('scopeLabel').innerHTML=`${state.owner==='all'?'全部负责人':ownerLink(state.owner)} · ${rs.length} 家`;document.querySelectorAll('.nav button').forEach(b=>{b.classList.toggle('active',b.dataset.view===state.view);if(b.dataset.view===state.view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});$('app').innerHTML=({guide:guideView,overview,owners:ownersView,plan:planView,suppliers:suppliersView}[state.view])(rs);enhanceTables($('app'));bindOverviewFilters();ensureActiveNavVisible();try{history.replaceState(null,'','#'+state.view)}catch{};
+function render(){closeSortMenu();document.querySelector('.filters').classList.toggle('hidden',!['owners','plan'].includes(state.view));drillGroups=new Map();drillIndex=0;overviewDrills.clear();const rs=base(),titles={guide:['降本看板功能说明','从整体目标到每日执行，通过四个板块逐层查看。'],suppliers:['供应商返利清单','全部供应商清单、基本资讯与谈判策略。'],overview:['采购整体谈判进展','从返利目标到已谈成果，逐层查看供应商贡献。'],owners:['负责人谈判进展','以负责的返利目标为分母，按日期追踪谈判与下一步。'],plan:['每日与每周推进进度','按目标完成时间查看任务、负责人和计划返利金额。']};$('pageTitle').textContent=titles[state.view][0];$('pageDesc').textContent=titles[state.view][1];$('scopeLabel').innerHTML=`${state.owner==='all'?'全部负责人':ownerLink(state.owner)} · ${rs.length} 家`;document.querySelectorAll('.nav button').forEach(b=>{b.classList.toggle('active',b.dataset.view===state.view);if(b.dataset.view===state.view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});$('app').innerHTML=({guide:guideView,overview,owners:ownersView,plan:planView,suppliers:suppliersView}[state.view])(rs);enhanceTables($('app'));bindOverviewFilters();ensureActiveNavVisible();try{history.replaceState(null,'','#'+state.view)}catch{};
  if($('ledgerSearch'))$('ledgerSearch').oninput=e=>{const pos=e.target.selectionStart;state.search=e.target.value;state.page=1;render();$('ledgerSearch').focus();$('ledgerSearch').setSelectionRange(pos,pos)};
  if($('statusSelect'))$('statusSelect').onchange=e=>{state.status=e.target.value;state.page=1;render()};
  if($('sortSelect'))$('sortSelect').onchange=e=>{state.sort=e.target.value;state.page=1;render()};
@@ -228,7 +272,7 @@ function render(){closeSortMenu();document.querySelector('.filters').classList.t
 }
 function exportCsv(kind){const rows=kind==='plan'?selectedPlan():listRows(base());const safe=v=>{let s=String(v??'');if(/^\s*[=+@-]/.test(s))s="'"+s;return '"'+s.replaceAll('"','""')+'"'};const data=[['供应商','分类','负责人','返利目标（万元）','目标完成日','实际完成日','已谈成返利（万元）','目标达成率','状态','下一步','来源','快照日'],...rows.map(r=>[r.supplier,r.substream,r.owner,num(r.targetAmount)?r.targetAmount/10000:null,r.plannedDate,r.actualDate,num(actual(r))?actual(r)/10000:null,num(achievement(r))?percent(achievement(r)):null,STATUSES[statusKey(r)],r.nextStep,r.locator,ASOF])];const url=URL.createObjectURL(new Blob(['\ufeff'+data.map(row=>row.map(safe).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=`采购谈判_${ASOF}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);$('toast').textContent=`已导出 ${rows.length} 条记录，空白金额保持为空。`;$('toast').classList.remove('hidden');setTimeout(()=>$('toast').classList.add('hidden'),2500)}
 function closeDialogs(){closeSortMenu();document.querySelectorAll('dialog[open]').forEach(d=>d.close())}
-document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.presentationChoice){setPresentation(b.dataset.presentationChoice,true);return}if(b.dataset.master){openMaster(b.dataset.master);return}if(b.hasAttribute('data-clear-master')){masterFocus=null;render();return}if(b.dataset.leverage){leverageDetail(b.dataset.id,b.dataset.leverage);return}if(b.dataset.close){$(b.dataset.close).close();return}if(b.dataset.detailTab){detail(detailId,b.dataset.detailTab);return}if(b.dataset.record){detail(b.dataset.record,b.dataset.tab||'profile');return}if(b.dataset.drill){contribution(b.dataset.drill);return}if(b.dataset.export){exportCsv(b.dataset.export);return}if(b.dataset.owner){closeDialogs();state.owner=b.dataset.owner;state.view='owners';state.status='all';state.search='';state.page=1;$('ownerFilter').value=state.owner;render();window.scrollTo(0,0);return}if(b.dataset.view){closeDialogs();masterFocus=null;state.view=b.dataset.view;state.search='';state.status='all';state.page=1;render();window.scrollTo(0,0);return}if(b.dataset.status){state.status=b.dataset.status;state.search='';state.page=1;render();$('ledgerSearch')?.scrollIntoView({block:'center'});return}if(b.dataset.page){state.page+=Number(b.dataset.page);render();return}if(b.hasAttribute('data-today')){state.periodMode='day';state.period=ASOF;state.search='';state.status='all';render()}});
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.presentationChoice){setPresentation(b.dataset.presentationChoice,true);return}if(b.dataset.master){openMaster(b.dataset.master);return}if(b.hasAttribute('data-clear-master')){masterFocus=null;render();return}if(b.dataset.leverage){leverageDetail(b.dataset.id,b.dataset.leverage);return}if(b.dataset.close){$(b.dataset.close).close();return}if(b.dataset.detailTab){detail(detailId,b.dataset.detailTab);return}if(b.dataset.record){detail(b.dataset.record,b.dataset.tab||'profile');return}if(b.dataset.overviewDrill){overviewDrill(b.dataset.overviewDrill);return}if(b.dataset.drill){contribution(b.dataset.drill);return}if(b.dataset.export){exportCsv(b.dataset.export);return}if(b.dataset.owner){closeDialogs();state.owner=b.dataset.owner;state.view='owners';state.status='all';state.search='';state.page=1;$('ownerFilter').value=state.owner;render();window.scrollTo(0,0);return}if(b.dataset.view){closeDialogs();masterFocus=null;state.view=b.dataset.view;state.search='';state.status='all';state.page=1;render();window.scrollTo(0,0);return}if(b.dataset.status){state.status=b.dataset.status;state.search='';state.page=1;render();$('ledgerSearch')?.scrollIntoView({block:'center'});return}if(b.dataset.page){state.page+=Number(b.dataset.page);render();return}if(b.hasAttribute('data-today')){state.periodMode='day';state.period=ASOF;state.search='';state.status='all';render()}});
 for(const name of [...new Set(DATA.records.filter(r=>r.workstream==='non-BOM').map(r=>r.substream))]){const o=document.createElement('option');o.value=o.textContent=name;$('workstreamFilter').append(o)}
 for(const name of [...new Set(DATA.records.map(r=>r.owner))].sort((a,b)=>a.localeCompare(b,'zh-CN'))){const o=document.createElement('option');o.value=o.textContent=name;$('ownerFilter').append(o)}
 $('workstreamFilter').onchange=e=>{state.workstream=e.target.value;state.page=1;render()};$('ownerFilter').onchange=e=>{state.owner=e.target.value;state.page=1;render()};

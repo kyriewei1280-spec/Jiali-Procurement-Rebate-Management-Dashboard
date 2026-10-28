@@ -329,3 +329,10 @@ html[data-presentation=mobile] #contributionDialog{
  width:calc(100vw - 20px);height:calc(100dvh - 24px);
  max-width:none;max-height:none;
 }
+.overview-number-link{display:inline;padding:0;border:0;border-radius:2px;background:none;color:var(--green);font:inherit;font-weight:600;line-height:inherit;min-height:0;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;vertical-align:baseline}
+.overview-number-link:hover{color:#90eb98}
+.overview-drill-note{margin-bottom:18px}
+.overview-reconciliation{margin:18px 0}
+.overview-reconciliation .table-scroll>table{min-width:900px;table-layout:auto}
+.overview-drill-count{margin:18px 0 10px;color:var(--muted)}
+html[data-presentation=mobile] .overview-kpi .overview-number-link{font:inherit;font-weight:600;display:inline-block;min-height:44px;line-height:44px}
