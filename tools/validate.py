@@ -54,6 +54,21 @@ def main():
     match = re.search(r'<script id="dataset" type="application/json">(.*?)</script>', index, re.S)
     check(match is not None and json.loads(match.group(1)) == data, 'Embedded data mismatch')
     check(not re.search(r'<(?:script|link)\b[^>]*(?:src|href)=["\']https?://', index, re.I), 'External runtime dependency')
+    access = json.loads((ROOT / 'data/access.json').read_text(encoding='utf-8'))
+    accounts = access['accounts']
+    check(len({a['id'] for a in accounts}) == len(accounts), 'Duplicate access account IDs')
+    check(len({a['hash'] for a in accounts}) == len(accounts), 'Duplicate access password hashes')
+    check(all(set(a) <= {'id', 'label', 'role', 'owner', 'hash'} for a in accounts), 'Unexpected public account field')
+    check(all(re.fullmatch(r'[0-9a-f]{64}', a['hash']) for a in accounts), 'Invalid password verifier')
+    check(access['algorithm'] == 'PBKDF2-SHA256' and access['iterations'] == 210000, 'Unexpected password derivation')
+    check(re.fullmatch(r'[0-9a-f]{48}', access['salt']) is not None and access['sessionHours'] == 12, 'Invalid login configuration')
+    owner_accounts = [a for a in accounts if a['role'] == 'owner']
+    named_owners = {r['owner'] for r in rows if r.get('owner') and r['owner'].strip().upper() not in {'NA', 'N/A', '未填', '待确认'}}
+    check({a['owner'] for a in owner_accounts} == named_owners and len(owner_accounts) == len(named_owners), 'Owner login coverage differs from source')
+    check(sorted(a['role'] for a in accounts if a['role'] != 'owner') == ['mold-admin', 'operations-admin', 'overall-admin'], 'Administrator role coverage differs')
+    embedded_access = re.search(r'<script id="access-config" type="application/json">(.*?)</script>', index, re.S)
+    check(embedded_access is not None and json.loads(embedded_access.group(1)) == access, 'Embedded login configuration differs')
+    check('<div id="dashboardShell" hidden>' in index, 'Dashboard must start hidden before identity selection')
     for filename in ['README.md', 'AGENTS.md', '.gitignore', 'docs/METRICS.md', 'docs/DATA.md', 'docs/DEPLOYMENT.md']:
         check((ROOT / filename).is_file(), f'Required file missing: {filename}')
     for file in ROOT.rglob('*'):

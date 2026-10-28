@@ -16,4 +16,6 @@ jobs:
       - name: Validate data and generated HTML
         run: python3 tools/validate.py
       - name: Check JavaScript syntax
-        run: node --check src/dashboard.js
+        run: |
+          node --check src/dashboard.js
+          node --check src/auth.js

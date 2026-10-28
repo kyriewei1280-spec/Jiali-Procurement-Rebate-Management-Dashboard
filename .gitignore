@@ -23,3 +23,8 @@ Thumbs.db
 .agents/
 .playwright/
 browser-profile/
+private/
+accounts.json
+*密码清单*
+credentials/
+
