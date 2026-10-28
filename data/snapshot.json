@@ -18,7 +18,117 @@
       "unmatchedQuality": 2376,
       "unmatchedProjects": 110,
       "unassignedProjects": 126
-    }
+    },
+    "fieldUpdates": [
+      {
+        "updatedOn": "2026-10-28",
+        "sourceFile": "2026年10月28日-采购日清日结任务追踪.xlsx",
+        "sourceSha256": "0fb4bbf32cacc2ead3e674e78e10be5a998029476606d4f838651b0c12a89674",
+        "scope": "仅更新 non-BOM 工装、物流的负责人及合作年限；谈判快照日期及其余数据保持原版。",
+        "fields": [
+          {
+            "recordId": "procurement-r120",
+            "field": "owner",
+            "locator": "'采购5922清单'!H120"
+          },
+          {
+            "recordId": "procurement-r120",
+            "field": "relationshipYears",
+            "locator": "'采购5922清单'!O120"
+          },
+          {
+            "recordId": "procurement-r125",
+            "field": "owner",
+            "locator": "'采购5922清单'!H125"
+          },
+          {
+            "recordId": "procurement-r125",
+            "field": "relationshipYears",
+            "locator": "'采购5922清单'!O125"
+          },
+          {
+            "recordId": "procurement-r127",
+            "field": "owner",
+            "locator": "'采购5922清单'!H127"
+          },
+          {
+            "recordId": "procurement-r127",
+            "field": "relationshipYears",
+            "locator": "'采购5922清单'!O127"
+          },
+          {
+            "recordId": "procurement-r129",
+            "field": "owner",
+            "locator": "'采购5922清单'!H129"
+          },
+          {
+            "recordId": "procurement-r129",
+            "field": "relationshipYears",
+            "locator": "'采购5922清单'!O129"
+          },
+          {
+            "recordId": "procurement-r131",
+            "field": "owner",
+            "locator": "'采购5922清单'!H131"
+          },
+          {
+            "recordId": "procurement-r131",
+            "field": "relationshipYears",
+            "locator": "'采购5922清单'!O131"
+          },
+          {
+            "recordId": "procurement-r132",
+            "field": "owner",
+            "locator": "'采购5922清单'!H132"
+          },
+          {
+            "recordId": "procurement-r132",
+            "field": "relationshipYears",
+            "locator": "'采购5922清单'!O132"
+          },
+          {
+            "recordId": "procurement-r133",
+            "field": "owner",
+            "locator": "'采购5922清单'!H133"
+          },
+          {
+            "recordId": "procurement-r133",
+            "field": "relationshipYears",
+            "locator": "'采购5922清单'!O133"
+          },
+          {
+            "recordId": "procurement-r136",
+            "field": "owner",
+            "locator": "'采购5922清单'!H136"
+          },
+          {
+            "recordId": "procurement-r136",
+            "field": "relationshipYears",
+            "locator": "'采购5922清单'!O136"
+          },
+          {
+            "recordId": "procurement-r138",
+            "field": "owner",
+            "locator": "'采购5922清单'!H138"
+          },
+          {
+            "recordId": "procurement-r138",
+            "field": "relationshipYears",
+            "locator": "'采购5922清单'!O138"
+          },
+          {
+            "recordId": "procurement-r145",
+            "field": "owner",
+            "locator": "'采购5922清单'!H145"
+          },
+          {
+            "recordId": "procurement-r145",
+            "field": "relationshipYears",
+            "locator": "'采购5922清单'!O145"
+          }
+        ]
+      }
+    ]
   },
   "records": [
     {
@@ -18984,7 +19094,7 @@
     {
       "id": "procurement-r120",
       "supplier": "海天塑机集团有限公司",
-      "owner": "NA",
+      "owner": "留培杨",
       "category": "设备",
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
@@ -19010,7 +19120,7 @@
       "shareOfSupplierSales": 0.0002,
       "companyType": "民企",
       "substitutability": "可替代",
-      "relationshipYears": "NA",
+      "relationshipYears": "未回复",
       "debongSimilarBusiness": "不确定",
       "deliveryIssue": null,
       "qualityIssue": null,
@@ -19174,7 +19284,7 @@
     {
       "id": "procurement-r125",
       "supplier": "广州睿松自动化设备有限公司",
-      "owner": "NA",
+      "owner": "留培杨",
       "category": "工装/设备",
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
@@ -19200,7 +19310,7 @@
       "shareOfSupplierSales": 0.02,
       "companyType": "民企",
       "substitutability": "可替代",
-      "relationshipYears": "NA",
+      "relationshipYears": "未回复",
       "debongSimilarBusiness": "不确定",
       "deliveryIssue": null,
       "qualityIssue": null,
@@ -19250,7 +19360,7 @@
     {
       "id": "procurement-r127",
       "supplier": "广州市水电设备安装有限公司",
-      "owner": "NA",
+      "owner": "留培杨",
       "category": "水电工程/设备",
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
@@ -19276,7 +19386,7 @@
       "shareOfSupplierSales": 0.002,
       "companyType": "国企",
       "substitutability": "可替代",
-      "relationshipYears": "NA",
+      "relationshipYears": "未回复",
       "debongSimilarBusiness": "不确定",
       "deliveryIssue": null,
       "qualityIssue": null,
@@ -19326,7 +19436,7 @@
     {
       "id": "procurement-r129",
       "supplier": "浙江晨浩智能科技有限公司",
-      "owner": "NA",
+      "owner": "留培杨",
       "category": "设备",
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
@@ -19352,7 +19462,7 @@
       "shareOfSupplierSales": 0.04,
       "companyType": "民企",
       "substitutability": "可替代",
-      "relationshipYears": "NA",
+      "relationshipYears": "未回复",
       "debongSimilarBusiness": "不确定",
       "deliveryIssue": null,
       "qualityIssue": null,
@@ -19402,7 +19512,7 @@
     {
       "id": "procurement-r131",
       "supplier": "必能信超声（上海）有限公司",
-      "owner": "NA",
+      "owner": "留培杨",
       "category": "设备",
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
@@ -19428,7 +19538,7 @@
       "shareOfSupplierSales": 0.001,
       "companyType": "民企",
       "substitutability": "可替代",
-      "relationshipYears": "NA",
+      "relationshipYears": "未回复",
       "debongSimilarBusiness": "不确定",
       "deliveryIssue": null,
       "qualityIssue": null,
@@ -19440,7 +19550,7 @@
     {
       "id": "procurement-r132",
       "supplier": "深圳市斯玛特激光科技有限公司",
-      "owner": "NA",
+      "owner": "留培杨",
       "category": "设备",
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
@@ -19466,7 +19576,7 @@
       "shareOfSupplierSales": 0.0002,
       "companyType": "民企",
       "substitutability": "可替代",
-      "relationshipYears": "NA",
+      "relationshipYears": "未回复",
       "debongSimilarBusiness": "不确定",
       "deliveryIssue": null,
       "qualityIssue": null,
@@ -19478,7 +19588,7 @@
     {
       "id": "procurement-r133",
       "supplier": "丽水市双剑金属制品有限公司",
-      "owner": "NA",
+      "owner": "留培杨",
       "category": "产线",
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
@@ -19504,7 +19614,7 @@
       "shareOfSupplierSales": 0.005,
       "companyType": "民企",
       "substitutability": "可替代",
-      "relationshipYears": "NA",
+      "relationshipYears": "未回复",
       "debongSimilarBusiness": "不确定",
       "deliveryIssue": null,
       "qualityIssue": null,
@@ -19592,7 +19702,7 @@
     {
       "id": "procurement-r136",
       "supplier": "温州晨浩智能设备有限公司",
-      "owner": "NA",
+      "owner": "留培杨",
       "category": "设备",
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
@@ -19618,7 +19728,7 @@
       "shareOfSupplierSales": 0.1,
       "companyType": "民企",
       "substitutability": "可替代",
-      "relationshipYears": "NA",
+      "relationshipYears": "未回复",
       "debongSimilarBusiness": "不确定",
       "deliveryIssue": null,
       "qualityIssue": null,
@@ -19668,7 +19778,7 @@
     {
       "id": "procurement-r138",
       "supplier": "常州华朝精密机械科技有限公司",
-      "owner": "NA",
+      "owner": "留培杨",
       "category": "工装",
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
@@ -19694,7 +19804,7 @@
       "shareOfSupplierSales": null,
       "companyType": "民企",
       "substitutability": "可替代",
-      "relationshipYears": "NA",
+      "relationshipYears": "未回复",
       "debongSimilarBusiness": "不确定",
       "deliveryIssue": null,
       "qualityIssue": null,
@@ -19934,7 +20044,7 @@
     {
       "id": "procurement-r145",
       "supplier": "深圳极顶科技有限公司",
-      "owner": "NA",
+      "owner": "留培杨",
       "category": "设备",
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
@@ -19960,7 +20070,7 @@
       "shareOfSupplierSales": null,
       "companyType": "民企",
       "substitutability": "可替代",
-      "relationshipYears": "NA",
+      "relationshipYears": "未回复",
       "debongSimilarBusiness": "不确定",
       "deliveryIssue": null,
       "qualityIssue": null,
@@ -20823,12 +20933,6 @@
     "plannedDateFilled": 72,
     "owners": [
       {
-        "owner": "NA",
-        "count": 10,
-        "targetAmount": 264610.576,
-        "actualAmount": null
-      },
-      {
         "owner": "伍梦华",
         "count": 21,
         "targetAmount": 13300000.0,
@@ -20872,8 +20976,8 @@
       },
       {
         "owner": "留培杨",
-        "count": 13,
-        "targetAmount": 1604069.6371898672,
+        "count": 23,
+        "targetAmount": 1868680.213189867,
         "actualAmount": null
       },
       {
