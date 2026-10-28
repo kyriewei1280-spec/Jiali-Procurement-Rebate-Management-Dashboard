@@ -36,7 +36,7 @@
 - Filters must update all relevant summaries and tables consistently. Clearly label any whole-source note that does not follow owner filters.
 - Keep keyboard navigation, visible focus, semantic controls, dialog Escape handling, CSV blank preservation, and CSV formula-injection protection.
 - Every table column has a compact funnel icon beside the heading, opening ascending/descending/default sorting. Do not restore column filter inputs. Preserve typed numeric sorting, empty values and export across pagination. Alternate row background colors, including sticky supplier cells.
-- Overview has overall/BOM/non-BOM sections, each with two rows of four metric boxes. Only the actual negotiated rebate amount is clickable and opens the same supplier master layout as 04. Show the actual aggregate target/receipt ratio for every scope, with a small bottom-right note that the original ratio was 3.6%. P/Q/R blank flags stay visually blank and generate no tags.
+- Overview has overall/BOM/non-BOM sections, each with two rows of two metric boxes: amount and supplier columns. Only the actual negotiated rebate amount is clickable and opens the same supplier master layout as 04. Overview includes the source-backed unallocated mold target pool in fully covered scopes. Show target/receipt, actual/full target, and actual/talked cohort target separately. Do not allocate the mold pool to supplier rows or partial category scopes. P/Q/R blank flags stay visually blank and generate no tags.
 - Use 策略 instead of 抓手 or 谈判规划; name 04 供应商返利清单. Hide the global filter bar on 00/01/04 and ignore saved global filters there. Retain global filters on 02/03. Do not restore the top-right data-method button.
 - Format monetary amounts with zero decimals and percentages with one decimal; calculate using unrounded source values.
 - Hide Excel letter prefixes in visible supplier column headings; retain source locators in details. Use 返利目标 for the source F-column business label. Remove the selected-owner banner and personal KPI cards; retain the achievement-rate link in the owner table.
@@ -67,3 +67,7 @@ For UI changes, verify 1440px, 1920px, and 390px: no page-level overflow; tables
 ## Typography update
 
 Browser presentation matches the former page viewed at 67% browser zoom. Keep its existing base type scale and root CSS zoom .67; review at 100% browser zoom. Mobile overrides root zoom to 1 with 16px body/controls, smaller secondary labels and 44px touch targets. Preserve responsive layout, keyboard controls, correctly positioned menus and equivalent data access in both modes.
+
+## Approved 2026-10-28 update
+
+The user approved publication of the four-card overview and contribution-dialog repair. Preserve the 2026-10-27 business snapshot unless a data refresh is separately requested. Contribution dialog width/height must be based on the visible viewport, compensating for Browser root zoom .67. Keep its header and close control visible while the body scrolls; test Browser and Mobile before publishing.

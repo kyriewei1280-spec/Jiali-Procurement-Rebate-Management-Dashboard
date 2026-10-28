@@ -20999,5 +20999,53 @@
       "detail": "35家模具供应商因目标为空，V列出现#DIV/0!，保留为待补目标；丽水月度表9个供应商编码为#N/A，只在名称可唯一确认时关联，不借错误编码强行匹配。",
       "locator": "'采购5921清单'!V74:V108；'26年1-8月源数据 (2)_丽水 1021'!B782:B1092"
     }
+  ],
+  "targetPools": [
+    {
+      "id": "mold-target",
+      "label": "模具",
+      "workstream": "non-BOM",
+      "substream": "non-BOM 模具",
+      "totalAmount": 6186164.734532448,
+      "memberIds": [
+        "procurement-r74",
+        "procurement-r75",
+        "procurement-r76",
+        "procurement-r77",
+        "procurement-r78",
+        "procurement-r79",
+        "procurement-r80",
+        "procurement-r81",
+        "procurement-r82",
+        "procurement-r83",
+        "procurement-r84",
+        "procurement-r85",
+        "procurement-r86",
+        "procurement-r87",
+        "procurement-r88",
+        "procurement-r89",
+        "procurement-r90",
+        "procurement-r91",
+        "procurement-r92",
+        "procurement-r93",
+        "procurement-r94",
+        "procurement-r95",
+        "procurement-r96",
+        "procurement-r97",
+        "procurement-r98",
+        "procurement-r99",
+        "procurement-r100",
+        "procurement-r101",
+        "procurement-r102",
+        "procurement-r103",
+        "procurement-r104",
+        "procurement-r105",
+        "procurement-r106",
+        "procurement-r107",
+        "procurement-r108"
+      ],
+      "locator": "'Non-Bom 模具618清单 1026'!K37",
+      "formula": "=D37*0.036"
+    }
   ]
 }

@@ -296,6 +296,36 @@ table tbody tr.traffic-row:hover>td,table.master-table tbody tr.traffic-row:hove
 .master-table th[data-field=annualReceiptAmount],.master-table td[data-field=annualReceiptAmount],.master-table th[data-field=targetAmount],.master-table td[data-field=targetAmount],.master-table th[data-field=historicalPriceIncreaseAmount],.master-table td[data-field=historicalPriceIncreaseAmount],.master-table th[data-field=actualAmount],.master-table td[data-field=actualAmount]{width:270px}
 .master-table th[data-field=nextStep],.master-table td[data-field=nextStep]{width:480px}
 .original-ratio{display:block;text-align:right;font-size:.9em;margin-top:16px;color:var(--muted)}
+
+/* Overview: amount and supplier columns, with targets above progress. */
+.overview-section .overview-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.overview-kpi{min-width:0;padding:26px 28px}
+.overview-kpi .value{font-size:42px;line-height:1.25;margin-top:14px}
+.overview-kpi .foot{min-height:0;margin-top:16px}
+.overview-ratio{font-size:21px;color:var(--text);line-height:1.55}
+.overview-ratio strong{font-weight:650;color:var(--green)}
+.overview-note{font-size:21px;line-height:1.55;color:var(--muted);margin-top:8px}
+html[data-presentation=mobile] .overview-section .overview-metrics{grid-template-columns:minmax(0,1fr);gap:12px}
+html[data-presentation=mobile] .overview-kpi{padding:20px}
+html[data-presentation=mobile] .overview-kpi .label,
+html[data-presentation=mobile] .overview-kpi .value small,
+html[data-presentation=mobile] .overview-kpi :is(.overview-ratio,.overview-note){font-size:21px}
+html[data-presentation=mobile] .overview-kpi .value{font-size:34px}
+html[data-presentation=mobile] .overview-kpi .foot{margin-top:12px}
 html[data-presentation=mobile] .mobile-record-card.traffic-row:nth-child(odd){background:var(--traffic-odd)}
 html[data-presentation=mobile] .mobile-record-card.traffic-row:nth-child(even){background:var(--traffic-even)}
 html[data-presentation=mobile] .mobile-traffic{padding-top:14px}
+
+/* Size the contribution dialog in visible viewport pixels despite Browser zoom. */
+#contributionDialog{
+ width:calc((100vw - 48px) / .67);
+ height:calc((100dvh - 48px) / .67);
+ max-width:none;max-height:none;margin:auto;overflow:hidden;
+}
+#contributionDialog[open]{display:flex;flex-direction:column}
+#contributionDialog .dialog-head{flex:0 0 auto;min-width:0}
+#contributionBody{flex:1 1 auto;min-height:0;min-width:0;overflow:auto;overscroll-behavior:contain}
+html[data-presentation=mobile] #contributionDialog{
+ width:calc(100vw - 20px);height:calc(100dvh - 24px);
+ max-width:none;max-height:none;
+}

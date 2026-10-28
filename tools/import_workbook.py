@@ -76,6 +76,14 @@ def total(rows, key):
     return sum(v) if v else None
 
 
+def target_pools(records, summary):
+    """Keep the workbook's mold scope target separate from individual F-column targets."""
+    return [dict(id='mold-target', label='模具', workstream='non-BOM', substream='non-BOM 模具',
+                 totalAmount=summary['moldReferenceAmount'],
+                 memberIds=[r['id'] for r in records if r['substream']=='non-BOM 模具'],
+                 locator=summary['moldReferenceLocator'], formula=summary['moldReferenceFormula'])]
+
+
 def import_snapshot(path, asof):
     book = read_book(path)
     sheet = '采购5921清单'
@@ -264,7 +272,8 @@ def import_snapshot(path, asof):
         if r['achievementRate'] is not None and numeric(r['sourceAchievementRate']) is not None:
             assert abs(r['achievementRate']-r['sourceAchievementRate'])<1e-9
     issues.append(dict(title='原表公式缺口',detail='35家模具供应商因目标为空，V列出现#DIV/0!，保留为待补目标；丽水月度表9个供应商编码为#N/A，只在名称可唯一确认时关联，不借错误编码强行匹配。',locator="'采购5921清单'!V74:V108；'26年1-8月源数据 (2)_丽水 1021'!B782:B1092"))
-    return dict(metadata=meta,records=records,actions=actions,summary=summary,issues=issues)
+    return dict(metadata=meta,records=records,actions=actions,summary=summary,issues=issues,
+                targetPools=target_pools(records, summary))
 
 
 if __name__=='__main__':

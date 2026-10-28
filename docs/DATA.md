@@ -1,6 +1,6 @@
 # 数据与维护
 
-`data/snapshot.json` 包含 metadata、records、actions、summary、issues。原始工作簿保持只读，不进入仓库。
+`data/snapshot.json` 包含 metadata、records、actions、summary、issues、targetPools。原始工作簿保持只读，不进入仓库。
 
 ## 主表
 
@@ -30,3 +30,7 @@
 4. 更新页面文案、README 与指标说明。运行构建、验证与 JS 语法检查。
 5. 验证三种屏宽、所有导航和弹窗、搜索/排序/分页、日期下拉、负责人联动与 CSV 空白保护。
 6. 按授权范围交付/发布。原始工作簿、完整原表抽取和本机文件不提交。
+
+## 2026-10-28 目标池扩展
+
+`targetPools` 从已有源表模具汇总生成，保留 `totalAmount`、`memberIds`、`locator`、`formula`。供应商原始 F/U 和历史记录保持不变。导入脚本每次从 Excel K37 读取池总额；浏览器根据当前供应商目标计算剩余未拆解额。模板只渲染计算结果，不写固定 5,922、1,202、7.1% 或 40.8%。

@@ -1,7 +1,7 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const DATA=JSON.parse($('dataset').textContent),META=DATA.metadata,ASOF=META.asOf;
-const state={view:['guide','overview','owners','plan','suppliers'].includes(location.hash.slice(1))?location.hash.slice(1):'guide',workstream:'all',owner:'all',search:'',status:'all',sort:'date',page:1,periodMode:'day',period:ASOF};
+const state={view:['guide','overview','owners','plan','suppliers'].includes(location.hash.slice(1))?location.hash.slice(1):'overview',workstream:'all',owner:'all',search:'',status:'all',sort:'date',page:1,periodMode:'day',period:ASOF};
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=x=>typeof x==='number'&&Number.isFinite(x);
 const money=x=>num(x)?(x/10000).toLocaleString('zh-CN',{maximumFractionDigits:0}):'待补';
@@ -95,10 +95,41 @@ function stageLabel(r){return r.actualDate&&r.actualDate<=ASOF?'已完成':start
 function guideView(){return `<div class="guide-intro panel"><p class="eyebrow">从目标到执行</p><h2>四个板块，一份供应商返利清单</h2><p>按以下顺序查看，点击卡片即可进入对应板块。</p></div><div class="guide-grid">${VIEW_GUIDE.map(([n,key,title,desc])=>`<button class="guide-card" data-view="${key}"><span class="guide-number">${n}</span><span><strong>${title}</strong><span class="guide-description">${desc}</span></span><span class="guide-arrow" aria-hidden="true">↗</span></button>`).join('')}</div>${notice('供应商名称可查看统一底表与详情；负责人姓名可进入个人进展；实际谈成返利金额可点入查看供应商贡献。日期与结果均以当前工作簿快照为准。')}`}
 function categoryOptions(name){const rows=DATA.records.filter(r=>r.workstream===name);return `<option value="all">全部 ${name}</option>${name==='non-BOM'?`<optgroup label="业务大类">${[...new Set(rows.map(r=>r.substream))].sort().map(s=>`<option value="group:${esc(s)}" ${categorySelection[name]==='group:'+s?'selected':''}>${esc(s.replace('non-BOM ',''))}</option>`).join('')}</optgroup>`:''}<optgroup label="原表品类">${[...new Set(rows.map(r=>r.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN')).map(c=>`<option value="category:${esc(c)}" ${categorySelection[name]==='category:'+c?'selected':''}>${esc(c)}</option>`).join('')}</optgroup>`}
 function categoryRows(rs,name){const value=categorySelection[name];return rs.filter(r=>r.workstream===name&&(value==='all'||value==='category:'+r.category||value==='group:'+r.substream))}
+// Pool totals are source-backed scope targets, never allocated to individual suppliers.
+// As targets are assigned, only the remaining pool is added, preventing double counting.
+function overviewTarget(rows){
+ const ids=new Set(rows.map(r=>r.id)),assigned=sum(rows,'targetAmount');
+ let reserve=0,coveredPool=false;const partialPools=[],missingPools=[],includedPools=[];
+ for(const pool of DATA.targetPools||[]){
+  const members=DATA.records.filter(r=>pool.memberIds.includes(r.id));
+  if(!members.some(r=>ids.has(r.id)))continue;
+  if(!num(pool.totalAmount)){missingPools.push(pool);continue}
+  const remaining=Math.max(0,pool.totalAmount-(sum(members,'targetAmount')??0));
+  if(members.every(r=>ids.has(r.id))){reserve+=remaining;coveredPool=true;includedPools.push({...pool,remaining})}
+  else if(remaining>0)partialPools.push({...pool,remaining});
+ }
+ return {assigned,reserve,total:num(assigned)||coveredPool?(assigned??0)+reserve:null,includedPools,partialPools,missingPools};
+}
+function overviewMetrics(rows){
+ const m=stats(rows),target=overviewTarget(rows),receipt=sum(rows,'annualReceiptAmount'),done=rows.filter(started);
+ const results=rows.filter(r=>num(actual(r))),amount=sum(results,'actualAmount'),doneTarget=sum(done,'targetAmount');
+ const cohortComplete=done.length>0&&done.every(r=>num(r.targetAmount)&&num(actual(r)));
+ return {m,target,receipt,done,results,amount,doneTarget,cohortComplete,
+  targetRate:ratio(target.total,receipt),overallRate:ratio(amount,target.total),cohortRate:cohortComplete?ratio(sum(done,'actualAmount'),doneTarget):null};
+}
 function overviewBlocks(rs){return ['总体','BOM','non-BOM'].map((name,index)=>{
- const rows=name==='总体'?rs:categoryRows(rs,name),m=stats(rows),receipt=sum(rows,'annualReceiptAmount'),done=rows.filter(started),doneTarget=done.length?sum(done,'targetAmount'):0;
- const metric=(label,value,foot)=>kpi(label,value,foot);
- return `<section class="overview-section" data-overview="${name}"><div class="overview-heading"><div><span class="eyebrow">${String(index+1).padStart(2,'0')} / NEGOTIATION</span><h2>${name}</h2></div>${name!=='总体'?`<label class="field-label">分类筛选<select data-category="${name}" aria-label="${name}分类筛选">${categoryOptions(name)}</select></label>`:''}</div><h3 class="metric-group-title">总目标</h3><div class="kpis fixed-metrics">${metric('入库金额',money(receipt)+'<small>万元</small>',`${rows.filter(r=>num(r.annualReceiptAmount)).length} / ${m.n} 家已填入库金额`)}${metric('返利目标金额',money(m.target)+'<small>万元</small>',`${m.targetFilled} 家已分配；${m.n-m.targetFilled} 家目标待补`)}${kpi('目标返利／入库比例',percent(ratio(m.target,receipt)),'返利目标金额 ÷ 入库金额<span class="original-ratio">原定比例 3.6%</span>')}${metric('预计谈判供应商数量',m.n+'<small>家</small>','当前范围内所有需要谈判的供应商')}</div><h3 class="metric-group-title">总进度</h3><div class="kpis fixed-metrics">${metric('整体返利进度',percent(m.rate),'实际谈成返利 ÷ 当前范围返利目标')}${metric('已谈供应商数量',done.length+'<small>家</small>','已开展谈判，包含已完成及谈判中',done)}${metric('原订返利目标金额',money(doneTarget)+'<small>万元</small>','已谈供应商原先对应的目标合计',done)}${kpi('实际谈成返利金额',drillButton(rows.filter(r=>num(actual(r))),money(m.recorded)+'<small>万元</small>','metric-link'),`${m.amountFilled} 家已填金额 · 点击查看供应商达成状况`)}</div></section>`
+ const rows=name==='总体'?rs:categoryRows(rs,name),v=overviewMetrics(rows),{m,target,done}=v;
+ const missingMolds=rows.filter(r=>r.substream==='non-BOM 模具'&&!num(r.targetAmount)).length;
+ const otherMissing=m.n-m.targetFilled-missingMolds;
+ const targetNotes=[`${m.unscheduled} 家待排期`,...(missingMolds?[`${missingMolds} 家模具目标待拆解`]:[]),...(otherMissing?[`${otherMissing} 家目标待补`]:[])];
+ const targetDetail=target.reserve>0?`含模具目标 ${money(target.reserve)} 万元待拆解`:target.partialPools.length?'模具目标尚未拆分至当前品类':target.missingPools.length?'模具汇总目标待补':`${m.targetFilled} 家已分配目标`;
+ const targetRatio=num(v.targetRate)?`占入库金额 <strong>${percent(v.targetRate)}</strong>`:'占入库金额比例待补';
+ const overallRatio=num(v.overallRate)?`占总返利目标 <strong>${percent(v.overallRate)}</strong>`:'整体返利进度待回填';
+ const cohortRatio=!done.length?'暂无已谈记录':num(v.cohortRate)?`已谈供应商目标达成率 <strong>${percent(v.cohortRate)}</strong>`:'已谈供应商目标达成率待补';
+ const cohortDetail=!done.length?'有谈判记录后计算达成率':v.cohortComplete?`已谈成 ${money(sum(done,'actualAmount'))} / 原定目标 ${money(v.doneTarget)} 万元`:`${done.filter(r=>!num(r.targetAmount)).length} 家目标待补；${done.filter(r=>!num(actual(r))).length} 家结果待补`;
+ const card=(key,label,value,ratioText,note)=>`<article class="kpi overview-kpi" data-metric="${key}"><div class="label">${label}</div><div class="value">${value}</div><div class="foot"><div class="overview-ratio">${ratioText}</div><div class="overview-note">${note}</div></div></article>`;
+ const amountValue=v.results.length?drillButton(v.results,money(v.amount)+'<small>万元</small>','metric-link'):'待回填';
+ return `<section class="overview-section" data-overview="${name}"><div class="overview-heading"><div><span class="eyebrow">${String(index+1).padStart(2,'0')} / NEGOTIATION</span><h2>${name}</h2></div>${name!=='总体'?`<label class="field-label">分类筛选<select data-category="${name}" aria-label="${name}分类筛选">${categoryOptions(name)}</select></label>`:''}</div><h3 class="metric-group-title">总目标</h3><div class="kpis overview-metrics">${card('target','返利金额目标',money(target.total)+(num(target.total)?'<small>万元</small>':''),targetRatio,targetDetail)}${card('suppliers','需谈判供应商',m.n+'<small>家</small>',targetNotes.join(' · '),'按 Excel 目标完成时间统计排期')}</div><h3 class="metric-group-title">总进度</h3><div class="kpis overview-metrics">${card('amount','已谈成返利金额',amountValue,overallRatio,v.results.length?`${v.results.length} 家已填结果 · 点击金额查看明细`:'实际返利金额尚未回填')}${card('talked','已谈判供应商',done.length+'<small>家</small>',cohortRatio,cohortDetail)}</div></section>`
  }).join('')}
 function bindOverviewFilters(){document.querySelectorAll('[data-category]').forEach(el=>el.onchange=()=>{const key=el.dataset.category,top=window.scrollY;categorySelection[key]=el.value;render();document.querySelector(`[data-category="${key}"]`).focus({preventScroll:true});window.scrollTo(0,top)})}
 
