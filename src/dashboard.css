@@ -339,3 +339,44 @@ html[data-presentation=mobile] .overview-kpi .overview-number-link{font:inherit;
 
 /* Later target dates remain visible after a first negotiation. */
 .follow-up-note{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:18px;line-height:1.6}.follow-up-note p{margin:6px 0 0;color:var(--text);font-weight:400}.follow-up-note .chip{white-space:normal}html[data-presentation=mobile] .follow-up-note{font-size:14px}
+
+/* Password entry and current identity, using the dashboard's existing visual system. */
+#dashboardShell[hidden],#loginScreen[hidden]{display:none!important}
+.login-screen{min-height:calc(100dvh / .67);padding-block:38px 52px;display:flex;flex-direction:column}
+.login-brand{display:flex;align-items:center;gap:14px;font-size:23px;font-weight:650}
+.login-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(32px,7vw,160px);align-items:center;flex:1;padding-block:64px}
+.login-intro{min-width:0}.login-intro h1{font-size:clamp(48px,4.8vw,82px);line-height:1.12;letter-spacing:-.04em;margin:16px 0 26px}
+.login-intro>p:not(.eyebrow){font-size:25px;color:var(--muted);max-width:32em;line-height:1.7}
+.login-modules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px;margin-top:44px;max-width:920px}
+.login-modules span{display:flex;align-items:center;gap:14px;padding:18px 0;border-top:1px solid var(--border);font-size:23px;color:#b9c2bb}
+.login-modules b{color:var(--green);font-size:21px;font-weight:600}
+.login-panel{min-width:0;padding:clamp(28px,3vw,64px);background:var(--surface);border:1px solid var(--border);border-radius:16px}
+.login-panel h2{font-size:32px;margin:14px 0 32px}.login-panel label{display:block;font-size:23px;margin-bottom:12px;color:var(--text)}
+.login-password-wrap{display:flex;min-width:0;border:1px solid #48544a;border-radius:10px;background:var(--raised)}
+.login-password-wrap:focus-within{outline:2px solid var(--green);outline-offset:3px}
+.login-password-wrap input{width:100%;min-width:0;background:transparent;border:none;padding:18px 20px;font-size:26px;letter-spacing:.035em;outline:none;box-shadow:none}
+.login-password-wrap button{border:0;border-left:1px solid var(--border);border-radius:0 9px 9px 0;padding:14px 18px;flex-shrink:0;font-size:21px;min-height:56px;background:transparent;color:var(--muted)}
+.login-help{font-size:21px;color:var(--muted);margin-top:12px}.login-error{min-height:2.8em;font-size:21px;color:var(--red);margin:16px 0;line-height:1.5}
+#loginSubmit{width:100%;min-height:62px;padding:16px 24px;font-size:25px;font-weight:650}.login-contact{font-size:21px;color:var(--muted);margin-top:20px;line-height:1.65}
+.account-controls{display:flex;align-items:center;gap:14px;min-width:0}.topmeta .account-controls #accountLabel{display:block;color:var(--text);font-size:21px;overflow-wrap:anywhere;max-width:26em}#logoutBtn{min-height:44px;white-space:nowrap}
+html[data-presentation=mobile] .login-screen{min-height:100dvh;padding-top:24px;padding-bottom:28px}
+html[data-presentation=mobile] .login-brand{font-size:18px}
+html[data-presentation=mobile] .login-layout{grid-template-columns:minmax(0,1fr);gap:28px;padding-top:36px;padding-bottom:12px;align-items:start}
+html[data-presentation=mobile] .login-intro h1{font-size:38px;margin:14px 0 18px}
+html[data-presentation=mobile] .login-intro>p:not(.eyebrow){font-size:18px}
+html[data-presentation=mobile] .login-modules{gap:10px 16px;margin-top:22px}
+html[data-presentation=mobile] .login-modules span{gap:8px;font-size:16px;padding:12px 0}
+html[data-presentation=mobile] .login-modules b{font-size:15px}
+html[data-presentation=mobile] .login-panel{padding:22px 20px}
+html[data-presentation=mobile] .login-panel h2{font-size:24px;margin:10px 0 24px}
+html[data-presentation=mobile] .login-panel label{font-size:18px}
+html[data-presentation=mobile] .login-password-wrap input{font-size:18px;padding:14px 12px}
+html[data-presentation=mobile] .login-password-wrap button{min-height:48px;font-size:16px;padding:12px}
+html[data-presentation=mobile] :is(.login-help,.login-error,.login-contact){font-size:16px}
+html[data-presentation=mobile] #loginSubmit{min-height:52px;font-size:19px;padding:12px 16px}
+html[data-presentation=mobile] .topline{flex-wrap:wrap;align-items:flex-start}
+html[data-presentation=mobile] .topmeta{width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+html[data-presentation=mobile] .account-controls{flex:1 0 100%;width:100%;gap:10px;justify-content:space-between}
+html[data-presentation=mobile] .topmeta .account-controls #accountLabel{font-size:16px;max-width:20em}
+html[data-presentation=mobile] #logoutBtn{font-size:16px;min-height:44px}
+@media(max-width:767px){html:not([data-presentation=browser]) .login-layout{grid-template-columns:minmax(0,1fr)}}

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "version": "3d89044be470997b53b05c45",
+  "algorithm": "PBKDF2-SHA256",
+  "iterations": 210000,
+  "salt": "9d3f7c01a59dd8f11bf9df3c513e457b3099defafa462e09",
+  "sessionHours": 12,
+  "accounts": [
+    {
+      "id": "admin-all",
+      "label": "采购总体管理员",
+      "role": "overall-admin",
+      "hash": "4e023f5e5cd99f2d93c9f9e91d9d15496d3cb17dfba7fc238f047c3c7bd9d62d"
+    },
+    {
+      "id": "admin-mold",
+      "label": "non-BOM 模具管理员",
+      "role": "mold-admin",
+      "hash": "f90e82ff2392ca7a96c3316f9ab28d798771cc3f2270d8791ef2b7ec37e7a8ff"
+    },
+    {
+      "id": "admin-ops",
+      "label": "non-BOM 工装、设备和物流管理员",
+      "role": "operations-admin",
+      "hash": "fee483be4b7a4ed545dfe58dab756084c7c14a2ba8e8c414e765d6ebb8695342"
+    },
+    {
+      "id": "owner-01",
+      "label": "伍梦华",
+      "role": "owner",
+      "owner": "伍梦华",
+      "hash": "264d8bb60f4e7149661f653eac0e609aa0860156b3f26b5dbb486ab3fa0b562c"
+    },
+    {
+      "id": "owner-02",
+      "label": "张西堂",
+      "role": "owner",
+      "owner": "张西堂",
+      "hash": "ca069fa44691020d128149c449dc141473b7fb1e5ce8a53466600feadb1bed69"
+    },
+    {
+      "id": "owner-03",
+      "label": "张颂元",
+      "role": "owner",
+      "owner": "张颂元",
+      "hash": "17c90d6ea800ed99a14a9dc0ad3dda7c4df8067eb7e4aaf6ac00a120a2210287"
+    },
+    {
+      "id": "owner-04",
+      "label": "朱昌玲",
+      "role": "owner",
+      "owner": "朱昌玲",
+      "hash": "8934dbebb45f250a4823c2d0fb9e474ad7cdff61128491f52da326c29ec83dbe"
+    },
+    {
+      "id": "owner-05",
+      "label": "李忠羊",
+      "role": "owner",
+      "owner": "李忠羊",
+      "hash": "0e8b30750b2748d0be9158a4b13b142358353c0ba7e7ba61c3eeb0160a47c25c"
+    },
+    {
+      "id": "owner-06",
+      "label": "李正文",
+      "role": "owner",
+      "owner": "李正文",
+      "hash": "24f24dd91421edcbaf64b0d644894b7f8730a00f15affff220ed6e02538087ff"
+    },
+    {
+      "id": "owner-07",
+      "label": "梅开",
+      "role": "owner",
+      "owner": "梅开",
+      "hash": "a7067aac89ea33812ec83221a2d782e4f90bcd9d5d922c107fd7ab319d691ec7"
+    },
+    {
+      "id": "owner-08",
+      "label": "留培杨",
+      "role": "owner",
+      "owner": "留培杨",
+      "hash": "2acb53c073d357a9b5022d7c2e7b652b6330d4a058a067e28c6022a35acc8ebe"
+    },
+    {
+      "id": "owner-09",
+      "label": "章林",
+      "role": "owner",
+      "owner": "章林",
+      "hash": "1a5f72ad6de382c958beddbf818432c04605403221cac1c191a29ad52a083d60"
+    },
+    {
+      "id": "owner-10",
+      "label": "胡剑卿",
+      "role": "owner",
+      "owner": "胡剑卿",
+      "hash": "0dfac0f46390d20f4517df15673877d079fbfb3deb026637093695dbe9623f57"
+    },
+    {
+      "id": "owner-11",
+      "label": "胡志辉",
+      "role": "owner",
+      "owner": "胡志辉",
+      "hash": "b693791d228cd80c7684ccddafa163c2024cc594182443a1cb8474a616ed1c0b"
+    },
+    {
+      "id": "owner-12",
+      "label": "蓝水燕",
+      "role": "owner",
+      "owner": "蓝水燕",
+      "hash": "a73c3dfb18019d84cf1db0738b093fabc7c6fbad58de2c7aeced5873f4b33fd6"
+    },
+    {
+      "id": "owner-13",
+      "label": "薛立柱",
+      "role": "owner",
+      "owner": "薛立柱",
+      "hash": "20a1338ec7afb1d4899ddd5471d28d94e5d65dc3962713e973a29182fee0c526"
+    },
+    {
+      "id": "owner-14",
+      "label": "黄东欢",
+      "role": "owner",
+      "owner": "黄东欢",
+      "hash": "621100f3ed2d776b21ba8884e3ce64f845ae63e8241fd7425e4d3f9033282b74"
+    }
+  ]
+}

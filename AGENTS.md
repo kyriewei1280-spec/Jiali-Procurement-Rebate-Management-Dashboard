@@ -4,12 +4,12 @@
 
 - Maintain the procurement rebate dashboard and its supporting documentation.
 - Default to Chinese for user-facing content and change summaries.
-- Keep the five user-requested views in order: 00 guide, 01 negotiation overview, 02 owner progress, 03 daily/weekly progress, and 04 supplier master. Owner and period supplier lists share the master columns and link to 04. Supplier detail remains a shared drilldown dialog.
+- Keep four authenticated business views in order: 01 negotiation overview, 02 owner progress, 03 daily/weekly progress, and 04 supplier master. The former guide is no longer a navigation destination. Owner and period supplier lists share the master columns and link to 04; supplier detail remains a shared dialog.
 - Read README.md, docs/METRICS.md, and docs/DATA.md before changing calculations or data.
 
 ## Editing and build
 
-- Edit src/dashboard.template.html, src/dashboard.css, and src/dashboard.js. Regenerate index.html with `python tools/build.py`; never edit only the generated HTML.
+- Edit src/dashboard.template.html, src/dashboard.css, src/dashboard.js, and src/auth.js. Regenerate index.html with `python tools/build.py`; never edit only the generated HTML.
 - Use data/snapshot.json as the normalized input. It contains real business records.
 - Preserve source sheet/row locators, units, as-of date, and source fingerprint.
 - Do not add source workbooks, full raw extracts, local filesystem paths, credentials, caches, browser profiles, or screenshots containing unrelated information.
@@ -46,7 +46,7 @@
 
 ## Validation
 
-Run `python tools/build.py`, `python tools/validate.py`, and `node --check src/dashboard.js` after relevant changes.
+Run `python tools/build.py`, `python tools/validate.py`, `node --check src/dashboard.js`, and `node --check src/auth.js` after relevant changes.
 
 For UI changes, verify 1440px, 1920px, and 390px: no page-level overflow; tables scroll locally; all navigation destinations are accessible; filters, owner drilldown, week windows, search, sorting, pagination, detail dialogs, and CSV export work. Check displayed totals against the normalized data and investigate differences against the source.
 
@@ -70,7 +70,20 @@ Browser presentation matches the former page viewed at 67% browser zoom. Keep it
 
 ## Approved 2026-10-28 update
 
-The user approved publication of the four-card overview and contribution-dialog repair. Preserve the 2026-10-27 business snapshot unless a data refresh is separately requested. Contribution dialog width/height must be based on the visible viewport, compensating for Browser root zoom .67. Keep its header and close control visible while the body scrolls; test Browser and Mobile before publishing.
+The four-card overview and contribution-dialog repair were approved. The current remote source has subsequently been refreshed to the 2026-10-28 main-sheet snapshot; preserve it during the login change and do not revert to the older 2026-10-27 local package. Contribution dialog dimensions compensate for Browser root zoom .67; keep the title and close control visible while its body scrolls.
+
+## Approved account display routing
+
+- User chose GitHub Pages with client-side display routing after acknowledging that all embedded/public data remains obtainable. Do not claim real server-enforced authorization or data secrecy. Do not migrate to Vercel or change repository visibility without a new user request.
+- Maintain 17 accounts for the current snapshot: 14 named owners and three administrator roles: overall-admin, mold-admin, operations-admin. Individual role is owner; match the exact full owner name, never surname.
+- Overall admin sees all data. Mold admin sees only non-BOM mold. Operations admin sees only non-BOM tooling/equipment/logistics, never mold. Owner accounts see their workstream aggregates in 01, and only their own records in 02/03/04.
+- For personal accounts, overview numbers open aggregate calculation/category tables, not other owners' supplier details. This is the explicit scope exception to the older all-supplier numeric-drilldown rule. Never pass personal rows off as reconciliation of a whole-workstream total.
+- Enforce display scopes consistently in dropdown options, search, supplier/owner links, dialogs, sort/pagination and exports. Period-plan denominator is the personal/admin detail scope, not the global snapshot summary. Changing a filter must not expand the account scope.
+- Clear rendered content, dialogs, filtering, search, table states and drilldown maps on logout or identity changes. Keep sign-in state in per-tab sessionStorage for at most 12 hours, invalidate on configuration version change, and tolerate denied browser storage. localStorage is only for presentation preference.
+- Keep plaintext passwords only in the local private delivery directory outside this repository. Public data/access.json contains account mappings and password-derived hashes only; never include plaintext in Git, docs, logs, screenshots, test artifacts or caseOS.
+- Account generation/rotation must preserve passwords not intentionally changed. A supplier/owner refresh requires explicit mapping review, not automatic unreviewed scope expansion.
+- Before publishing, execute meaningful local scope/stress checks for every account, at least five simultaneous independent sessions, desktop/mobile, repeated actions, wrong passwords, logout/refresh and denied storage. Do not load-test the public GitHub Pages host. Report actual results; a test plan is not proof of execution.
+- Preserve the current source values (including the latest 5,924 displayed overall target), source fingerprints and snapshot date. Older 5,922/5,303 examples are historical and must not become hardcoded live targets.
 
 ## 2026-10-29 first negotiation semantics
 

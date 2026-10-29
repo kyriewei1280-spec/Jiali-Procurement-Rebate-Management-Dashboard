@@ -2,9 +2,18 @@
 <html lang="zh-CN">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>采购降本 · 日清日结看板</title><style>/*__STYLES__*/</style></head>
 <body>
+<section id="loginScreen" class="login-screen shell" aria-labelledby="loginTitle">
+ <div class="login-brand"><div class="brand-mark" aria-hidden="true">采</div><span>采购降本管理</span></div>
+ <div class="login-layout">
+  <div class="login-intro"><p class="eyebrow">PROCUREMENT · YOUR WORKSPACE</p><h1 id="loginTitle">进入你的<br>采购工作台。</h1><p>输入分配给你的密码，查看对应的采购进展、谈判计划和供应商清单。</p><div class="login-modules" aria-label="工作台内容"><span><b>01</b>整体进展</span><span><b>02</b>负责人进展</span><span><b>03</b>谈判议程</span><span><b>04</b>供应商清单</span></div></div>
+  <div class="login-panel"><form id="loginForm" novalidate><p class="eyebrow">SIGN IN</p><h2>使用你的专属密码</h2><label for="loginPassword">登录密码</label><div class="login-password-wrap"><input id="loginPassword" type="password" autocomplete="current-password" autocapitalize="off" spellcheck="false" maxlength="128" aria-describedby="loginHelp loginError" placeholder="请输入密码" required><button type="button" id="toggleLoginPassword" aria-label="显示或隐藏密码" aria-pressed="false">显示</button></div><p id="loginHelp" class="login-help">密码区分大小写，请保留短横线。</p><p id="loginError" class="login-error" role="alert" aria-live="polite"></p><button type="submit" id="loginSubmit" class="primary">进入工作台</button><p class="login-contact">如需获取或重置密码，请联系采购看板管理员。</p></form></div>
+ </div>
+ <noscript><p class="login-error">请启用浏览器 JavaScript 后使用看板。</p></noscript>
+</section>
+<div id="dashboardShell" hidden>
 <header class="topbar shell">
- <div class="topline"><div class="identity"><div class="brand-mark" aria-hidden="true">采</div><div><strong>采购降本管理</strong><small>PROCUREMENT PERFORMANCE</small></div></div><div class="topmeta"><div class="presentation-switch" role="group" aria-label="显示模式"><button type="button" data-presentation-choice="browser" aria-pressed="true">Browser</button><button type="button" data-presentation-choice="mobile" aria-pressed="false">Mobile</button></div></div></div>
- <div class="nav-wrap" role="region" aria-label="看板页面导航" tabindex="0"><nav class="nav" aria-label="主导航"><button class="active" data-view="guide" aria-current="page"><em>00</em>功能说明</button><button data-view="overview"><em>01</em>整体谈判进展</button><button data-view="owners"><em>02</em>负责人进展</button><button data-view="plan"><em>03</em>每日 / 每周进度</button><button data-view="suppliers"><em>04</em>供应商返利清单</button></nav></div>
+ <div class="topline"><div class="identity"><div class="brand-mark" aria-hidden="true">采</div><div><strong>采购降本管理</strong><small>PROCUREMENT PERFORMANCE</small></div></div><div class="topmeta"><div class="account-controls"><span id="accountLabel"></span><button type="button" id="logoutBtn" class="ghost">退出登录</button></div><div class="presentation-switch" role="group" aria-label="显示模式"><button type="button" data-presentation-choice="browser" aria-pressed="true">Browser</button><button type="button" data-presentation-choice="mobile" aria-pressed="false">Mobile</button></div></div></div>
+ <div class="nav-wrap" role="region" aria-label="看板页面导航" tabindex="0"><nav class="nav" aria-label="主导航"><button class="active" data-view="overview" aria-current="page"><em>01</em>整体谈判进展</button><button data-view="owners"><em>02</em>负责人进展</button><button data-view="plan"><em>03</em>每日 / 每周进度</button><button data-view="suppliers"><em>04</em>供应商返利清单</button></nav></div>
 </header>
 <main class="shell">
  <div class="hero"><div><p class="eyebrow" id="eyebrow">DAILY EXECUTION · PROCUREMENT</p><h1 id="pageTitle">采购降本，进展一目了然。</h1><p id="pageDesc">目标分解到人，计划落到供应商，成果逐项确认。</p></div><div class="snapshot-tag">数据截至<strong id="asofLabel"></strong></div></div>
@@ -12,11 +21,15 @@
  <div id="app" aria-live="polite"></div>
  <footer class="page-footer"><div>金额：人民币万元 · 周期：周一至周日 · 按目标完成时间归集</div></footer>
 </main>
+</div>
 <dialog class="dialog" id="detailDialog" aria-labelledby="detailTitle"><div class="dialog-head"><h2 id="detailTitle">供应商详情</h2><button data-close="detailDialog" class="ghost" aria-label="关闭供应商详情">✕</button></div><div class="dialog-body" id="detailBody"></div></dialog>
 <dialog class="dialog" id="leverageDialog" aria-labelledby="leverageTitle"><div class="dialog-head"><h2 id="leverageTitle">谈判策略</h2><button data-close="leverageDialog" class="ghost" aria-label="关闭谈判策略">✕</button></div><div class="dialog-body" id="leverageBody"></div></dialog>
 <div id="sortMenu" class="sort-menu" popover="auto" role="group" aria-labelledby="sortMenuTitle"><div id="sortMenuTitle" class="sort-menu-title"></div><button data-sort-choice="1">↑ 升序（由小至大）</button><button data-sort-choice="-1">↓ 降序（由大至小）</button><button data-sort-choice="0">恢复默认顺序</button></div>
 <div id="toast" class="toast hidden" role="status"></div>
 <dialog class="dialog wide-dialog" id="contributionDialog" aria-labelledby="contributionTitle"><div class="dialog-head"><h2 id="contributionTitle">返利达成贡献</h2><button data-close="contributionDialog" class="ghost" aria-label="关闭贡献分析">✕</button></div><div class="dialog-body" id="contributionBody"></div></dialog>
 <script id="dataset" type="application/json">/*__DATA__*/</script>
+<script id="access-config" type="application/json">/*__ACCESS__*/</script>
+<script>/*__AUTH__*/</script>
 <script>/*__SCRIPT__*/</script>
 </body></html>
+
