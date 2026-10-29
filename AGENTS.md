@@ -71,3 +71,7 @@ Browser presentation matches the former page viewed at 67% browser zoom. Keep it
 ## Approved 2026-10-28 update
 
 The user approved publication of the four-card overview and contribution-dialog repair. Preserve the 2026-10-27 business snapshot unless a data refresh is separately requested. Contribution dialog width/height must be based on the visible viewport, compensating for Browser root zoom .67. Keep its header and close control visible while the body scrolls; test Browser and Mobile before publishing.
+
+## 2026-10-29 first negotiation semantics
+
+The user requested a new local HTML refresh. The current T header is 第一次谈判时间; metadata.actualDateMeaning records this change. Do not label every T-filled record fully completed. When I is later than T and results are below target or provisional, keep that supplier in its I-date daily/weekly plan and show the reviewed reason for further negotiation/follow-up. Do not invent second-round appointments. Keep one supplier record and count each ID once. Owner date-compliance labels now refer to on-time first negotiation, not final completion. 明曜's CNY 300,000 stays in source totals but is explicitly provisional per the user's confirmation. Preserve this disclosure until updated evidence confirms its status.

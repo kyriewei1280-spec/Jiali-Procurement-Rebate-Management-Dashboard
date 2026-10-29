@@ -336,3 +336,6 @@ html[data-presentation=mobile] #contributionDialog{
 .overview-reconciliation .table-scroll>table{min-width:900px;table-layout:auto}
 .overview-drill-count{margin:18px 0 10px;color:var(--muted)}
 html[data-presentation=mobile] .overview-kpi .overview-number-link{font:inherit;font-weight:600;display:inline-block;min-height:44px;line-height:44px}
+
+/* Later target dates remain visible after a first negotiation. */
+.follow-up-note{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:18px;line-height:1.6}.follow-up-note p{margin:6px 0 0;color:var(--text);font-weight:400}.follow-up-note .chip{white-space:normal}html[data-presentation=mobile] .follow-up-note{font-size:14px}

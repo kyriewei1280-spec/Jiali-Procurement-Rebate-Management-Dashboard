@@ -28,8 +28,10 @@ def refresh(source, sheet, asof):
     data = copy.deepcopy(before)
     book = read_book(source)
     rows = book[sheet]
-    assert [rows[1].get(c) for c in ('F','I','T','U','V')] == [
-        '5000万目标','目标完成时间','实际完成时间','实际返利金额','返利目标达成率']
+    assert [rows[1].get(c) for c in ('F','I','U','V')] == [
+        '5000万目标','目标完成时间','实际返利金额','返利目标达成率']
+    assert rows[1].get('T') in ('实际完成时间','第一次谈判时间'), 'Review changed T-column meaning'
+    first_negotiation = rows[1]['T'] == '第一次谈判时间'
     suppliers = [(i,v) for i,v in rows.items() if i>1 and v.get('C')]
     byname = {norm(v['C']):(i,v) for i,v in suppliers}
     assert len(byname)==len(suppliers), 'Duplicate supplier names require review'
@@ -54,7 +56,7 @@ def refresh(source, sheet, asof):
         r['history'] = [h for h in r['history'] if h['kind']!='谈判结果']
         if r['actualDate'] or numeric(r['actualAmount']) is not None:
             r['history'].append(dict(date=r['actualDate'],kind='谈判结果',amount=r['actualAmount'],target=r['targetAmount'],
-                text='主表已回填谈判结果；协议签署与财务兑现需另行确认。',locator=f"'{sheet}'!T{i}:V{i}"))
+                text=('主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。' if first_negotiation else '主表已回填谈判结果；协议签署与财务兑现需另行确认。'),locator=f"'{sheet}'!T{i}:V{i}"))
         r['history'].sort(key=lambda h:h['date'] or '9999')
     records, summary, meta = data['records'], data['summary'], data['metadata']
     summary.update(supplierCount=len(records),uniqueSupplierCount=len(byname),
@@ -81,6 +83,7 @@ def refresh(source, sheet, asof):
         sourceModified=datetime.fromtimestamp(source.stat().st_mtime,timezone(timedelta(hours=8))).isoformat(),
         primarySheet=sheet,rowRange=f'A2:V{lastrow}',
         sourceSelection=f'以{sheet}为唯一供应商汇总；辅助明细与目标池按 supportingSource 保留，不重复计入。')
+    meta['actualDateMeaning'] = 'firstNegotiation' if first_negotiation else 'completion'
     # Replace obsolete snapshot-specific gap statements with current main-sheet counts.
     keep=[i for i in data['issues'] if i['title'] not in ('模具目标尚未分配','non-BOM排期待补','空白结果待确认','原表公式缺口')]
     missing=[r for r in records if r['substream']=='non-BOM 模具' and r['targetAmount'] is None]

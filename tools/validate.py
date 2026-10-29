@@ -19,6 +19,8 @@ def main():
     date.fromisoformat(meta['asOf'])
     check(len({r['id'] for r in rows}) == len(rows), 'Duplicate record IDs')
     check(len(rows) == summary['supplierCount'], 'Supplier count mismatch')
+    check(len({r['supplier'] for r in rows}) == len(rows), 'Duplicate supplier names / follow-up rows')
+    check(meta.get('actualDateMeaning','completion') in ('completion','firstNegotiation'), 'Unknown negotiation date meaning')
     check(abs(sum(r['targetAmount'] for r in rows if r['targetAmount'] is not None) - summary['targetAmount']) < 0.01, 'Target total mismatch')
     for owner in summary['owners']:
         selected = [r for r in rows if r['owner'] == owner['owner']]
@@ -47,6 +49,11 @@ def main():
         results = [h for h in row['history'] if h['kind'] == '谈判结果']
         check(len(results) <= 1, 'Snapshot result double counted in history')
         check(not results or results[0]['amount'] == amount, 'History result mismatch')
+        if row.get('progressSummary'):
+            check(bool(row.get('progressAsOf') and row.get('progressLocator')), 'Progress provenance missing')
+            check(row['progressAsOf'] <= meta['asOf'], 'Future progress reported as current')
+        if row.get('actualAmountPending'):
+            check(amount is not None and '协商中' in row.get('progressSummary',''), 'Provisional amount must be disclosed')
     check(meta['displayDivisor'] == 10000 and meta['currency'] == 'CNY', 'Unexpected amount unit')
     index = (ROOT / 'index.html').read_text(encoding='utf-8')
     check(index == render(), 'index.html is stale; run python tools/build.py')
