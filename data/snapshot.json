@@ -1,17 +1,17 @@
 {
   "metadata": {
     "schemaVersion": "3.0",
-    "asOf": "2026-10-29",
-    "sourceFile": "2026年10月29日-采购日清日结任务追踪.xlsx",
-    "sourceSha256": "23b4590eba11f285be82d28387614f6af4e8d2160ad4f84833caf70dc5ac3e23",
-    "sourceModified": "2026-10-29T08:59:15+08:00",
+    "asOf": "2026-10-30",
+    "sourceFile": "2026年10月30日-采购日清日结任务追踪.xlsx",
+    "sourceSha256": "88be15e33c12e2ade31d83e1b2bb396b5d1cee73ef5ca9a136839a79cb5c9223",
+    "sourceModified": "2026-10-30T09:27:04+08:00",
     "currency": "CNY",
     "rawAmountUnit": "元",
     "displayDivisor": 10000,
     "displayAmountUnit": "万元",
     "annualReceiptPeriod": "2025-09 至 2026-08",
     "primarySheet": "采购5922清单",
-    "rowRange": "A2:V158",
+    "rowRange": "A2:X158",
     "sourceSelection": "以采购5922清单为唯一供应商汇总；辅助明细与目标池按 supportingSource 保留，不重复计入。",
     "associationAudit": {
       "unmatchedClaims": 154,
@@ -157,7 +157,8 @@
         "procurement-r72"
       ],
       "note": "沿用用户已核对的商谈摘要；明曜30万元仍在协商中。摘要日期不随主表刷新改写。"
-    }
+    },
+    "hasFollowUpColumns": true
   },
   "records": [
     {
@@ -169,7 +170,7 @@
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
       "sourceRow": 2,
-      "locator": "'采购5922清单'!A2:V2",
+      "locator": "'采购5922清单'!A2:X2",
       "plannedDate": "2026-11-05",
       "actualDate": null,
       "agreedAmount": null,
@@ -587,7 +588,9 @@
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
-      "nextStepLocator": "'采购日清日结 | 滚动更新'!M24"
+      "nextStepLocator": "'采购日清日结 | 滚动更新'!M24",
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r3",
@@ -598,7 +601,7 @@
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
       "sourceRow": 3,
-      "locator": "'采购5922清单'!A3:V3",
+      "locator": "'采购5922清单'!A3:X3",
       "plannedDate": "2026-10-26",
       "actualDate": "2026-10-26",
       "agreedAmount": null,
@@ -1227,7 +1230,7 @@
           "sharedNote": true
         }
       ],
-      "nextStep": "推进协议签订，跟进年底结清逾期款项的要求。",
+      "nextStep": "待回复",
       "annualReceiptAmount": 103200357.306334,
       "targetAmount": 2000000.0,
       "targetRebateRate": 0.019379777863203662,
@@ -1244,7 +1247,12 @@
       "actualAmount": 1000000.0,
       "sourceAchievementRate": 0.5,
       "achievementRate": 0.5,
-      "nextStepLocator": "'采购日清日结 | 滚动更新'!M20"
+      "nextStepLocator": "'采购5922清单'!W3:X3",
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W3:X3"
     },
     {
       "id": "procurement-r4",
@@ -1254,10 +1262,10 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 4,
-      "locator": "'采购5922清单'!A4:V4",
+      "sourceRow": 152,
+      "locator": "'采购5922清单'!A152:X152",
       "plannedDate": "2026-11-04",
-      "actualDate": null,
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -1357,8 +1365,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 2000000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T152:V152"
+        }
+      ],
+      "nextStep": "待回复；下次跟进日期：2026-11-06",
       "annualReceiptAmount": 92372298.48,
       "targetAmount": 2000000.0,
       "targetRebateRate": 0.021651512768549656,
@@ -1372,9 +1389,15 @@
       "deliveryIssue": "是",
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
+      "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": 0.0,
+      "nextFollowUpDate": "2026-11-06",
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复；下次跟进日期：2026-11-06",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W152:X152",
+      "nextStepLocator": "'采购5922清单'!W152:X152"
     },
     {
       "id": "procurement-r5",
@@ -1384,8 +1407,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 5,
-      "locator": "'采购5922清单'!A5:V5",
+      "sourceRow": 4,
+      "locator": "'采购5922清单'!A4:X4",
       "plannedDate": "2026-10-26",
       "actualDate": "2026-10-26",
       "agreedAmount": null,
@@ -3111,7 +3134,7 @@
           "amount": 1000000.0,
           "target": 1000000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T5:V5"
+          "locator": "'采购5922清单'!T4:V4"
         },
         {
           "date": "2026-10-27",
@@ -3121,7 +3144,7 @@
           "sharedNote": true
         }
       ],
-      "nextStep": "推进返利协议签订。",
+      "nextStep": "待回复",
       "annualReceiptAmount": 61564960.6387993,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.01624300559318124,
@@ -3138,7 +3161,12 @@
       "actualAmount": 1000000.0,
       "sourceAchievementRate": 1.0,
       "achievementRate": 1.0,
-      "nextStepLocator": "'采购日清日结 | 滚动更新'!M20"
+      "nextStepLocator": "'采购5922清单'!W4:X4",
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W4:X4"
     },
     {
       "id": "procurement-r6",
@@ -3148,8 +3176,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 6,
-      "locator": "'采购5922清单'!A6:V6",
+      "sourceRow": 5,
+      "locator": "'采购5922清单'!A5:X5",
       "plannedDate": "2026-11-06",
       "actualDate": null,
       "agreedAmount": null,
@@ -3486,7 +3514,9 @@
       "newProjectFlag": "是",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r7",
@@ -3496,8 +3526,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 7,
-      "locator": "'采购5922清单'!A7:V7",
+      "sourceRow": 6,
+      "locator": "'采购5922清单'!A6:X6",
       "plannedDate": "2026-11-06",
       "actualDate": "2026-10-28",
       "agreedAmount": null,
@@ -3931,22 +3961,22 @@
       "history": [
         {
           "date": "2026-10-28",
-          "kind": "谈判结果",
-          "amount": 0.0,
-          "target": 2000000.0,
-          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T7:V7"
-        },
-        {
-          "date": "2026-10-28",
           "kind": "商谈进展",
           "amount": null,
           "target": 2000000.0,
           "text": "负责人不在公司，预计下周回复；返利金额待确认。调整后的目标完成时间为11月6日。",
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+        },
+        {
+          "date": "2026-10-28",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 2000000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T6:V6"
         }
       ],
-      "nextStep": "负责人不在公司，需待下周回复；按主表目标完成日继续谈判／跟进。",
+      "nextStep": "待回复",
       "annualReceiptAmount": 49426422.2658003,
       "targetAmount": 2000000.0,
       "targetRebateRate": 0.040464187135467886,
@@ -3963,11 +3993,12 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "负责人不在公司，预计下周回复；返利金额待确认。调整后的目标完成时间为11月6日。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "followUpReason": "负责人不在公司，需待下周回复"
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W6:X6",
+      "nextStepLocator": "'采购5922清单'!W6:X6",
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r8",
@@ -3977,8 +4008,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 8,
-      "locator": "'采购5922清单'!A8:V8",
+      "sourceRow": 7,
+      "locator": "'采购5922清单'!A7:X7",
       "plannedDate": "2026-10-27",
       "actualDate": "2026-10-27",
       "agreedAmount": null,
@@ -4087,7 +4118,7 @@
           "amount": 0.0,
           "target": 1500000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T8:V8"
+          "locator": "'采购5922清单'!T7:V7"
         },
         {
           "date": "2026-10-28",
@@ -4098,7 +4129,7 @@
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
         }
       ],
-      "nextStep": "继续与股东协商返利，金额尚未确定，预计10月30日反馈。供应商反映行情上涨及现金结算与实际承兑结算差异；以长期合作、新材料开发争取支持。",
+      "nextStep": "待回复；下次跟进日期：2026-10-30",
       "annualReceiptAmount": 39759112.59,
       "targetAmount": 1500000.0,
       "targetRebateRate": 0.037727200188498976,
@@ -4115,10 +4146,12 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "继续与股东协商返利，金额尚未确定，预计10月30日反馈。供应商反映行情上涨及现金结算与实际承兑结算差异；以长期合作、新材料开发争取支持。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+      "progressSummary": "待回复；下次跟进日期：2026-10-30",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W7:X7",
+      "nextStepLocator": "'采购5922清单'!W7:X7",
+      "nextFollowUpDate": "2026-10-30",
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r9",
@@ -4128,8 +4161,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 9,
-      "locator": "'采购5922清单'!A9:V9",
+      "sourceRow": 8,
+      "locator": "'采购5922清单'!A8:X8",
       "plannedDate": "2026-11-03",
       "actualDate": null,
       "agreedAmount": null,
@@ -4484,7 +4517,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r10",
@@ -4494,10 +4529,10 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 10,
-      "locator": "'采购5922清单'!A10:V10",
+      "sourceRow": 153,
+      "locator": "'采购5922清单'!A153:X153",
       "plannedDate": "2026-10-27",
-      "actualDate": "2026-10-28",
+      "actualDate": "2026-10-27",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -4799,12 +4834,12 @@
           "sharedNote": true
         },
         {
-          "date": "2026-10-28",
+          "date": "2026-10-27",
           "kind": "谈判结果",
           "amount": 800000.0,
           "target": 1000000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T10:V10"
+          "locator": "'采购5922清单'!T153:V153"
         },
         {
           "date": "2026-10-28",
@@ -4815,7 +4850,7 @@
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
         }
       ],
-      "nextStep": "已谈成返利80万元，目标100万元，达成率80%；计划10月29日协议签字盖章。主要策略为采购份额、就近办厂、新项目支持及长期合作。",
+      "nextStep": "待回复",
       "annualReceiptAmount": 34718628.6946,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.028802980924057524,
@@ -4832,10 +4867,12 @@
       "actualAmount": 800000.0,
       "sourceAchievementRate": 0.8,
       "achievementRate": 0.8,
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "progressSummary": "已谈成返利80万元，目标100万元，达成率80%；计划10月29日协议签字盖章。主要策略为采购份额、就近办厂、新项目支持及长期合作。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+      "nextStepLocator": "'采购5922清单'!W153:X153",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W153:X153",
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r11",
@@ -4845,8 +4882,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 11,
-      "locator": "'采购5922清单'!A11:V11",
+      "sourceRow": 9,
+      "locator": "'采购5922清单'!A9:X9",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -5152,7 +5189,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r12",
@@ -5162,8 +5201,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 12,
-      "locator": "'采购5922清单'!A12:V12",
+      "sourceRow": 10,
+      "locator": "'采购5922清单'!A10:X10",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -5308,7 +5347,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r13",
@@ -5318,8 +5359,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 13,
-      "locator": "'采购5922清单'!A13:V13",
+      "sourceRow": 11,
+      "locator": "'采购5922清单'!A11:X11",
       "plannedDate": "2026-10-27",
       "actualDate": "2026-10-27",
       "agreedAmount": null,
@@ -5428,7 +5469,7 @@
           "amount": 0.0,
           "target": 500000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T13:V13"
+          "locator": "'采购5922清单'!T11:V11"
         },
         {
           "date": "2026-10-28",
@@ -5439,7 +5480,7 @@
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
         }
       ],
-      "nextStep": "继续与股东协商返利，金额尚未确定，预计10月30日反馈。供应商反映行情上涨及现金结算与实际承兑结算差异；以长期合作、新材料开发争取支持。",
+      "nextStep": "待回复；下次跟进日期：2026-10-30",
       "annualReceiptAmount": 29719616.88,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.016823904629015528,
@@ -5456,10 +5497,12 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "继续与股东协商返利，金额尚未确定，预计10月30日反馈。供应商反映行情上涨及现金结算与实际承兑结算差异；以长期合作、新材料开发争取支持。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+      "progressSummary": "待回复；下次跟进日期：2026-10-30",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W11:X11",
+      "nextStepLocator": "'采购5922清单'!W11:X11",
+      "nextFollowUpDate": "2026-10-30",
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r14",
@@ -5469,10 +5512,10 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 14,
-      "locator": "'采购5922清单'!A14:V14",
+      "sourceRow": 154,
+      "locator": "'采购5922清单'!A154:X154",
       "plannedDate": "2026-10-29",
-      "actualDate": null,
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -5787,8 +5830,17 @@
           "locator": "'2027年量产新项目定点清单 1021'!A95:M95"
         }
       ],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 1000000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T154:V154"
+        }
+      ],
+      "nextStep": "否，供应商预计10/31回复；下次跟进日期：2026-10-31",
       "annualReceiptAmount": 27963335.6191,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.03576111282364192,
@@ -5802,9 +5854,15 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "是",
-      "actualAmount": null,
+      "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": 0.0,
+      "nextFollowUpDate": "2026-10-31",
+      "agreementStatus": "否，供应商预计10/31回复",
+      "progressSummary": "否，供应商预计10/31回复；下次跟进日期：2026-10-31",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W154:X154",
+      "nextStepLocator": "'采购5922清单'!W154:X154"
     },
     {
       "id": "procurement-r15",
@@ -5814,8 +5872,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 15,
-      "locator": "'采购5922清单'!A15:V15",
+      "sourceRow": 12,
+      "locator": "'采购5922清单'!A12:X12",
       "plannedDate": "2026-11-03",
       "actualDate": null,
       "agreedAmount": null,
@@ -5921,7 +5979,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r16",
@@ -5931,8 +5991,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 16,
-      "locator": "'采购5922清单'!A16:V16",
+      "sourceRow": 13,
+      "locator": "'采购5922清单'!A13:X13",
       "plannedDate": "2026-10-27",
       "actualDate": "2026-10-27",
       "agreedAmount": null,
@@ -6100,8 +6160,8 @@
           "kind": "谈判结果",
           "amount": 300000.0,
           "target": 1000000.0,
-          "text": "主表保留30万元；用户确认仍在协商中，尚未最终确认。T栏为首次谈判日期。",
-          "locator": "'采购5922清单'!T16:V16"
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T13:V13"
         },
         {
           "date": "2026-10-28",
@@ -6112,7 +6172,7 @@
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
         }
       ],
-      "nextStep": "最新主表返利金额保留30万元；目前仍与供应商股东协商中，尚未最终确认。以采购份额、就近办厂、新项目支持及长期合作继续争取。",
+      "nextStep": "待回复",
       "annualReceiptAmount": 25706419.302199,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.038900789263732936,
@@ -6129,11 +6189,12 @@
       "actualAmount": 300000.0,
       "sourceAchievementRate": 0.3,
       "achievementRate": 0.3,
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "progressSummary": "最新主表返利金额保留30万元；目前仍与供应商股东协商中，尚未最终确认。以采购份额、就近办厂、新项目支持及长期合作继续争取。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "actualAmountPending": true
+      "nextStepLocator": "'采购5922清单'!W13:X13",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W13:X13",
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r17",
@@ -6143,8 +6204,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 17,
-      "locator": "'采购5922清单'!A17:V17",
+      "sourceRow": 14,
+      "locator": "'采购5922清单'!A14:X14",
       "plannedDate": "2026-11-03",
       "actualDate": null,
       "agreedAmount": null,
@@ -6444,7 +6505,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r18",
@@ -6454,8 +6517,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 18,
-      "locator": "'采购5922清单'!A18:V18",
+      "sourceRow": 15,
+      "locator": "'采购5922清单'!A15:X15",
       "plannedDate": "2026-11-04",
       "actualDate": null,
       "agreedAmount": null,
@@ -6600,7 +6663,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r19",
@@ -6610,8 +6675,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 19,
-      "locator": "'采购5922清单'!A19:V19",
+      "sourceRow": 16,
+      "locator": "'采购5922清单'!A16:X16",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -7187,7 +7252,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r20",
@@ -7197,8 +7264,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 20,
-      "locator": "'采购5922清单'!A20:V20",
+      "sourceRow": 17,
+      "locator": "'采购5922清单'!A17:X17",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -7620,7 +7687,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r21",
@@ -7630,8 +7699,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 21,
-      "locator": "'采购5922清单'!A21:V21",
+      "sourceRow": 18,
+      "locator": "'采购5922清单'!A18:X18",
       "plannedDate": "2026-10-26",
       "actualDate": "2026-10-26",
       "agreedAmount": null,
@@ -7858,7 +7927,7 @@
           "amount": 1700000.0,
           "target": 2000000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T21:V21"
+          "locator": "'采购5922清单'!T18:V18"
         },
         {
           "date": "2026-10-27",
@@ -7868,7 +7937,7 @@
           "sharedNote": true
         }
       ],
-      "nextStep": "推进协议签订，跟进未达目标差额。",
+      "nextStep": "待回复",
       "annualReceiptAmount": 22573210.4490999,
       "targetAmount": 2000000.0,
       "targetRebateRate": 0.08860060045556123,
@@ -7885,7 +7954,12 @@
       "actualAmount": 1700000.0,
       "sourceAchievementRate": 0.85,
       "achievementRate": 0.85,
-      "nextStepLocator": "'采购日清日结 | 滚动更新'!M20"
+      "nextStepLocator": "'采购5922清单'!W18:X18",
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W18:X18"
     },
     {
       "id": "procurement-r22",
@@ -7895,8 +7969,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 22,
-      "locator": "'采购5922清单'!A22:V22",
+      "sourceRow": 19,
+      "locator": "'采购5922清单'!A19:X19",
       "plannedDate": "2026-11-04",
       "actualDate": "2026-10-27",
       "agreedAmount": null,
@@ -8031,7 +8105,7 @@
           "amount": 0.0,
           "target": 1000000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T22:V22"
+          "locator": "'采购5922清单'!T19:V19"
         },
         {
           "date": "2026-10-28",
@@ -8042,7 +8116,7 @@
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
         }
       ],
-      "nextStep": "需向老板反馈，计划约总经理到访进一步洽谈；按主表目标完成日继续谈判／跟进。",
+      "nextStep": "待回复；下次跟进日期：2026-10-30",
       "annualReceiptAmount": 21231048.937,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.047100828742251605,
@@ -8059,11 +8133,12 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "返利金额待确认，预计10月30日回复；计划下周约总经理来公司进一步洽谈。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "followUpReason": "需向老板反馈，计划约总经理到访进一步洽谈"
+      "progressSummary": "待回复；下次跟进日期：2026-10-30",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W19:X19",
+      "nextStepLocator": "'采购5922清单'!W19:X19",
+      "nextFollowUpDate": "2026-10-30",
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r23",
@@ -8073,8 +8148,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 23,
-      "locator": "'采购5922清单'!A23:V23",
+      "sourceRow": 20,
+      "locator": "'采购5922清单'!A20:X20",
       "plannedDate": "2026-11-06",
       "actualDate": null,
       "agreedAmount": null,
@@ -8232,7 +8307,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r24",
@@ -8242,8 +8319,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 24,
-      "locator": "'采购5922清单'!A24:V24",
+      "sourceRow": 21,
+      "locator": "'采购5922清单'!A21:X21",
       "plannedDate": "2026-11-03",
       "actualDate": null,
       "agreedAmount": null,
@@ -8375,7 +8452,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r25",
@@ -8385,10 +8464,10 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 25,
-      "locator": "'采购5922清单'!A25:V25",
-      "plannedDate": "2026-10-29",
-      "actualDate": null,
+      "sourceRow": 155,
+      "locator": "'采购5922清单'!A155:X155",
+      "plannedDate": "2026-10-26",
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -8488,8 +8567,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 700000.0,
+          "target": 1000000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T155:V155"
+        }
+      ],
+      "nextStep": "是，待协议盖章寄回",
       "annualReceiptAmount": 20018163.1,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.04995463344985934,
@@ -8503,9 +8591,15 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "actualAmount": 700000.0,
+      "sourceAchievementRate": 0.7,
+      "achievementRate": 0.7,
+      "nextFollowUpDate": null,
+      "agreementStatus": "是，待协议盖章寄回",
+      "progressSummary": "是，待协议盖章寄回",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W155:X155",
+      "nextStepLocator": "'采购5922清单'!W155:X155"
     },
     {
       "id": "procurement-r26",
@@ -8515,8 +8609,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 26,
-      "locator": "'采购5922清单'!A26:V26",
+      "sourceRow": 22,
+      "locator": "'采购5922清单'!A22:X22",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -8661,7 +8755,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r27",
@@ -8671,8 +8767,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 27,
-      "locator": "'采购5922清单'!A27:V27",
+      "sourceRow": 23,
+      "locator": "'采购5922清单'!A23:X23",
       "plannedDate": "2026-11-06",
       "actualDate": null,
       "agreedAmount": null,
@@ -9005,7 +9101,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r28",
@@ -9015,8 +9113,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 28,
-      "locator": "'采购5922清单'!A28:V28",
+      "sourceRow": 24,
+      "locator": "'采购5922清单'!A24:X24",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -9383,7 +9481,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r29",
@@ -9393,8 +9493,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 29,
-      "locator": "'采购5922清单'!A29:V29",
+      "sourceRow": 25,
+      "locator": "'采购5922清单'!A25:X25",
       "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
@@ -9539,7 +9639,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r30",
@@ -9549,8 +9651,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 30,
-      "locator": "'采购5922清单'!A30:V30",
+      "sourceRow": 26,
+      "locator": "'采购5922清单'!A26:X26",
       "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
@@ -9695,7 +9797,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r31",
@@ -9705,8 +9809,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 31,
-      "locator": "'采购5922清单'!A31:V31",
+      "sourceRow": 27,
+      "locator": "'采购5922清单'!A27:X27",
       "plannedDate": "2026-11-03",
       "actualDate": null,
       "agreedAmount": null,
@@ -9851,7 +9955,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r32",
@@ -9861,8 +9967,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 32,
-      "locator": "'采购5922清单'!A32:V32",
+      "sourceRow": 28,
+      "locator": "'采购5922清单'!A28:X28",
       "plannedDate": "2026-10-27",
       "actualDate": "2026-10-27",
       "agreedAmount": null,
@@ -9933,10 +10039,10 @@
           "amount": 300000.0,
           "target": 300000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T32:V32"
+          "locator": "'采购5922清单'!T28:V28"
         }
       ],
-      "nextStep": null,
+      "nextStep": "待回复",
       "annualReceiptAmount": 13376025.7298999,
       "targetAmount": 300000.0,
       "targetRebateRate": 0.022428186522503425,
@@ -9952,7 +10058,13 @@
       "newProjectFlag": "否",
       "actualAmount": 300000.0,
       "sourceAchievementRate": 1.0,
-      "achievementRate": 1.0
+      "achievementRate": 1.0,
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W28:X28",
+      "nextStepLocator": "'采购5922清单'!W28:X28"
     },
     {
       "id": "procurement-r33",
@@ -9962,8 +10074,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 33,
-      "locator": "'采购5922清单'!A33:V33",
+      "sourceRow": 29,
+      "locator": "'采购5922清单'!A29:X29",
       "plannedDate": "2026-10-28",
       "actualDate": "2026-10-28",
       "agreedAmount": null,
@@ -10107,22 +10219,22 @@
       "history": [
         {
           "date": "2026-10-28",
-          "kind": "谈判结果",
-          "amount": 0.0,
-          "target": 500000.0,
-          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T33:V33"
-        },
-        {
-          "date": "2026-10-28",
           "kind": "商谈进展",
           "amount": null,
           "target": 500000.0,
           "text": "返利诉求已反馈至供应商公司领导，等待回复，金额尚未确定。",
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+        },
+        {
+          "date": "2026-10-28",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 500000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T29:V29"
         }
       ],
-      "nextStep": "返利诉求已反馈至供应商公司领导，等待回复，金额尚未确定。",
+      "nextStep": "待回复",
       "annualReceiptAmount": 12323027.27,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.04057444563295201,
@@ -10139,10 +10251,12 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "返利诉求已反馈至供应商公司领导，等待回复，金额尚未确定。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W29:X29",
+      "nextStepLocator": "'采购5922清单'!W29:X29",
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r34",
@@ -10152,8 +10266,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 34,
-      "locator": "'采购5922清单'!A34:V34",
+      "sourceRow": 30,
+      "locator": "'采购5922清单'!A30:X30",
       "plannedDate": "2026-10-28",
       "actualDate": "2026-10-28",
       "agreedAmount": null,
@@ -10907,22 +11021,22 @@
         },
         {
           "date": "2026-10-28",
-          "kind": "谈判结果",
-          "amount": 400000.0,
-          "target": 600000.0,
-          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T34:V34"
-        },
-        {
-          "date": "2026-10-28",
           "kind": "商谈进展",
           "amount": null,
           "target": 600000.0,
           "text": "已谈成返利40万元，目标60万元，达成率66.7%；已现场签字。",
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+        },
+        {
+          "date": "2026-10-28",
+          "kind": "谈判结果",
+          "amount": 400000.0,
+          "target": 600000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T30:V30"
         }
       ],
-      "nextStep": "已谈成返利40万元，目标60万元，达成率66.7%；已现场签字。",
+      "nextStep": "待回复",
       "annualReceiptAmount": 12237026.2658999,
       "targetAmount": 600000.0,
       "targetRebateRate": 0.04903152015551194,
@@ -10939,10 +11053,12 @@
       "actualAmount": 400000.0,
       "sourceAchievementRate": 0.6666666666666666,
       "achievementRate": 0.6666666666666666,
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "progressSummary": "已谈成返利40万元，目标60万元，达成率66.7%；已现场签字。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+      "nextStepLocator": "'采购5922清单'!W30:X30",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W30:X30",
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r35",
@@ -10952,8 +11068,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 35,
-      "locator": "'采购5922清单'!A35:V35",
+      "sourceRow": 31,
+      "locator": "'采购5922清单'!A31:X31",
       "plannedDate": "2026-11-03",
       "actualDate": null,
       "agreedAmount": null,
@@ -11113,7 +11229,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r36",
@@ -11123,8 +11241,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 36,
-      "locator": "'采购5922清单'!A36:V36",
+      "sourceRow": 32,
+      "locator": "'采购5922清单'!A32:X32",
       "plannedDate": "2026-11-05",
       "actualDate": null,
       "agreedAmount": null,
@@ -11269,7 +11387,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r37",
@@ -11279,8 +11399,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 37,
-      "locator": "'采购5922清单'!A37:V37",
+      "sourceRow": 33,
+      "locator": "'采购5922清单'!A33:X33",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -11426,7 +11546,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r38",
@@ -11436,8 +11558,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 38,
-      "locator": "'采购5922清单'!A38:V38",
+      "sourceRow": 34,
+      "locator": "'采购5922清单'!A34:X34",
       "plannedDate": "2026-11-03",
       "actualDate": "2026-10-28",
       "agreedAmount": null,
@@ -11568,22 +11690,22 @@
       "history": [
         {
           "date": "2026-10-28",
-          "kind": "谈判结果",
-          "amount": 0.0,
-          "target": 300000.0,
-          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T38:V38"
-        },
-        {
-          "date": "2026-10-28",
           "kind": "商谈进展",
           "amount": null,
           "target": 300000.0,
           "text": "供应商已反馈不支持返点，当前未争取到返利。",
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+        },
+        {
+          "date": "2026-10-28",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 300000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T34:V34"
         }
       ],
-      "nextStep": "首轮反馈不支持返点，仍需继续争取；按主表目标完成日继续谈判／跟进。",
+      "nextStep": "待回复",
       "annualReceiptAmount": 11190517.67,
       "targetAmount": 300000.0,
       "targetRebateRate": 0.02680841126807318,
@@ -11600,11 +11722,12 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "供应商已反馈不支持返点，当前未争取到返利。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "followUpReason": "首轮反馈不支持返点，仍需继续争取"
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W34:X34",
+      "nextStepLocator": "'采购5922清单'!W34:X34",
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r39",
@@ -11614,8 +11737,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 39,
-      "locator": "'采购5922清单'!A39:V39",
+      "sourceRow": 35,
+      "locator": "'采购5922清单'!A35:X35",
       "plannedDate": "2026-11-03",
       "actualDate": null,
       "agreedAmount": null,
@@ -11760,7 +11883,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r40",
@@ -11770,9 +11895,9 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 40,
-      "locator": "'采购5922清单'!A40:V40",
-      "plannedDate": "2026-10-29",
+      "sourceRow": 36,
+      "locator": "'采购5922清单'!A36:X36",
+      "plannedDate": "2026-11-03",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -11877,7 +12002,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r41",
@@ -11887,8 +12014,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 41,
-      "locator": "'采购5922清单'!A41:V41",
+      "sourceRow": 37,
+      "locator": "'采购5922清单'!A37:X37",
       "plannedDate": "2026-10-29",
       "actualDate": null,
       "agreedAmount": null,
@@ -12017,7 +12144,7 @@
       ],
       "projects": [],
       "history": [],
-      "nextStep": null,
+      "nextStep": "下次跟进日期：2026-10-30",
       "annualReceiptAmount": 10830683.72,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.046165137208900045,
@@ -12033,7 +12160,18 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": "2026-10-30",
+      "agreementStatus": null,
+      "progressSummary": "下次跟进日期：2026-10-30",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W37:X37",
+      "nextStepLocator": "'采购5922清单'!W37:X37",
+      "rebateProgressOverride": {
+        "asOf": "2026-10-30",
+        "bucket": "shortfall",
+        "source": "用户确认：按原定10/29计划纳入本次进度；下一次刷新重新梳理规则。"
+      }
     },
     {
       "id": "procurement-r42",
@@ -12043,8 +12181,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 42,
-      "locator": "'采购5922清单'!A42:V42",
+      "sourceRow": 38,
+      "locator": "'采购5922清单'!A38:X38",
       "plannedDate": "2026-11-03",
       "actualDate": null,
       "agreedAmount": null,
@@ -12071,7 +12209,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r43",
@@ -12081,8 +12221,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 43,
-      "locator": "'采购5922清单'!A43:V43",
+      "sourceRow": 39,
+      "locator": "'采购5922清单'!A39:X39",
       "plannedDate": "2026-11-04",
       "actualDate": null,
       "agreedAmount": null,
@@ -12175,7 +12315,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r44",
@@ -12185,8 +12327,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 44,
-      "locator": "'采购5922清单'!A44:V44",
+      "sourceRow": 40,
+      "locator": "'采购5922清单'!A40:X40",
       "plannedDate": "2026-10-29",
       "actualDate": null,
       "agreedAmount": null,
@@ -12237,7 +12379,7 @@
       ],
       "projects": [],
       "history": [],
-      "nextStep": null,
+      "nextStep": "下次跟进日期：2026-10-30",
       "annualReceiptAmount": 10439145.43,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.04789664090348821,
@@ -12253,7 +12395,18 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": "2026-10-30",
+      "agreementStatus": null,
+      "progressSummary": "下次跟进日期：2026-10-30",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W40:X40",
+      "nextStepLocator": "'采购5922清单'!W40:X40",
+      "rebateProgressOverride": {
+        "asOf": "2026-10-30",
+        "bucket": "pending",
+        "source": "用户确认：按原定10/29计划纳入本次进度；下一次刷新重新梳理规则。"
+      }
     },
     {
       "id": "procurement-r45",
@@ -12263,8 +12416,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 45,
-      "locator": "'采购5922清单'!A45:V45",
+      "sourceRow": 41,
+      "locator": "'采购5922清单'!A41:X41",
       "plannedDate": "2026-11-05",
       "actualDate": null,
       "agreedAmount": null,
@@ -12409,7 +12562,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r46",
@@ -12419,8 +12574,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 46,
-      "locator": "'采购5922清单'!A46:V46",
+      "sourceRow": 42,
+      "locator": "'采购5922清单'!A42:X42",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -12539,7 +12694,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r47",
@@ -12549,8 +12706,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 47,
-      "locator": "'采购5922清单'!A47:V47",
+      "sourceRow": 43,
+      "locator": "'采购5922清单'!A43:X43",
       "plannedDate": "2026-10-28",
       "actualDate": "2026-10-28",
       "agreedAmount": null,
@@ -12563,22 +12720,22 @@
       "history": [
         {
           "date": "2026-10-28",
-          "kind": "谈判结果",
-          "amount": 0.0,
-          "target": 500000.0,
-          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T47:V47"
-        },
-        {
-          "date": "2026-10-28",
           "kind": "商谈进展",
           "amount": null,
           "target": 500000.0,
           "text": "供应商正与股东协商，预计10月29日回复，返利金额待确认。涉及货款支持及同等价格下采购份额支持。",
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+        },
+        {
+          "date": "2026-10-28",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 500000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T43:V43"
         }
       ],
-      "nextStep": "供应商正与股东协商，预计10月29日回复，返利金额待确认。涉及货款支持及同等价格下采购份额支持。",
+      "nextStep": "待回复；下次跟进日期：2026-10-30",
       "annualReceiptAmount": 10016747.0421,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.04991640478675556,
@@ -12595,10 +12752,12 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "供应商正与股东协商，预计10月29日回复，返利金额待确认。涉及货款支持及同等价格下采购份额支持。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+      "progressSummary": "待回复；下次跟进日期：2026-10-30",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W43:X43",
+      "nextStepLocator": "'采购5922清单'!W43:X43",
+      "nextFollowUpDate": "2026-10-30",
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r48",
@@ -12608,8 +12767,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 48,
-      "locator": "'采购5922清单'!A48:V48",
+      "sourceRow": 44,
+      "locator": "'采购5922清单'!A44:X44",
       "plannedDate": "2026-11-04",
       "actualDate": null,
       "agreedAmount": null,
@@ -12742,7 +12901,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r49",
@@ -12752,8 +12913,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 49,
-      "locator": "'采购5922清单'!A49:V49",
+      "sourceRow": 45,
+      "locator": "'采购5922清单'!A45:X45",
       "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
@@ -12885,7 +13046,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r50",
@@ -12895,8 +13058,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 50,
-      "locator": "'采购5922清单'!A50:V50",
+      "sourceRow": 46,
+      "locator": "'采购5922清单'!A46:X46",
       "plannedDate": "2026-11-05",
       "actualDate": null,
       "agreedAmount": null,
@@ -13041,7 +13204,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r51",
@@ -13051,8 +13216,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 51,
-      "locator": "'采购5922清单'!A51:V51",
+      "sourceRow": 47,
+      "locator": "'采购5922清单'!A47:X47",
       "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
@@ -13570,7 +13735,9 @@
       "newProjectFlag": "是",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r52",
@@ -13580,8 +13747,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 52,
-      "locator": "'采购5922清单'!A52:V52",
+      "sourceRow": 48,
+      "locator": "'采购5922清单'!A48:X48",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -13726,7 +13893,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r53",
@@ -13736,8 +13905,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 53,
-      "locator": "'采购5922清单'!A53:V53",
+      "sourceRow": 49,
+      "locator": "'采购5922清单'!A49:X49",
       "plannedDate": "2026-10-28",
       "actualDate": "2026-10-28",
       "agreedAmount": null,
@@ -14063,22 +14232,22 @@
       "history": [
         {
           "date": "2026-10-28",
-          "kind": "谈判结果",
-          "amount": 0.0,
-          "target": 500000.0,
-          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T53:V53"
-        },
-        {
-          "date": "2026-10-28",
           "kind": "商谈进展",
           "amount": null,
           "target": 500000.0,
           "text": "供应商预计10月30日反馈，返利金额尚未确定。",
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+        },
+        {
+          "date": "2026-10-28",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 500000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T49:V49"
         }
       ],
-      "nextStep": "供应商预计10月30日反馈，返利金额尚未确定。",
+      "nextStep": "待回复；下次跟进日期：2026-10-30",
       "annualReceiptAmount": 8154408.91910001,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.061316522749902055,
@@ -14095,10 +14264,12 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "供应商预计10月30日反馈，返利金额尚未确定。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+      "progressSummary": "待回复；下次跟进日期：2026-10-30",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W49:X49",
+      "nextStepLocator": "'采购5922清单'!W49:X49",
+      "nextFollowUpDate": "2026-10-30",
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r54",
@@ -14108,10 +14279,10 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 54,
-      "locator": "'采购5922清单'!A54:V54",
+      "sourceRow": 156,
+      "locator": "'采购5922清单'!A156:X156",
       "plannedDate": "2026-11-06",
-      "actualDate": null,
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -14119,8 +14290,17 @@
       "claims": [],
       "qualityRecords": [],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 200000.0,
+          "target": 200000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T156:V156"
+        }
+      ],
+      "nextStep": "是，已盖章寄至公司",
       "annualReceiptAmount": 7320749.46,
       "targetAmount": 200000.0,
       "targetRebateRate": 0.02731960724687879,
@@ -14134,9 +14314,15 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "actualAmount": 200000.0,
+      "sourceAchievementRate": 1.0,
+      "achievementRate": 1.0,
+      "nextFollowUpDate": null,
+      "agreementStatus": "是，已盖章寄至公司",
+      "progressSummary": "是，已盖章寄至公司",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W156:X156",
+      "nextStepLocator": "'采购5922清单'!W156:X156"
     },
     {
       "id": "procurement-r55",
@@ -14146,10 +14332,10 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 55,
-      "locator": "'采购5922清单'!A55:V55",
-      "plannedDate": "2026-10-29",
-      "actualDate": "2026-10-28",
+      "sourceRow": 50,
+      "locator": "'采购5922清单'!A50:X50",
+      "plannedDate": "2026-10-28",
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -14427,22 +14613,22 @@
       "history": [
         {
           "date": "2026-10-28",
-          "kind": "谈判结果",
-          "amount": 0.0,
-          "target": 500000.0,
-          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T55:V55"
-        },
-        {
-          "date": "2026-10-28",
           "kind": "商谈进展",
           "amount": null,
           "target": 500000.0,
           "text": "供应商预计10月29日反馈，返利金额尚未确定。",
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+        },
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 500000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T50:V50"
         }
       ],
-      "nextStep": "供应商尚待反馈；按主表目标完成日继续谈判／跟进。",
+      "nextStep": "否，供应商不支持返点；下次跟进日期：2026-10-29",
       "annualReceiptAmount": 6975435.01100001,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.07168011732766745,
@@ -14459,11 +14645,12 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "供应商预计10月29日反馈，返利金额尚未确定。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "followUpReason": "供应商尚待反馈"
+      "progressSummary": "否，供应商不支持返点；下次跟进日期：2026-10-29",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W50:X50",
+      "nextStepLocator": "'采购5922清单'!W50:X50",
+      "nextFollowUpDate": "2026-10-29",
+      "agreementStatus": "否，供应商不支持返点"
     },
     {
       "id": "procurement-r56",
@@ -14473,8 +14660,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 56,
-      "locator": "'采购5922清单'!A56:V56",
+      "sourceRow": 51,
+      "locator": "'采购5922清单'!A51:X51",
       "plannedDate": "2026-11-05",
       "actualDate": null,
       "agreedAmount": null,
@@ -14619,7 +14806,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r57",
@@ -14629,8 +14818,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 57,
-      "locator": "'采购5922清单'!A57:V57",
+      "sourceRow": 52,
+      "locator": "'采购5922清单'!A52:X52",
       "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
@@ -14775,7 +14964,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r58",
@@ -14785,8 +14976,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 58,
-      "locator": "'采购5922清单'!A58:V58",
+      "sourceRow": 53,
+      "locator": "'采购5922清单'!A53:X53",
       "plannedDate": "2026-11-04",
       "actualDate": null,
       "agreedAmount": null,
@@ -15157,7 +15348,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r59",
@@ -15167,10 +15360,10 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 59,
-      "locator": "'采购5922清单'!A59:V59",
+      "sourceRow": 157,
+      "locator": "'采购5922清单'!A157:X157",
       "plannedDate": "2026-11-04",
-      "actualDate": null,
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -15309,8 +15502,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 500000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T157:V157"
+        }
+      ],
+      "nextStep": "待回复；下次跟进日期：2026-11-02",
       "annualReceiptAmount": 6176488.32100002,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.0809521485372203,
@@ -15324,9 +15526,15 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
+      "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": 0.0,
+      "nextFollowUpDate": "2026-11-02",
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复；下次跟进日期：2026-11-02",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W157:X157",
+      "nextStepLocator": "'采购5922清单'!W157:X157"
     },
     {
       "id": "procurement-r60",
@@ -15336,8 +15544,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 60,
-      "locator": "'采购5922清单'!A60:V60",
+      "sourceRow": 54,
+      "locator": "'采购5922清单'!A54:X54",
       "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
@@ -15443,7 +15651,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r61",
@@ -15453,8 +15663,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 61,
-      "locator": "'采购5922清单'!A61:V61",
+      "sourceRow": 55,
+      "locator": "'采购5922清单'!A55:X55",
       "plannedDate": "2026-11-06",
       "actualDate": null,
       "agreedAmount": null,
@@ -15481,7 +15691,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r62",
@@ -15491,8 +15703,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 62,
-      "locator": "'采购5922清单'!A62:V62",
+      "sourceRow": 56,
+      "locator": "'采购5922清单'!A56:X56",
       "plannedDate": "2026-11-04",
       "actualDate": null,
       "agreedAmount": null,
@@ -15824,7 +16036,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r63",
@@ -15834,8 +16048,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 63,
-      "locator": "'采购5922清单'!A63:V63",
+      "sourceRow": 57,
+      "locator": "'采购5922清单'!A57:X57",
       "plannedDate": "2026-11-03",
       "actualDate": null,
       "agreedAmount": null,
@@ -16008,7 +16222,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r64",
@@ -16018,8 +16234,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 64,
-      "locator": "'采购5922清单'!A64:V64",
+      "sourceRow": 58,
+      "locator": "'采购5922清单'!A58:X58",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -16086,7 +16302,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r65",
@@ -16096,10 +16314,10 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 65,
-      "locator": "'采购5922清单'!A65:V65",
+      "sourceRow": 158,
+      "locator": "'采购5922清单'!A158:X158",
       "plannedDate": "2026-10-29",
-      "actualDate": null,
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -16268,8 +16486,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 500000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T158:V158"
+        }
+      ],
+      "nextStep": "否，供应商不支持返点",
       "annualReceiptAmount": 4954537.63700001,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.10091759042580443,
@@ -16283,9 +16510,15 @@
       "deliveryIssue": null,
       "qualityIssue": "是",
       "newProjectFlag": "否",
-      "actualAmount": null,
+      "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": 0.0,
+      "nextFollowUpDate": null,
+      "agreementStatus": "否，供应商不支持返点",
+      "progressSummary": "否，供应商不支持返点",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W158:X158",
+      "nextStepLocator": "'采购5922清单'!W158:X158"
     },
     {
       "id": "procurement-r66",
@@ -16295,8 +16528,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 66,
-      "locator": "'采购5922清单'!A66:V66",
+      "sourceRow": 59,
+      "locator": "'采购5922清单'!A59:X59",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -16532,7 +16765,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r67",
@@ -16542,8 +16777,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 67,
-      "locator": "'采购5922清单'!A67:V67",
+      "sourceRow": 60,
+      "locator": "'采购5922清单'!A60:X60",
       "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
@@ -16610,7 +16845,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r68",
@@ -16620,8 +16857,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 68,
-      "locator": "'采购5922清单'!A68:V68",
+      "sourceRow": 61,
+      "locator": "'采购5922清单'!A61:X61",
       "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
@@ -16648,7 +16885,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r69",
@@ -16658,8 +16897,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 69,
-      "locator": "'采购5922清单'!A69:V69",
+      "sourceRow": 62,
+      "locator": "'采购5922清单'!A62:X62",
       "plannedDate": "2026-11-04",
       "actualDate": null,
       "agreedAmount": null,
@@ -16713,7 +16952,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r70",
@@ -16723,8 +16964,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 70,
-      "locator": "'采购5922清单'!A70:V70",
+      "sourceRow": 63,
+      "locator": "'采购5922清单'!A63:X63",
       "plannedDate": "2026-10-28",
       "actualDate": "2026-10-28",
       "agreedAmount": null,
@@ -16816,22 +17057,22 @@
       "history": [
         {
           "date": "2026-10-28",
-          "kind": "谈判结果",
-          "amount": 0.0,
-          "target": 300000.0,
-          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T70:V70"
-        },
-        {
-          "date": "2026-10-28",
           "kind": "商谈进展",
           "amount": null,
           "target": 300000.0,
           "text": "供应商预计10月29日反馈，返利金额尚未确定。",
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+        },
+        {
+          "date": "2026-10-28",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 300000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T63:V63"
         }
       ],
-      "nextStep": "供应商预计10月29日反馈，返利金额尚未确定。",
+      "nextStep": "待回复",
       "annualReceiptAmount": 3670312.68,
       "targetAmount": 300000.0,
       "targetRebateRate": 0.081736905314563,
@@ -16848,10 +17089,12 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "供应商预计10月29日反馈，返利金额尚未确定。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W63:X63",
+      "nextStepLocator": "'采购5922清单'!W63:X63",
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r71",
@@ -16861,8 +17104,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 71,
-      "locator": "'采购5922清单'!A71:V71",
+      "sourceRow": 64,
+      "locator": "'采购5922清单'!A64:X64",
       "plannedDate": "2026-11-05",
       "actualDate": null,
       "agreedAmount": null,
@@ -17111,7 +17354,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r72",
@@ -17121,8 +17366,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 72,
-      "locator": "'采购5922清单'!A72:V72",
+      "sourceRow": 65,
+      "locator": "'采购5922清单'!A65:X65",
       "plannedDate": "2026-10-28",
       "actualDate": "2026-10-28",
       "agreedAmount": null,
@@ -17253,22 +17498,22 @@
       "history": [
         {
           "date": "2026-10-28",
-          "kind": "谈判结果",
-          "amount": 0.0,
-          "target": 300000.0,
-          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
-          "locator": "'采购5922清单'!T72:V72"
-        },
-        {
-          "date": "2026-10-28",
           "kind": "商谈进展",
           "amount": null,
           "target": 300000.0,
           "text": "供应商预计10月29日反馈，返利金额尚未确定；涉及LED物料份额支持。供应商诉求为货款支持、集中下单及扩大份额。",
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+        },
+        {
+          "date": "2026-10-28",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 300000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T65:V65"
         }
       ],
-      "nextStep": "供应商预计10月29日反馈，返利金额尚未确定；涉及LED物料份额支持。供应商诉求为货款支持、集中下单及扩大份额。",
+      "nextStep": "待回复",
       "annualReceiptAmount": 3017374.395,
       "targetAmount": 300000.0,
       "targetRebateRate": 0.09942418829334568,
@@ -17285,10 +17530,12 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "供应商预计10月29日反馈，返利金额尚未确定；涉及LED物料份额支持。供应商诉求为货款支持、集中下单及扩大份额。",
-      "progressAsOf": "2026-10-28",
-      "progressLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图",
-      "nextStepLocator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W65:X65",
+      "nextStepLocator": "'采购5922清单'!W65:X65",
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复"
     },
     {
       "id": "procurement-r73",
@@ -17298,8 +17545,8 @@
       "workstream": "BOM",
       "substream": "BOM",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 73,
-      "locator": "'采购5922清单'!A73:V73",
+      "sourceRow": 66,
+      "locator": "'采购5922清单'!A66:X66",
       "plannedDate": "2026-10-31",
       "actualDate": null,
       "agreedAmount": null,
@@ -17326,7 +17573,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r74",
@@ -17336,10 +17585,10 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 74,
-      "locator": "'采购5922清单'!A74:V74",
-      "plannedDate": null,
-      "actualDate": null,
+      "sourceRow": 67,
+      "locator": "'采购5922清单'!A67:X67",
+      "plannedDate": "2026-10-29",
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -17452,8 +17701,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 1384488.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T67:V67"
+        }
+      ],
+      "nextStep": "待回复；下次跟进日期：2026-10-30",
       "annualReceiptAmount": 38458000.0,
       "targetAmount": 1384488.0,
       "targetRebateRate": 0.036,
@@ -17467,9 +17725,15 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
+      "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": 0.0,
+      "nextFollowUpDate": "2026-10-30",
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复；下次跟进日期：2026-10-30",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W67:X67",
+      "nextStepLocator": "'采购5922清单'!W67:X67"
     },
     {
       "id": "procurement-r75",
@@ -17479,10 +17743,10 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 75,
-      "locator": "'采购5922清单'!A75:V75",
-      "plannedDate": null,
-      "actualDate": null,
+      "sourceRow": 68,
+      "locator": "'采购5922清单'!A68:X68",
+      "plannedDate": "2026-10-29",
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -17504,8 +17768,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 308920.0,
+          "target": 556056.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T68:V68"
+        }
+      ],
+      "nextStep": "待回复",
       "annualReceiptAmount": 15446000.0,
       "targetAmount": 556056.0,
       "targetRebateRate": 0.036,
@@ -17519,9 +17792,15 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "actualAmount": 308920.0,
+      "sourceAchievementRate": 0.5555555555555556,
+      "achievementRate": 0.5555555555555556,
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W68:X68",
+      "nextStepLocator": "'采购5922清单'!W68:X68"
     },
     {
       "id": "procurement-r76",
@@ -17531,10 +17810,10 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 76,
-      "locator": "'采购5922清单'!A76:V76",
-      "plannedDate": null,
-      "actualDate": null,
+      "sourceRow": 69,
+      "locator": "'采购5922清单'!A69:X69",
+      "plannedDate": "2026-10-29",
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -17542,8 +17821,17 @@
       "claims": [],
       "qualityRecords": [],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 70200.0,
+          "target": 505439.99999999994,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T69:V69"
+        }
+      ],
+      "nextStep": "待回复",
       "annualReceiptAmount": 14040000.0,
       "targetAmount": 505439.99999999994,
       "targetRebateRate": 0.036,
@@ -17557,9 +17845,15 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "actualAmount": 70200.0,
+      "sourceAchievementRate": 0.1388888888888889,
+      "achievementRate": 0.1388888888888889,
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W69:X69",
+      "nextStepLocator": "'采购5922清单'!W69:X69"
     },
     {
       "id": "procurement-r77",
@@ -17569,9 +17863,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 77,
-      "locator": "'采购5922清单'!A77:V77",
-      "plannedDate": null,
+      "sourceRow": 70,
+      "locator": "'采购5922清单'!A70:X70",
+      "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -17597,7 +17891,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r78",
@@ -17607,9 +17903,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 78,
-      "locator": "'采购5922清单'!A78:V78",
-      "plannedDate": null,
+      "sourceRow": 71,
+      "locator": "'采购5922清单'!A71:X71",
+      "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -17649,7 +17945,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r79",
@@ -17659,9 +17957,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 79,
-      "locator": "'采购5922清单'!A79:V79",
-      "plannedDate": null,
+      "sourceRow": 72,
+      "locator": "'采购5922清单'!A72:X72",
+      "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -17701,7 +17999,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r80",
@@ -17711,9 +18011,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 80,
-      "locator": "'采购5922清单'!A80:V80",
-      "plannedDate": null,
+      "sourceRow": 73,
+      "locator": "'采购5922清单'!A73:X73",
+      "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -17739,7 +18039,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r81",
@@ -17749,9 +18051,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 81,
-      "locator": "'采购5922清单'!A81:V81",
-      "plannedDate": null,
+      "sourceRow": 74,
+      "locator": "'采购5922清单'!A74:X74",
+      "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -17910,7 +18212,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r82",
@@ -17920,9 +18224,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 82,
-      "locator": "'采购5922清单'!A82:V82",
-      "plannedDate": null,
+      "sourceRow": 75,
+      "locator": "'采购5922清单'!A75:X75",
+      "plannedDate": "2026-10-31",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -17948,7 +18252,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r83",
@@ -17958,9 +18264,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 83,
-      "locator": "'采购5922清单'!A83:V83",
-      "plannedDate": null,
+      "sourceRow": 76,
+      "locator": "'采购5922清单'!A76:X76",
+      "plannedDate": "2026-10-31",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -17986,7 +18292,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r84",
@@ -17996,9 +18304,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 84,
-      "locator": "'采购5922清单'!A84:V84",
-      "plannedDate": null,
+      "sourceRow": 77,
+      "locator": "'采购5922清单'!A77:X77",
+      "plannedDate": "2026-10-31",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -18024,7 +18332,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r85",
@@ -18034,8 +18344,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 85,
-      "locator": "'采购5922清单'!A85:V85",
+      "sourceRow": 78,
+      "locator": "'采购5922清单'!A78:X78",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18062,7 +18372,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r86",
@@ -18072,8 +18384,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 86,
-      "locator": "'采购5922清单'!A86:V86",
+      "sourceRow": 79,
+      "locator": "'采购5922清单'!A79:X79",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18100,7 +18412,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r87",
@@ -18110,9 +18424,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 87,
-      "locator": "'采购5922清单'!A87:V87",
-      "plannedDate": null,
+      "sourceRow": 80,
+      "locator": "'采购5922清单'!A80:X80",
+      "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -18138,7 +18452,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r88",
@@ -18148,9 +18464,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 88,
-      "locator": "'采购5922清单'!A88:V88",
-      "plannedDate": null,
+      "sourceRow": 81,
+      "locator": "'采购5922清单'!A81:X81",
+      "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -18176,7 +18492,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r89",
@@ -18186,9 +18504,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 89,
-      "locator": "'采购5922清单'!A89:V89",
-      "plannedDate": null,
+      "sourceRow": 82,
+      "locator": "'采购5922清单'!A82:X82",
+      "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -18228,7 +18546,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r90",
@@ -18238,9 +18558,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 90,
-      "locator": "'采购5922清单'!A90:V90",
-      "plannedDate": null,
+      "sourceRow": 83,
+      "locator": "'采购5922清单'!A83:X83",
+      "plannedDate": "2026-11-01",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -18266,7 +18586,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r91",
@@ -18276,8 +18598,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 91,
-      "locator": "'采购5922清单'!A91:V91",
+      "sourceRow": 84,
+      "locator": "'采购5922清单'!A84:X84",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18304,7 +18626,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r92",
@@ -18314,9 +18638,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 92,
-      "locator": "'采购5922清单'!A92:V92",
-      "plannedDate": null,
+      "sourceRow": 85,
+      "locator": "'采购5922清单'!A85:X85",
+      "plannedDate": "2026-11-01",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -18342,7 +18666,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r93",
@@ -18352,8 +18678,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 93,
-      "locator": "'采购5922清单'!A93:V93",
+      "sourceRow": 86,
+      "locator": "'采购5922清单'!A86:X86",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18380,7 +18706,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r94",
@@ -18390,8 +18718,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 94,
-      "locator": "'采购5922清单'!A94:V94",
+      "sourceRow": 87,
+      "locator": "'采购5922清单'!A87:X87",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18404,8 +18732,8 @@
       "history": [],
       "nextStep": null,
       "annualReceiptAmount": 1380000.0,
-      "targetAmount": 49679.99999999999,
-      "targetRebateRate": 0.036,
+      "targetAmount": 0.0,
+      "targetRebateRate": 0.0,
       "historicalPriceReductionRate": "不适用",
       "historicalPriceIncreaseAmount": null,
       "shareOfSupplierSales": null,
@@ -18418,7 +18746,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r95",
@@ -18428,9 +18758,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 95,
-      "locator": "'采购5922清单'!A95:V95",
-      "plannedDate": null,
+      "sourceRow": 88,
+      "locator": "'采购5922清单'!A88:X88",
+      "plannedDate": "2026-11-01",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -18442,8 +18772,8 @@
       "history": [],
       "nextStep": null,
       "annualReceiptAmount": 1150000.0,
-      "targetAmount": 41400.0,
-      "targetRebateRate": 0.036,
+      "targetAmount": 57500.0,
+      "targetRebateRate": 0.05,
       "historicalPriceReductionRate": "不适用",
       "historicalPriceIncreaseAmount": null,
       "shareOfSupplierSales": null,
@@ -18456,7 +18786,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r96",
@@ -18466,9 +18798,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 96,
-      "locator": "'采购5922清单'!A96:V96",
-      "plannedDate": null,
+      "sourceRow": 89,
+      "locator": "'采购5922清单'!A89:X89",
+      "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -18494,7 +18826,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r97",
@@ -18504,9 +18838,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 97,
-      "locator": "'采购5922清单'!A97:V97",
-      "plannedDate": null,
+      "sourceRow": 90,
+      "locator": "'采购5922清单'!A90:X90",
+      "plannedDate": "2026-11-01",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -18532,7 +18866,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r98",
@@ -18542,9 +18878,9 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 98,
-      "locator": "'采购5922清单'!A98:V98",
-      "plannedDate": null,
+      "sourceRow": 91,
+      "locator": "'采购5922清单'!A91:X91",
+      "plannedDate": "2026-11-02",
       "actualDate": null,
       "agreedAmount": null,
       "realizedAmount": null,
@@ -18570,7 +18906,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r99",
@@ -18580,8 +18918,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 99,
-      "locator": "'采购5922清单'!A99:V99",
+      "sourceRow": 92,
+      "locator": "'采购5922清单'!A92:X92",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18608,7 +18946,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r100",
@@ -18618,8 +18958,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 100,
-      "locator": "'采购5922清单'!A100:V100",
+      "sourceRow": 93,
+      "locator": "'采购5922清单'!A93:X93",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18646,7 +18986,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r101",
@@ -18656,8 +18998,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 101,
-      "locator": "'采购5922清单'!A101:V101",
+      "sourceRow": 94,
+      "locator": "'采购5922清单'!A94:X94",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18684,7 +19026,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r102",
@@ -18694,8 +19038,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 102,
-      "locator": "'采购5922清单'!A102:V102",
+      "sourceRow": 95,
+      "locator": "'采购5922清单'!A95:X95",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18722,7 +19066,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r103",
@@ -18732,8 +19078,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 103,
-      "locator": "'采购5922清单'!A103:V103",
+      "sourceRow": 96,
+      "locator": "'采购5922清单'!A96:X96",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18746,8 +19092,8 @@
       "history": [],
       "nextStep": null,
       "annualReceiptAmount": 410000.0,
-      "targetAmount": 14759.999999999998,
-      "targetRebateRate": 0.036,
+      "targetAmount": 0.0,
+      "targetRebateRate": 0.0,
       "historicalPriceReductionRate": "不适用",
       "historicalPriceIncreaseAmount": null,
       "shareOfSupplierSales": null,
@@ -18760,7 +19106,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r104",
@@ -18770,8 +19118,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 104,
-      "locator": "'采购5922清单'!A104:V104",
+      "sourceRow": 97,
+      "locator": "'采购5922清单'!A97:X97",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18784,8 +19132,8 @@
       "history": [],
       "nextStep": null,
       "annualReceiptAmount": 193600.0,
-      "targetAmount": 6969.599999999999,
-      "targetRebateRate": 0.036,
+      "targetAmount": 0.0,
+      "targetRebateRate": 0.0,
       "historicalPriceReductionRate": "不适用",
       "historicalPriceIncreaseAmount": null,
       "shareOfSupplierSales": null,
@@ -18798,7 +19146,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r105",
@@ -18808,8 +19158,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 105,
-      "locator": "'采购5922清单'!A105:V105",
+      "sourceRow": 98,
+      "locator": "'采购5922清单'!A98:X98",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18822,8 +19172,8 @@
       "history": [],
       "nextStep": null,
       "annualReceiptAmount": 152200.0,
-      "targetAmount": 5479.2,
-      "targetRebateRate": 0.036,
+      "targetAmount": 0.0,
+      "targetRebateRate": 0.0,
       "historicalPriceReductionRate": "不适用",
       "historicalPriceIncreaseAmount": null,
       "shareOfSupplierSales": null,
@@ -18836,7 +19186,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r106",
@@ -18846,8 +19198,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 106,
-      "locator": "'采购5922清单'!A106:V106",
+      "sourceRow": 99,
+      "locator": "'采购5922清单'!A99:X99",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18860,8 +19212,8 @@
       "history": [],
       "nextStep": null,
       "annualReceiptAmount": 136000.017689,
-      "targetAmount": 4896.000636803999,
-      "targetRebateRate": 0.036,
+      "targetAmount": 0.0,
+      "targetRebateRate": 0.0,
       "historicalPriceReductionRate": "不适用",
       "historicalPriceIncreaseAmount": null,
       "shareOfSupplierSales": null,
@@ -18874,7 +19226,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r107",
@@ -18884,8 +19238,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 107,
-      "locator": "'采购5922清单'!A107:V107",
+      "sourceRow": 100,
+      "locator": "'采购5922清单'!A100:X100",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18898,8 +19252,8 @@
       "history": [],
       "nextStep": null,
       "annualReceiptAmount": 120000.0,
-      "targetAmount": 4320.0,
-      "targetRebateRate": 0.036,
+      "targetAmount": 0.0,
+      "targetRebateRate": 0.0,
       "historicalPriceReductionRate": "不适用",
       "historicalPriceIncreaseAmount": null,
       "shareOfSupplierSales": null,
@@ -18912,7 +19266,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r108",
@@ -18922,8 +19278,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 模具",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 108,
-      "locator": "'采购5922清单'!A108:V108",
+      "sourceRow": 101,
+      "locator": "'采购5922清单'!A101:X101",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18936,8 +19292,8 @@
       "history": [],
       "nextStep": null,
       "annualReceiptAmount": 35000.0,
-      "targetAmount": 1260.0,
-      "targetRebateRate": 0.036,
+      "targetAmount": 0.0,
+      "targetRebateRate": 0.0,
       "historicalPriceReductionRate": "不适用",
       "historicalPriceIncreaseAmount": null,
       "shareOfSupplierSales": null,
@@ -18950,7 +19306,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r109",
@@ -18960,8 +19318,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 109,
-      "locator": "'采购5922清单'!A109:V109",
+      "sourceRow": 102,
+      "locator": "'采购5922清单'!A102:X102",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -18988,7 +19346,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r110",
@@ -18998,8 +19358,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 110,
-      "locator": "'采购5922清单'!A110:V110",
+      "sourceRow": 103,
+      "locator": "'采购5922清单'!A103:X103",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19026,7 +19386,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r111",
@@ -19036,8 +19398,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 111,
-      "locator": "'采购5922清单'!A111:V111",
+      "sourceRow": 104,
+      "locator": "'采购5922清单'!A104:X104",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19064,7 +19426,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r112",
@@ -19074,8 +19438,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 112,
-      "locator": "'采购5922清单'!A112:V112",
+      "sourceRow": 105,
+      "locator": "'采购5922清单'!A105:X105",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19102,7 +19466,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r113",
@@ -19112,8 +19478,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 113,
-      "locator": "'采购5922清单'!A113:V113",
+      "sourceRow": 106,
+      "locator": "'采购5922清单'!A106:X106",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19140,7 +19506,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r114",
@@ -19150,8 +19518,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 114,
-      "locator": "'采购5922清单'!A114:V114",
+      "sourceRow": 107,
+      "locator": "'采购5922清单'!A107:X107",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19178,7 +19546,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r115",
@@ -19188,8 +19558,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 115,
-      "locator": "'采购5922清单'!A115:V115",
+      "sourceRow": 108,
+      "locator": "'采购5922清单'!A108:X108",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19216,7 +19586,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r116",
@@ -19226,8 +19598,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 116,
-      "locator": "'采购5922清单'!A116:V116",
+      "sourceRow": 109,
+      "locator": "'采购5922清单'!A109:X109",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19254,7 +19626,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r117",
@@ -19264,8 +19638,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 117,
-      "locator": "'采购5922清单'!A117:V117",
+      "sourceRow": 110,
+      "locator": "'采购5922清单'!A110:X110",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19292,7 +19666,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r118",
@@ -19302,8 +19678,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 118,
-      "locator": "'采购5922清单'!A118:V118",
+      "sourceRow": 111,
+      "locator": "'采购5922清单'!A111:X111",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19330,7 +19706,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r119",
@@ -19340,8 +19718,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 119,
-      "locator": "'采购5922清单'!A119:V119",
+      "sourceRow": 112,
+      "locator": "'采购5922清单'!A112:X112",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19368,7 +19746,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r120",
@@ -19378,8 +19758,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 120,
-      "locator": "'采购5922清单'!A120:V120",
+      "sourceRow": 113,
+      "locator": "'采购5922清单'!A113:X113",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19406,7 +19786,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r121",
@@ -19416,8 +19798,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 121,
-      "locator": "'采购5922清单'!A121:V121",
+      "sourceRow": 114,
+      "locator": "'采购5922清单'!A114:X114",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19444,7 +19826,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r122",
@@ -19454,8 +19838,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 122,
-      "locator": "'采购5922清单'!A122:V122",
+      "sourceRow": 115,
+      "locator": "'采购5922清单'!A115:X115",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19482,7 +19866,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r123",
@@ -19492,8 +19878,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 123,
-      "locator": "'采购5922清单'!A123:V123",
+      "sourceRow": 116,
+      "locator": "'采购5922清单'!A116:X116",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19520,7 +19906,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r124",
@@ -19530,8 +19918,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 124,
-      "locator": "'采购5922清单'!A124:V124",
+      "sourceRow": 117,
+      "locator": "'采购5922清单'!A117:X117",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19558,7 +19946,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r125",
@@ -19568,8 +19958,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 125,
-      "locator": "'采购5922清单'!A125:V125",
+      "sourceRow": 118,
+      "locator": "'采购5922清单'!A118:X118",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19596,7 +19986,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r126",
@@ -19606,8 +19998,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 126,
-      "locator": "'采购5922清单'!A126:V126",
+      "sourceRow": 119,
+      "locator": "'采购5922清单'!A119:X119",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19634,7 +20026,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r127",
@@ -19644,8 +20038,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 127,
-      "locator": "'采购5922清单'!A127:V127",
+      "sourceRow": 120,
+      "locator": "'采购5922清单'!A120:X120",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19672,7 +20066,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r128",
@@ -19682,8 +20078,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 128,
-      "locator": "'采购5922清单'!A128:V128",
+      "sourceRow": 121,
+      "locator": "'采购5922清单'!A121:X121",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19710,7 +20106,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r129",
@@ -19720,8 +20118,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 129,
-      "locator": "'采购5922清单'!A129:V129",
+      "sourceRow": 122,
+      "locator": "'采购5922清单'!A122:X122",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19748,7 +20146,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r130",
@@ -19758,8 +20158,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 130,
-      "locator": "'采购5922清单'!A130:V130",
+      "sourceRow": 123,
+      "locator": "'采购5922清单'!A123:X123",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19786,7 +20186,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r131",
@@ -19796,8 +20198,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 131,
-      "locator": "'采购5922清单'!A131:V131",
+      "sourceRow": 124,
+      "locator": "'采购5922清单'!A124:X124",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19824,7 +20226,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r132",
@@ -19834,8 +20238,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 132,
-      "locator": "'采购5922清单'!A132:V132",
+      "sourceRow": 125,
+      "locator": "'采购5922清单'!A125:X125",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19862,7 +20266,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r133",
@@ -19872,8 +20278,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 133,
-      "locator": "'采购5922清单'!A133:V133",
+      "sourceRow": 126,
+      "locator": "'采购5922清单'!A126:X126",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19900,7 +20306,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r134",
@@ -19910,8 +20318,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 134,
-      "locator": "'采购5922清单'!A134:V134",
+      "sourceRow": 127,
+      "locator": "'采购5922清单'!A127:X127",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19938,7 +20346,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r135",
@@ -19948,8 +20358,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 135,
-      "locator": "'采购5922清单'!A135:V135",
+      "sourceRow": 128,
+      "locator": "'采购5922清单'!A128:X128",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -19976,7 +20386,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r136",
@@ -19986,8 +20398,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 136,
-      "locator": "'采购5922清单'!A136:V136",
+      "sourceRow": 129,
+      "locator": "'采购5922清单'!A129:X129",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -20014,7 +20426,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r137",
@@ -20024,8 +20438,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 137,
-      "locator": "'采购5922清单'!A137:V137",
+      "sourceRow": 130,
+      "locator": "'采购5922清单'!A130:X130",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -20052,7 +20466,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r138",
@@ -20062,8 +20478,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 138,
-      "locator": "'采购5922清单'!A138:V138",
+      "sourceRow": 131,
+      "locator": "'采购5922清单'!A131:X131",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -20090,7 +20506,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r139",
@@ -20100,8 +20518,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 139,
-      "locator": "'采购5922清单'!A139:V139",
+      "sourceRow": 132,
+      "locator": "'采购5922清单'!A132:X132",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -20128,7 +20546,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r140",
@@ -20138,8 +20558,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 140,
-      "locator": "'采购5922清单'!A140:V140",
+      "sourceRow": 133,
+      "locator": "'采购5922清单'!A133:X133",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -20166,7 +20586,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r141",
@@ -20176,8 +20598,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 141,
-      "locator": "'采购5922清单'!A141:V141",
+      "sourceRow": 134,
+      "locator": "'采购5922清单'!A134:X134",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -20204,7 +20626,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r142",
@@ -20214,8 +20638,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 142,
-      "locator": "'采购5922清单'!A142:V142",
+      "sourceRow": 135,
+      "locator": "'采购5922清单'!A135:X135",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -20242,7 +20666,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r143",
@@ -20252,8 +20678,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 143,
-      "locator": "'采购5922清单'!A143:V143",
+      "sourceRow": 136,
+      "locator": "'采购5922清单'!A136:X136",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -20280,7 +20706,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r144",
@@ -20290,8 +20718,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 144,
-      "locator": "'采购5922清单'!A144:V144",
+      "sourceRow": 137,
+      "locator": "'采购5922清单'!A137:X137",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -20318,7 +20746,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r145",
@@ -20328,8 +20758,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 工装",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 145,
-      "locator": "'采购5922清单'!A145:V145",
+      "sourceRow": 138,
+      "locator": "'采购5922清单'!A138:X138",
       "plannedDate": null,
       "actualDate": null,
       "agreedAmount": null,
@@ -20356,7 +20786,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r146",
@@ -20366,8 +20798,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 146,
-      "locator": "'采购5922清单'!A146:V146",
+      "sourceRow": 139,
+      "locator": "'采购5922清单'!A139:X139",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -20396,7 +20828,7 @@
       "annualReceiptAmount": 11198521.52,
       "targetAmount": 335955.6456,
       "targetRebateRate": 0.03,
-      "historicalPriceReductionRate": null,
+      "historicalPriceReductionRate": "不适用",
       "historicalPriceIncreaseAmount": 0.0,
       "shareOfSupplierSales": 0.05,
       "companyType": "民企",
@@ -20408,7 +20840,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r147",
@@ -20418,10 +20852,10 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 147,
-      "locator": "'采购5922清单'!A147:V147",
+      "sourceRow": 140,
+      "locator": "'采购5922清单'!A140:X140",
       "plannedDate": "2026-10-30",
-      "actualDate": null,
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -20429,8 +20863,17 @@
       "claims": [],
       "qualityRecords": [],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 180000.0,
+          "target": 264332.7945,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T140:V140"
+        }
+      ],
+      "nextStep": "待回复",
       "annualReceiptAmount": 8811093.15,
       "targetAmount": 264332.7945,
       "targetRebateRate": 0.030000000000000002,
@@ -20444,9 +20887,15 @@
       "deliveryIssue": "无",
       "qualityIssue": "无",
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "actualAmount": 180000.0,
+      "sourceAchievementRate": 0.6809597739867271,
+      "achievementRate": 0.6809597739867271,
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W140:X140",
+      "nextStepLocator": "'采购5922清单'!W140:X140"
     },
     {
       "id": "procurement-r148",
@@ -20456,8 +20905,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 148,
-      "locator": "'采购5922清单'!A148:V148",
+      "sourceRow": 141,
+      "locator": "'采购5922清单'!A141:X141",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -20484,7 +20933,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r149",
@@ -20494,10 +20945,10 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 149,
-      "locator": "'采购5922清单'!A149:V149",
+      "sourceRow": 142,
+      "locator": "'采购5922清单'!A142:X142",
       "plannedDate": "2026-10-30",
-      "actualDate": null,
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -20505,8 +20956,17 @@
       "claims": [],
       "qualityRecords": [],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 158631.9768,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T142:V142"
+        }
+      ],
+      "nextStep": "待回复",
       "annualReceiptAmount": 3965799.42,
       "targetAmount": 158631.9768,
       "targetRebateRate": 0.04,
@@ -20520,9 +20980,15 @@
       "deliveryIssue": "无",
       "qualityIssue": "无",
       "newProjectFlag": "否",
-      "actualAmount": null,
+      "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": 0.0,
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W142:X142",
+      "nextStepLocator": "'采购5922清单'!W142:X142"
     },
     {
       "id": "procurement-r150",
@@ -20532,8 +20998,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 150,
-      "locator": "'采购5922清单'!A150:V150",
+      "sourceRow": 143,
+      "locator": "'采购5922清单'!A143:X143",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -20560,7 +21026,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r151",
@@ -20570,10 +21038,10 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 151,
-      "locator": "'采购5922清单'!A151:V151",
+      "sourceRow": 144,
+      "locator": "'采购5922清单'!A144:X144",
       "plannedDate": "2026-10-30",
-      "actualDate": null,
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -20581,8 +21049,17 @@
       "claims": [],
       "qualityRecords": [],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 151213.7524,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T144:V144"
+        }
+      ],
+      "nextStep": "待回复",
       "annualReceiptAmount": 3780343.81,
       "targetAmount": 151213.7524,
       "targetRebateRate": 0.04,
@@ -20596,9 +21073,15 @@
       "deliveryIssue": "无",
       "qualityIssue": "无",
       "newProjectFlag": "否",
-      "actualAmount": null,
+      "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": 0.0,
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W144:X144",
+      "nextStepLocator": "'采购5922清单'!W144:X144"
     },
     {
       "id": "procurement-r152",
@@ -20608,8 +21091,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 152,
-      "locator": "'采购5922清单'!A152:V152",
+      "sourceRow": 145,
+      "locator": "'采购5922清单'!A145:X145",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -20636,7 +21119,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r153",
@@ -20646,10 +21131,10 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 153,
-      "locator": "'采购5922清单'!A153:V153",
+      "sourceRow": 146,
+      "locator": "'采购5922清单'!A146:X146",
       "plannedDate": "2026-10-30",
-      "actualDate": null,
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -20657,8 +21142,17 @@
       "claims": [],
       "qualityRecords": [],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 69756.8,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T146:V146"
+        }
+      ],
+      "nextStep": "待回复",
       "annualReceiptAmount": 1743920.0,
       "targetAmount": 69756.8,
       "targetRebateRate": 0.04,
@@ -20672,9 +21166,15 @@
       "deliveryIssue": "无",
       "qualityIssue": "无",
       "newProjectFlag": "否",
-      "actualAmount": null,
+      "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": 0.0,
+      "nextFollowUpDate": null,
+      "agreementStatus": "待回复",
+      "progressSummary": "待回复",
+      "progressAsOf": "2026-10-30",
+      "progressLocator": "'采购5922清单'!W146:X146",
+      "nextStepLocator": "'采购5922清单'!W146:X146"
     },
     {
       "id": "procurement-r154",
@@ -20684,8 +21184,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 154,
-      "locator": "'采购5922清单'!A154:V154",
+      "sourceRow": 147,
+      "locator": "'采购5922清单'!A147:X147",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -20712,7 +21212,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r155",
@@ -20722,8 +21224,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 155,
-      "locator": "'采购5922清单'!A155:V155",
+      "sourceRow": 148,
+      "locator": "'采购5922清单'!A148:X148",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -20750,7 +21252,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r156",
@@ -20760,8 +21264,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 156,
-      "locator": "'采购5922清单'!A156:V156",
+      "sourceRow": 149,
+      "locator": "'采购5922清单'!A149:X149",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -20788,7 +21292,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r157",
@@ -20798,8 +21304,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 157,
-      "locator": "'采购5922清单'!A157:V157",
+      "sourceRow": 150,
+      "locator": "'采购5922清单'!A150:X150",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -20826,7 +21332,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     },
     {
       "id": "procurement-r158",
@@ -20836,8 +21344,8 @@
       "workstream": "non-BOM",
       "substream": "non-BOM 物流",
       "sourceSheet": "采购5922清单",
-      "sourceRow": 158,
-      "locator": "'采购5922清单'!A158:V158",
+      "sourceRow": 151,
+      "locator": "'采购5922清单'!A151:X151",
       "plannedDate": "2026-10-30",
       "actualDate": null,
       "agreedAmount": null,
@@ -20864,7 +21372,9 @@
       "newProjectFlag": "否",
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null
+      "achievementRate": null,
+      "nextFollowUpDate": null,
+      "agreementStatus": null
     }
   ],
   "actions": [
@@ -21204,18 +21714,18 @@
   "summary": {
     "supplierCount": 157,
     "uniqueSupplierCount": 157,
-    "targetAmount": 59244219.619449385,
+    "targetAmount": 59172954.81881259,
     "targetFilled": 157,
-    "actualAmount": 5500000.0,
-    "actualAmountFilled": 18,
-    "actualDateFilled": 18,
-    "plannedDateFilled": 85,
+    "actualAmount": 6959120.0,
+    "actualAmountFilled": 31,
+    "actualDateFilled": 31,
+    "plannedDateFilled": 105,
     "owners": [
       {
         "owner": "伍梦华",
         "count": 21,
         "targetAmount": 13300000.0,
-        "actualAmount": 3500000.0
+        "actualAmount": 3700000.0
       },
       {
         "owner": "张西堂",
@@ -21257,7 +21767,7 @@
         "owner": "留培杨",
         "count": 23,
         "targetAmount": 1868680.213189867,
-        "actualAmount": null
+        "actualAmount": 180000.0
       },
       {
         "owner": "章林",
@@ -21275,7 +21785,7 @@
         "owner": "胡志辉",
         "count": 13,
         "targetAmount": 9500000.0,
-        "actualAmount": 0.0
+        "actualAmount": 700000.0
       },
       {
         "owner": "蓝水燕",
@@ -21292,8 +21802,8 @@
       {
         "owner": "黄东欢",
         "count": 35,
-        "targetAmount": 6212210.646259519,
-        "actualAmount": null
+        "targetAmount": 6140945.845622716,
+        "actualAmount": 379120.0
       }
     ],
     "groups": [
@@ -21307,9 +21817,9 @@
       {
         "name": "non-BOM 模具",
         "count": 35,
-        "targetAmount": 6212210.646259519,
+        "targetAmount": 6140945.845622716,
         "targetMissing": 0,
-        "dateMissing": 35
+        "dateMissing": 15
       },
       {
         "name": "non-BOM 工装",
@@ -21346,14 +21856,14 @@
     "thisWeek": {
       "start": "2026-10-26",
       "end": "2026-11-01",
-      "plannedCount": 46,
-      "targetAmount": 25204069.63718987
+      "plannedCount": 61,
+      "targetAmount": 31104200.288722184
     },
     "nextWeek": {
       "start": "2026-11-02",
       "end": "2026-11-08",
-      "plannedCount": 39,
-      "targetAmount": 23600000.0
+      "plannedCount": 45,
+      "targetAmount": 24325010.7940904
     }
   },
   "issues": [
@@ -21364,7 +21874,7 @@
     },
     {
       "title": "non-BOM排期待补",
-      "detail": "72家non-BOM供应商没有目标完成时间，单列为待排期。",
+      "detail": "52家non-BOM供应商没有目标完成时间，单列为待排期。",
       "locator": "'采购5922清单'!I2:I158"
     },
     {

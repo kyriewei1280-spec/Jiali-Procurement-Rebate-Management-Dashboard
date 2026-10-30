@@ -28,7 +28,7 @@ def main():
         check((owner['targetAmount'] is None and all(r['targetAmount'] is None for r in selected)) or (owner['targetAmount'] is not None and abs(sum(r['targetAmount'] for r in selected if r['targetAmount'] is not None) - owner['targetAmount']) < 0.01), 'Owner target mismatch')
     for key in ('lastWeek', 'thisWeek', 'nextWeek'):
         week = summary[key]
-        selected = [r for r in rows if r['plannedDate'] and week['start'] <= r['plannedDate'] <= week['end']]
+        selected = [r for r in rows if any(d and week['start'] <= d <= week['end'] for d in (r['plannedDate'], r.get('nextFollowUpDate')))]
         check(len(selected) == week['plannedCount'], f'Week count mismatch: {key}')
         check(abs(sum(r['targetAmount'] for r in selected if r['targetAmount'] is not None) - week['targetAmount']) < 0.01, 'Week target mismatch')
     check(all(r.get('locator') for r in rows), 'Source locator missing')
@@ -37,6 +37,11 @@ def main():
     check(bool(actuals) or summary['actualAmount'] is None, 'Missing actuals incorrectly represented as zero')
     check(not actuals or abs(sum(actuals)-summary['actualAmount']) < .01, 'Actual total mismatch')
     for row in rows:
+        override = row.get('rebateProgressOverride')
+        if override:
+            check(override.get('asOf') == meta['asOf'], 'Expired progress classification')
+            check(override.get('bucket') in ('shortfall','pending') and override.get('source'), 'Unreviewed progress classification')
+            check(row['actualDate'] is None and row['actualAmount'] is None, 'Progress exception must not replace actual results')
         amount, target = row['actualAmount'], row['targetAmount']
         expected = amount/target if amount is not None and target else None
         check(row['achievementRate'] == expected, 'Supplier achievement mismatch')
