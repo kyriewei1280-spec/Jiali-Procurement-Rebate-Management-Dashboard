@@ -96,3 +96,7 @@ The user requested a new local HTML refresh. The current T header is 第一次�
 - The user's explicit 10/30 exception adds 康涵 F=500000 to shortfall and 绅陆 F=500000 to pending. Keep their T/U null and confirmed-negotiated counts unchanged. Record the dated exception in rebateProgressOverride for audit, with no visible temporary-classification labels. Clear it on the next workbook import so it cannot silently become a general rule.
 - Include both I and W dates in period plans; deduplicate supplier IDs within each date/week. W alone is not proof of an actual negotiation and never moves the owner's deadline denominator.
 - Three monetary buckets need not cover the whole department target; unnegotiated rows remain excluded except for explicit dated exceptions. Keep personal overview drilldowns aggregated by category.
+
+## 2026-11-02 source layout
+
+The latest source has W=未达成金额, X=下次跟进日期, Y=agreement/reply status, Z=timing annotation, AA=notes. Resolve columns by the validated layout; never treat W money as a date. Preserve sourceShortfallAmount/sourceTiming/negotiationNotes and metadata.sourceColumns. W is MAX(F-U,0) for all suppliers, including pending and unnegotiated, so do not sum W as the overview shortfall bucket. Continue the reviewed per-status bucketing. The two 10/30 overrides have expired; 绅陆 now has T=10/30, while 康涵 has no actual record. Do not silently restore those old overrides. The filename's 11/2 data version does not advance the online Beijing calendar date.

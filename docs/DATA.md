@@ -68,3 +68,11 @@
 两条用户明确的本次归类以 rebateProgressOverride 保存asOf、bucket、指令来源：康涵shortfall、绅陆pending。金额读取各自F，不覆写T/U，不追加供应商或已谈记录，不在界面加临时标记。仅适用于相同快照日且尚无实际记录；下一次refresh_main_sheet导入清除该字段，避免旧例外自动沿用。
 
 账号配置与所有辅助索赔、质量、项目、行动记录保持不变。源文件名及SHA-256更新；原始Excel保持只读，未提交原文件或完整抽取。
+
+## 2026-11-02 主表A–AA适配
+
+最新版本主表仍为采购5922清单，157家身份及负责人归属不变。导入器先识别表头：旧布局W跟进/X协议；新布局W未达成差额/X跟进/Y协议/Z按时标注/AA备注。避免将金额作为Excel日期解析。metadata.sourceColumns记录实际映射，rowRange与定位扩展至AA。
+
+W保存sourceShortfallAmount，Z保存sourceTiming，AA保存negotiationNotes；X/Y分别映射现有nextFollowUpDate/agreementStatus。当前摘要读取新备注，过期的主表摘要在新表相应字段全空时清除；原有历史、质量、索赔、项目、行动项不改写。
+
+全部4082个映射字段逐项与原始XML缓存值核对，W逐行与MAX(F-U,0)核对。88家原有字段变动；新增W使157家都有新增数据。账号映射不变，源工作簿只读。本次导入清除10/30两条快照限定的人工分桶，后续已谈情况按新T/U/Y计算。
