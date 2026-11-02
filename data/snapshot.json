@@ -1,10 +1,10 @@
 {
   "metadata": {
     "schemaVersion": "3.0",
-    "asOf": "2026-11-02",
-    "sourceFile": "2026年11月2日-采购日清日结任务追踪.xlsx",
-    "sourceSha256": "c9060169c17af41b78fae967fd277b081c65091fda8f7e178e76386b14da56ce",
-    "sourceModified": "2026-11-02T09:12:30.261027+08:00",
+    "asOf": "2026-11-03",
+    "sourceFile": "2026年11月3日-采购日清日结任务追踪.xlsx",
+    "sourceSha256": "1f453b3776af16eb302f6f8edcb698aedc0cabefe856821ef3f0e27e2ded78d8",
+    "sourceModified": "2026-11-02T22:07:37.170988+08:00",
     "currency": "CNY",
     "rawAmountUnit": "元",
     "displayDivisor": 10000,
@@ -1294,7 +1294,7 @@
       "nextFollowUpDate": null,
       "agreementStatus": "尚未签协议",
       "progressSummary": "尚未签协议；金额已确认100万，待签协议（微信10/30谈判记录截图）",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X3:AB3",
       "sourceShortfallAmount": 1000000.0,
       "sourceTiming": "按时谈判",
@@ -1422,7 +1422,7 @@
           "locator": "'采购5922清单'!T152:V152"
         }
       ],
-      "nextStep": "待回复；下次跟进日期：2026-11-06",
+      "nextStep": "待回复；26年原材料涨价，需与日方内部商议后11/6回复（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-06",
       "annualReceiptAmount": 92372298.48,
       "targetAmount": 2000000.0,
       "targetRebateRate": 0.021651512768549656,
@@ -1441,13 +1441,13 @@
       "achievementRate": null,
       "nextFollowUpDate": "2026-11-06",
       "agreementStatus": "待回复",
-      "progressSummary": "待回复；下次跟进日期：2026-11-06",
-      "progressAsOf": "2026-11-02",
+      "progressSummary": "待回复；26年原材料涨价，需与日方内部商议后11/6回复（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-06",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X152:AB152",
       "nextStepLocator": "'采购5922清单'!X152:AB152",
       "sourceShortfallAmount": 2000000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": null,
+      "negotiationNotes": "26年原材料涨价，需与日方内部商议后11/6回复（微信11/2 BOM谈判截图）",
       "confirmationDate": null
     },
     {
@@ -3216,7 +3216,7 @@
       "nextFollowUpDate": null,
       "agreementStatus": "尚未签协议",
       "progressSummary": "尚未签协议；金额已确认100万，待签协议（微信10/30谈判记录截图）",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X4:AB4",
       "sourceShortfallAmount": 0.0,
       "sourceTiming": "按时谈判",
@@ -3234,7 +3234,7 @@
       "sourceRow": 5,
       "locator": "'采购5922清单'!A5:AB5",
       "plannedDate": "2026-11-06",
-      "actualDate": null,
+      "actualDate": "2026-10-28",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -3552,8 +3552,17 @@
           "locator": "'2027年量产新项目定点清单 1021'!A324:M324"
         }
       ],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-28",
+          "kind": "谈判结果",
+          "amount": null,
+          "target": 1000000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T5:V5"
+        }
+      ],
+      "nextStep": "待回复；【11/3待与小伍确认】首谈日期按截图填10/28；26年年度降本未达成、D03/800D项目支持；未约定返利，供应商申请预算中，待与部门确认后回复；尚未安排跟进日期（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 53484149.8,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.018697128097565834,
@@ -3571,11 +3580,15 @@
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
       "nextFollowUpDate": null,
-      "agreementStatus": null,
+      "agreementStatus": "待回复",
       "sourceShortfallAmount": 1000000.0,
-      "sourceTiming": null,
-      "negotiationNotes": null,
-      "confirmationDate": null
+      "sourceTiming": "按时谈判",
+      "negotiationNotes": "【11/3待与小伍确认】首谈日期按截图填10/28；26年年度降本未达成、D03/800D项目支持；未约定返利，供应商申请预算中，待与部门确认后回复；尚未安排跟进日期（微信11/2 BOM谈判截图）",
+      "confirmationDate": null,
+      "progressSummary": "待回复；【11/3待与小伍确认】首谈日期按截图填10/28；26年年度降本未达成、D03/800D项目支持；未约定返利，供应商申请预算中，待与部门确认后回复；尚未安排跟进日期（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
+      "progressLocator": "'采购5922清单'!X5:AB5",
+      "nextStepLocator": "'采购5922清单'!X5:AB5"
     },
     {
       "id": "procurement-r7",
@@ -4029,13 +4042,13 @@
         {
           "date": "2026-10-28",
           "kind": "谈判结果",
-          "amount": null,
+          "amount": 1000000.0,
           "target": 2000000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T6:V6"
         }
       ],
-      "nextStep": "待回复；负责人不在公司，下周回复 (微信10/30截图)；下次跟进日期：2026-11-06",
+      "nextStep": "尚未签协议；11/2确认返利100万（目标200万），待签协议；供应商诉求2026年底前结清所有逾期货款、后期按时付款（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 49426422.2658003,
       "targetAmount": 2000000.0,
       "targetRebateRate": 0.040464187135467886,
@@ -4049,19 +4062,19 @@
       "deliveryIssue": null,
       "qualityIssue": "是",
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null,
-      "progressSummary": "待回复；负责人不在公司，下周回复 (微信10/30截图)；下次跟进日期：2026-11-06",
-      "progressAsOf": "2026-11-02",
+      "actualAmount": 1000000.0,
+      "sourceAchievementRate": 0.5,
+      "achievementRate": 0.5,
+      "progressSummary": "尚未签协议；11/2确认返利100万（目标200万），待签协议；供应商诉求2026年底前结清所有逾期货款、后期按时付款（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X6:AB6",
       "nextStepLocator": "'采购5922清单'!X6:AB6",
-      "nextFollowUpDate": "2026-11-06",
-      "agreementStatus": "待回复",
-      "sourceShortfallAmount": 2000000.0,
+      "nextFollowUpDate": null,
+      "agreementStatus": "尚未签协议",
+      "sourceShortfallAmount": 1000000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "负责人不在公司，下周回复 (微信10/30截图)",
-      "confirmationDate": null
+      "negotiationNotes": "11/2确认返利100万（目标200万），待签协议；供应商诉求2026年底前结清所有逾期货款、后期按时付款（微信11/2 BOM谈判截图）",
+      "confirmationDate": "2026-11-02"
     },
     {
       "id": "procurement-r8",
@@ -4192,7 +4205,7 @@
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
         }
       ],
-      "nextStep": "供应商不支持返利；10/30回复不支持返利（微信10/30谈判记录截图）",
+      "nextStep": "供应商不支持返利；10/30回复不支持返利（微信10/30谈判记录截图）；迪美化工与迪美高分子为同一老板，两者合计返利60万（全部计入迪美高分子U11）（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 39759112.59,
       "targetAmount": 1500000.0,
       "targetRebateRate": 0.037727200188498976,
@@ -4209,15 +4222,15 @@
       "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
-      "progressSummary": "供应商不支持返利；10/30回复不支持返利（微信10/30谈判记录截图）",
-      "progressAsOf": "2026-11-02",
+      "progressSummary": "供应商不支持返利；10/30回复不支持返利（微信10/30谈判记录截图）；迪美化工与迪美高分子为同一老板，两者合计返利60万（全部计入迪美高分子U11）（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X7:AB7",
       "nextStepLocator": "'采购5922清单'!X7:AB7",
       "nextFollowUpDate": null,
       "agreementStatus": "供应商不支持返利",
       "sourceShortfallAmount": 1500000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "10/30回复不支持返利（微信10/30谈判记录截图）",
+      "negotiationNotes": "10/30回复不支持返利（微信10/30谈判记录截图）；迪美化工与迪美高分子为同一老板，两者合计返利60万（全部计入迪美高分子U11）（微信11/2 BOM谈判截图）",
       "confirmationDate": "2026-10-27"
     },
     {
@@ -4940,7 +4953,7 @@
       "achievementRate": 0.8,
       "nextStepLocator": "'采购5922清单'!X153:AB153",
       "progressSummary": "是，已签协议；10/29协议签字盖章 (微信10/30截图)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X153:AB153",
       "nextFollowUpDate": null,
       "agreementStatus": "是，已签协议",
@@ -5280,7 +5293,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "尚未安排跟进日期；供应商称预计下周回复、很难给予支持（微信10/30谈判记录截图）",
       "progressSummary": "待回复；尚未安排跟进日期；供应商称预计下周回复、很难给予支持（微信10/30谈判记录截图）",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X9:AB9",
       "nextStepLocator": "'采购5922清单'!X9:AB9",
       "confirmationDate": null
@@ -5426,13 +5439,13 @@
         {
           "date": "2026-10-30",
           "kind": "谈判结果",
-          "amount": null,
+          "amount": 800000.0,
           "target": 1000000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T10:V10"
         }
       ],
-      "nextStep": "待回复；尚未安排跟进日期；供应商诉求2026年底前结清逾期货款（微信10/30谈判记录截图）",
+      "nextStep": "尚未签协议；11/2确认返利80万（目标100万），待签协议；同等价格优先导入新材料；诉求2026年底前结清逾期货款（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 34413099.0775,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.029058702261832058,
@@ -5446,19 +5459,19 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null,
+      "actualAmount": 800000.0,
+      "sourceAchievementRate": 0.8,
+      "achievementRate": 0.8,
       "nextFollowUpDate": null,
-      "agreementStatus": "待回复",
-      "sourceShortfallAmount": 1000000.0,
+      "agreementStatus": "尚未签协议",
+      "sourceShortfallAmount": 200000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "尚未安排跟进日期；供应商诉求2026年底前结清逾期货款（微信10/30谈判记录截图）",
-      "progressSummary": "待回复；尚未安排跟进日期；供应商诉求2026年底前结清逾期货款（微信10/30谈判记录截图）",
-      "progressAsOf": "2026-11-02",
+      "negotiationNotes": "11/2确认返利80万（目标100万），待签协议；同等价格优先导入新材料；诉求2026年底前结清逾期货款（微信11/2 BOM谈判截图）",
+      "progressSummary": "尚未签协议；11/2确认返利80万（目标100万），待签协议；同等价格优先导入新材料；诉求2026年底前结清逾期货款（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X10:AB10",
       "nextStepLocator": "'采购5922清单'!X10:AB10",
-      "confirmationDate": null
+      "confirmationDate": "2026-11-02"
     },
     {
       "id": "procurement-r13",
@@ -5575,7 +5588,7 @@
         {
           "date": "2026-10-27",
           "kind": "谈判结果",
-          "amount": 594392.3376,
+          "amount": 600000.0,
           "target": 500000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T11:V11"
@@ -5589,7 +5602,7 @@
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
         }
       ],
-      "nextStep": "尚未签协议；10/30同意返利2%，U暂按E列年入库×2%估算，需跟进确认金额与日期（微信10/30谈判记录截图）",
+      "nextStep": "尚未签协议；11/2确认返利60万（原按2%估算59.4万），待签协议；迪美化工与迪美高分子为同一老板，60万为两家合计返利，全部计入本行（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 29719616.88,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.016823904629015528,
@@ -5603,19 +5616,19 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": 594392.3376,
-      "sourceAchievementRate": 1.1887846752,
-      "achievementRate": 1.1887846752,
-      "progressSummary": "尚未签协议；10/30同意返利2%，U暂按E列年入库×2%估算，需跟进确认金额与日期（微信10/30谈判记录截图）",
-      "progressAsOf": "2026-11-02",
+      "actualAmount": 600000.0,
+      "sourceAchievementRate": 1.2,
+      "achievementRate": 1.2,
+      "progressSummary": "尚未签协议；11/2确认返利60万（原按2%估算59.4万），待签协议；迪美化工与迪美高分子为同一老板，60万为两家合计返利，全部计入本行（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X11:AB11",
       "nextStepLocator": "'采购5922清单'!X11:AB11",
       "nextFollowUpDate": null,
       "agreementStatus": "尚未签协议",
       "sourceShortfallAmount": 0.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "10/30同意返利2%，U暂按E列年入库×2%估算，需跟进确认金额与日期（微信10/30谈判记录截图）",
-      "confirmationDate": "2026-10-27"
+      "negotiationNotes": "11/2确认返利60万（原按2%估算59.4万），待签协议；迪美化工与迪美高分子为同一老板，60万为两家合计返利，全部计入本行（微信11/2 BOM谈判截图）",
+      "confirmationDate": "2026-11-02"
     },
     {
       "id": "procurement-r14",
@@ -5947,13 +5960,13 @@
         {
           "date": "2026-10-29",
           "kind": "谈判结果",
-          "amount": null,
+          "amount": 0.0,
           "target": 1000000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T154:V154"
         }
       ],
-      "nextStep": "待回复；下次跟进日期：2026-10-31",
+      "nextStep": "供应商不支持返利；11/2回复不支持返利：26年原材料涨价、最终按低于市场价10%定价，已明确难以支持（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 27963335.6191,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.03576111282364192,
@@ -5967,19 +5980,19 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "是",
-      "actualAmount": null,
+      "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null,
-      "nextFollowUpDate": "2026-10-31",
-      "agreementStatus": "待回复",
-      "progressSummary": "待回复；下次跟进日期：2026-10-31",
-      "progressAsOf": "2026-11-02",
+      "achievementRate": 0.0,
+      "nextFollowUpDate": null,
+      "agreementStatus": "供应商不支持返利",
+      "progressSummary": "供应商不支持返利；11/2回复不支持返利：26年原材料涨价、最终按低于市场价10%定价，已明确难以支持（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X154:AB154",
       "nextStepLocator": "'采购5922清单'!X154:AB154",
       "sourceShortfallAmount": 1000000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": null,
-      "confirmationDate": null
+      "negotiationNotes": "11/2回复不支持返利：26年原材料涨价、最终按低于市场价10%定价，已明确难以支持（微信11/2 BOM谈判截图）",
+      "confirmationDate": "2026-11-02"
     },
     {
       "id": "procurement-r15",
@@ -5992,7 +6005,7 @@
       "sourceRow": 12,
       "locator": "'采购5922清单'!A12:AB12",
       "plannedDate": "2026-11-03",
-      "actualDate": null,
+      "actualDate": "2026-11-03",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -6079,8 +6092,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-11-03",
+          "kind": "谈判结果",
+          "amount": null,
+          "target": 1000000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T12:V12"
+        }
+      ],
+      "nextStep": "待回复；【11/3待与小伍确认】首谈日期按截图填11/3；26年晶圆涨价、关税/库存/汇率费用高至1.2KK USD，已回复很难支持，内部再确认后回复；尚未安排跟进日期（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 27353874.8615,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.0365578918914877,
@@ -6098,11 +6120,15 @@
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
       "nextFollowUpDate": null,
-      "agreementStatus": null,
+      "agreementStatus": "待回复",
       "sourceShortfallAmount": 1000000.0,
-      "sourceTiming": null,
-      "negotiationNotes": null,
-      "confirmationDate": null
+      "sourceTiming": "按时谈判",
+      "negotiationNotes": "【11/3待与小伍确认】首谈日期按截图填11/3；26年晶圆涨价、关税/库存/汇率费用高至1.2KK USD，已回复很难支持，内部再确认后回复；尚未安排跟进日期（微信11/2 BOM谈判截图）",
+      "confirmationDate": null,
+      "progressSummary": "待回复；【11/3待与小伍确认】首谈日期按截图填11/3；26年晶圆涨价、关税/库存/汇率费用高至1.2KK USD，已回复很难支持，内部再确认后回复；尚未安排跟进日期（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
+      "progressLocator": "'采购5922清单'!X12:AB12",
+      "nextStepLocator": "'采购5922清单'!X12:AB12"
     },
     {
       "id": "procurement-r16",
@@ -6279,7 +6305,7 @@
         {
           "date": "2026-10-27",
           "kind": "谈判结果",
-          "amount": 300000.0,
+          "amount": 350000.0,
           "target": 1000000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T13:V13"
@@ -6293,7 +6319,7 @@
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
         }
       ],
-      "nextStep": "待回复；10/31再次入厂沟通；供应商股东协商中（微信10/30谈判记录截图）；下次跟进日期：2026-10-31",
+      "nextStep": "待回复；10/31再次入厂沟通后金额升至35万（目标100万），供应商股东协商中；尚未安排下次跟进日期（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 25706419.302199,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.038900789263732936,
@@ -6307,18 +6333,18 @@
       "deliveryIssue": null,
       "qualityIssue": "是",
       "newProjectFlag": "否",
-      "actualAmount": 300000.0,
-      "sourceAchievementRate": 0.3,
-      "achievementRate": 0.3,
+      "actualAmount": 350000.0,
+      "sourceAchievementRate": 0.35,
+      "achievementRate": 0.35,
       "nextStepLocator": "'采购5922清单'!X13:AB13",
-      "progressSummary": "待回复；10/31再次入厂沟通；供应商股东协商中（微信10/30谈判记录截图）；下次跟进日期：2026-10-31",
-      "progressAsOf": "2026-11-02",
+      "progressSummary": "待回复；10/31再次入厂沟通后金额升至35万（目标100万），供应商股东协商中；尚未安排下次跟进日期（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X13:AB13",
-      "nextFollowUpDate": "2026-10-31",
+      "nextFollowUpDate": null,
       "agreementStatus": "待回复",
-      "sourceShortfallAmount": 700000.0,
+      "sourceShortfallAmount": 650000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "10/31再次入厂沟通；供应商股东协商中（微信10/30谈判记录截图）",
+      "negotiationNotes": "10/31再次入厂沟通后金额升至35万（目标100万），供应商股东协商中；尚未安排下次跟进日期（微信11/2 BOM谈判截图）",
       "confirmationDate": null
     },
     {
@@ -7378,7 +7404,7 @@
           "locator": "'采购5922清单'!T16:V16"
         }
       ],
-      "nextStep": "待回复；11/2反馈（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
+      "nextStep": "待回复；11/2反馈：部分呆滞费用尚未完成结算，呆滞无入库产品处理完后相应金额可支持，供应商11/2更新清单回复；尚未安排下次跟进日期（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 24734999.3329999,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.04042854364123075,
@@ -7395,13 +7421,13 @@
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
-      "nextFollowUpDate": "2026-11-02",
+      "nextFollowUpDate": null,
       "agreementStatus": "待回复",
       "sourceShortfallAmount": 1000000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "11/2反馈（微信10/30谈判记录截图）",
-      "progressSummary": "待回复；11/2反馈（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
-      "progressAsOf": "2026-11-02",
+      "negotiationNotes": "11/2反馈：部分呆滞费用尚未完成结算，呆滞无入库产品处理完后相应金额可支持，供应商11/2更新清单回复；尚未安排下次跟进日期（微信11/2 BOM谈判截图）",
+      "progressSummary": "待回复；11/2反馈：部分呆滞费用尚未完成结算，呆滞无入库产品处理完后相应金额可支持，供应商11/2更新清单回复；尚未安排下次跟进日期（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X16:AB16",
       "nextStepLocator": "'采购5922清单'!X16:AB16",
       "confirmationDate": null
@@ -7853,7 +7879,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "供应商不支持返利（微信10/30谈判记录截图）",
       "progressSummary": "供应商不支持返利；供应商不支持返利（微信10/30谈判记录截图）",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X17:AB17",
       "nextStepLocator": "'采购5922清单'!X17:AB17",
       "confirmationDate": "2026-10-30"
@@ -8125,7 +8151,7 @@
       "nextFollowUpDate": null,
       "agreementStatus": "尚未签协议",
       "progressSummary": "尚未签协议；金额已确认170万，待签协议（微信10/30谈判记录截图）",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X18:AB18",
       "sourceShortfallAmount": 300000.0,
       "sourceTiming": "按时谈判",
@@ -8287,7 +8313,7 @@
           "locator": "'10月 | 微信消息'!C2（10/28进度截图）及用户补充的10/28进度截图"
         }
       ],
-      "nextStep": "待回复；尚未明确跟进日期；供应商下周行程满、需向老板反馈（微信10/30谈判记录截图）",
+      "nextStep": "待回复；【11/3待与小伍确认】11/2截图标「下周行程都安排满，不支持返利」，是否已明确拒绝待确认；诉求2026年结清所有逾期货款（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 21231048.937,
       "targetAmount": 1000000.0,
       "targetRebateRate": 0.047100828742251605,
@@ -8304,15 +8330,15 @@
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
-      "progressSummary": "待回复；尚未明确跟进日期；供应商下周行程满、需向老板反馈（微信10/30谈判记录截图）",
-      "progressAsOf": "2026-11-02",
+      "progressSummary": "待回复；【11/3待与小伍确认】11/2截图标「下周行程都安排满，不支持返利」，是否已明确拒绝待确认；诉求2026年结清所有逾期货款（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X19:AB19",
       "nextStepLocator": "'采购5922清单'!X19:AB19",
       "nextFollowUpDate": null,
       "agreementStatus": "待回复",
       "sourceShortfallAmount": 1000000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "尚未明确跟进日期；供应商下周行程满、需向老板反馈（微信10/30谈判记录截图）",
+      "negotiationNotes": "【11/3待与小伍确认】11/2截图标「下周行程都安排满，不支持返利」，是否已明确拒绝待确认；诉求2026年结清所有逾期货款（微信11/2 BOM谈判截图）",
       "confirmationDate": null
     },
     {
@@ -8780,7 +8806,7 @@
       "nextFollowUpDate": null,
       "agreementStatus": "尚未签协议",
       "progressSummary": "尚未签协议；尚未安排跟进日期；待协议盖章寄回",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X155:AB155",
       "nextStepLocator": "'采购5922清单'!X155:AB155",
       "sourceShortfallAmount": 300000.0,
@@ -8929,13 +8955,13 @@
         {
           "date": "2026-10-30",
           "kind": "谈判结果",
-          "amount": null,
+          "amount": 300000.0,
           "target": 500000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T22:V22"
         }
       ],
-      "nextStep": "待回复；供应商承诺10/30回复，当日未回复需催促（微信10/30谈判记录截图）；下次跟进日期：2026-10-30",
+      "nextStep": "尚未签协议；11/2确认返利30万（目标50万），以贴现2%方式支持，待签协议；科思创2647每月确保用量；诉求2026年结清逾期货款、按时付款（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 19786445.478,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.02526982426206547,
@@ -8949,19 +8975,19 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null,
-      "nextFollowUpDate": "2026-10-30",
-      "agreementStatus": "待回复",
-      "sourceShortfallAmount": 500000.0,
+      "actualAmount": 300000.0,
+      "sourceAchievementRate": 0.6,
+      "achievementRate": 0.6,
+      "nextFollowUpDate": null,
+      "agreementStatus": "尚未签协议",
+      "sourceShortfallAmount": 200000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "供应商承诺10/30回复，当日未回复需催促（微信10/30谈判记录截图）",
-      "progressSummary": "待回复；供应商承诺10/30回复，当日未回复需催促（微信10/30谈判记录截图）；下次跟进日期：2026-10-30",
-      "progressAsOf": "2026-11-02",
+      "negotiationNotes": "11/2确认返利30万（目标50万），以贴现2%方式支持，待签协议；科思创2647每月确保用量；诉求2026年结清逾期货款、按时付款（微信11/2 BOM谈判截图）",
+      "progressSummary": "尚未签协议；11/2确认返利30万（目标50万），以贴现2%方式支持，待签协议；科思创2647每月确保用量；诉求2026年结清逾期货款、按时付款（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X22:AB22",
       "nextStepLocator": "'采购5922清单'!X22:AB22",
-      "confirmationDate": null
+      "confirmationDate": "2026-11-02"
     },
     {
       "id": "procurement-r27",
@@ -9682,7 +9708,7 @@
           "locator": "'采购5922清单'!T24:V24"
         }
       ],
-      "nextStep": "待回复；11/2再次现场确认（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
+      "nextStep": "待回复；【11/3待与小伍确认】11/2截图标「不支持，计划年底…」（文字截断）；供应商支持就近办厂及26年年度降本；诉求11/2确认未定价项、到期款付款时间；状态待确认（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 19299943.6148998,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.025906811438246573,
@@ -9699,13 +9725,13 @@
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
-      "nextFollowUpDate": "2026-11-02",
+      "nextFollowUpDate": null,
       "agreementStatus": "待回复",
       "sourceShortfallAmount": 500000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "11/2再次现场确认（微信10/30谈判记录截图）",
-      "progressSummary": "待回复；11/2再次现场确认（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
-      "progressAsOf": "2026-11-02",
+      "negotiationNotes": "【11/3待与小伍确认】11/2截图标「不支持，计划年底…」（文字截断）；供应商支持就近办厂及26年年度降本；诉求11/2确认未定价项、到期款付款时间；状态待确认（微信11/2 BOM谈判截图）",
+      "progressSummary": "待回复；【11/3待与小伍确认】11/2截图标「不支持，计划年底…」（文字截断）；供应商支持就近办厂及26年年度降本；诉求11/2确认未定价项、到期款付款时间；状态待确认（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X24:AB24",
       "nextStepLocator": "'采购5922清单'!X24:AB24",
       "confirmationDate": null
@@ -10299,7 +10325,7 @@
       "nextFollowUpDate": null,
       "agreementStatus": "尚未签协议",
       "progressSummary": "尚未签协议；尚未安排跟进日期；待协议签署寄回 (微信10/29 P7)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X28:AB28",
       "nextStepLocator": "'采购5922清单'!X28:AB28",
       "sourceShortfallAmount": 0.0,
@@ -10493,7 +10519,7 @@
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
       "progressSummary": "待回复；11/2回复；已反馈至公司领导（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X29:AB29",
       "nextStepLocator": "'采购5922清单'!X29:AB29",
       "nextFollowUpDate": "2026-11-02",
@@ -11300,7 +11326,7 @@
       "achievementRate": 0.6666666666666666,
       "nextStepLocator": "'采购5922清单'!X30:AB30",
       "progressSummary": "是，已签协议；现场签字 (微信10/30截图)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X30:AB30",
       "nextFollowUpDate": null,
       "agreementStatus": "是，已签协议",
@@ -11659,7 +11685,7 @@
       "sourceRow": 33,
       "locator": "'采购5922清单'!A33:AB33",
       "plannedDate": "2026-10-30",
-      "actualDate": null,
+      "actualDate": "2026-10-30",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -11786,8 +11812,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-30",
+          "kind": "谈判结果",
+          "amount": null,
+          "target": 500000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T33:V33"
+        }
+      ],
+      "nextStep": "待回复；【11/3待与小伍确认】首谈日期按截图填10/30，截图标「不支持」但11/2行动项要求重新确认谈判时间，状态待确认；供应商称加工费全年不到300万、产能紧张；要求对方履约账期；11/2反馈（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 11377350.0444001,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.043946964631372896,
@@ -11805,11 +11840,15 @@
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
       "nextFollowUpDate": null,
-      "agreementStatus": null,
+      "agreementStatus": "待回复",
       "sourceShortfallAmount": 500000.0,
-      "sourceTiming": null,
-      "negotiationNotes": null,
-      "confirmationDate": null
+      "sourceTiming": "按时谈判",
+      "negotiationNotes": "【11/3待与小伍确认】首谈日期按截图填10/30，截图标「不支持」但11/2行动项要求重新确认谈判时间，状态待确认；供应商称加工费全年不到300万、产能紧张；要求对方履约账期；11/2反馈（微信11/2 BOM谈判截图）",
+      "confirmationDate": null,
+      "progressSummary": "待回复；【11/3待与小伍确认】首谈日期按截图填10/30，截图标「不支持」但11/2行动项要求重新确认谈判时间，状态待确认；供应商称加工费全年不到300万、产能紧张；要求对方履约账期；11/2反馈（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
+      "progressLocator": "'采购5922清单'!X33:AB33",
+      "nextStepLocator": "'采购5922清单'!X33:AB33"
     },
     {
       "id": "procurement-r38",
@@ -11984,7 +12023,7 @@
       "sourceAchievementRate": 0.0,
       "achievementRate": 0.0,
       "progressSummary": "供应商不支持返利；10/30回复不支持返利（微信10/30谈判记录截图）",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X34:AB34",
       "nextStepLocator": "'采购5922清单'!X34:AB34",
       "nextFollowUpDate": null,
@@ -12167,7 +12206,7 @@
       "sourceRow": 36,
       "locator": "'采购5922清单'!A36:AB36",
       "plannedDate": "2026-11-03",
-      "actualDate": null,
+      "actualDate": "2026-10-29",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -12254,8 +12293,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-10-29",
+          "kind": "谈判结果",
+          "amount": null,
+          "target": 300000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T36:V36"
+        }
+      ],
+      "nextStep": "待回复；【11/3待与小伍确认】首谈日期按截图填10/29；年度降本未达成、下游客户不接受涨价；结佳只谈直接接单，未出具返利意向，需出具报告后确认（可能返现金或返货）；诉求新项目材料优先导入、呆滞库存及时沟通；11/6前反馈（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-06",
       "annualReceiptAmount": 10946739.27,
       "targetAmount": 300000.0,
       "targetRebateRate": 0.02740542115789335,
@@ -12272,12 +12320,16 @@
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
-      "nextFollowUpDate": null,
-      "agreementStatus": null,
+      "nextFollowUpDate": "2026-11-06",
+      "agreementStatus": "待回复",
       "sourceShortfallAmount": 300000.0,
-      "sourceTiming": null,
-      "negotiationNotes": null,
-      "confirmationDate": null
+      "sourceTiming": "按时谈判",
+      "negotiationNotes": "【11/3待与小伍确认】首谈日期按截图填10/29；年度降本未达成、下游客户不接受涨价；结佳只谈直接接单，未出具返利意向，需出具报告后确认（可能返现金或返货）；诉求新项目材料优先导入、呆滞库存及时沟通；11/6前反馈（微信11/2 BOM谈判截图）",
+      "confirmationDate": null,
+      "progressSummary": "待回复；【11/3待与小伍确认】首谈日期按截图填10/29；年度降本未达成、下游客户不接受涨价；结佳只谈直接接单，未出具返利意向，需出具报告后确认（可能返现金或返货）；诉求新项目材料优先导入、呆滞库存及时沟通；11/6前反馈（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-06",
+      "progressAsOf": "2026-11-03",
+      "progressLocator": "'采购5922清单'!X36:AB36",
+      "nextStepLocator": "'采购5922清单'!X36:AB36"
     },
     {
       "id": "procurement-r41",
@@ -12437,7 +12489,7 @@
       "nextFollowUpDate": "2026-10-30",
       "agreementStatus": null,
       "progressSummary": "下次跟进日期：2026-10-30",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X37:AB37",
       "nextStepLocator": "'采购5922清单'!X37:AB37",
       "sourceShortfallAmount": 500000.0,
@@ -12662,13 +12714,13 @@
         {
           "date": "2026-10-30",
           "kind": "谈判结果",
-          "amount": null,
+          "amount": 200000.0,
           "target": 500000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T40:V40"
         }
       ],
-      "nextStep": "待回复；11/2反馈；较计划(10/29)延后一天开谈（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
+      "nextStep": "待回复；11/2反馈返利20万（目标50万），供应商称服务费率低，下一轮再沟通确认；尚未安排下次跟进日期；诉求到期货款按时支付（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 10439145.43,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.04789664090348821,
@@ -12682,18 +12734,18 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null,
-      "nextFollowUpDate": "2026-11-02",
+      "actualAmount": 200000.0,
+      "sourceAchievementRate": 0.4,
+      "achievementRate": 0.4,
+      "nextFollowUpDate": null,
       "agreementStatus": "待回复",
-      "progressSummary": "待回复；11/2反馈；较计划(10/29)延后一天开谈（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
-      "progressAsOf": "2026-11-02",
+      "progressSummary": "待回复；11/2反馈返利20万（目标50万），供应商称服务费率低，下一轮再沟通确认；尚未安排下次跟进日期；诉求到期货款按时支付（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X40:AB40",
       "nextStepLocator": "'采购5922清单'!X40:AB40",
-      "sourceShortfallAmount": 500000.0,
+      "sourceShortfallAmount": 300000.0,
       "sourceTiming": "未按时谈判",
-      "negotiationNotes": "11/2反馈；较计划(10/29)延后一天开谈（微信10/30谈判记录截图）",
+      "negotiationNotes": "11/2反馈返利20万（目标50万），供应商称服务费率低，下一轮再沟通确认；尚未安排下次跟进日期；诉求到期货款按时支付（微信11/2 BOM谈判截图）",
       "confirmationDate": null
     },
     {
@@ -13002,7 +13054,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "11/5反馈（微信10/30谈判记录截图）",
       "progressSummary": "待回复；11/5反馈（微信10/30谈判记录截图）；下次跟进日期：2026-11-05",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X42:AB42",
       "nextStepLocator": "'采购5922清单'!X42:AB42",
       "confirmationDate": null
@@ -13038,13 +13090,13 @@
         {
           "date": "2026-10-28",
           "kind": "谈判结果",
-          "amount": 50000.0,
+          "amount": 80000.0,
           "target": 500000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T43:V43"
         }
       ],
-      "nextStep": "待回复；供应商内部协商只能支持5万(目标20万)，11/2回复（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
+      "nextStep": "待回复；11/2回复可支持8万（目标20万，原5万），要求最新计算后再回复；尚未安排下次跟进日期；诉求到期货款按时支付（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 10016747.0421,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.04991640478675556,
@@ -13058,18 +13110,18 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": 50000.0,
-      "sourceAchievementRate": 0.1,
-      "achievementRate": 0.1,
-      "progressSummary": "待回复；供应商内部协商只能支持5万(目标20万)，11/2回复（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
-      "progressAsOf": "2026-11-02",
+      "actualAmount": 80000.0,
+      "sourceAchievementRate": 0.16,
+      "achievementRate": 0.16,
+      "progressSummary": "待回复；11/2回复可支持8万（目标20万，原5万），要求最新计算后再回复；尚未安排下次跟进日期；诉求到期货款按时支付（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X43:AB43",
       "nextStepLocator": "'采购5922清单'!X43:AB43",
-      "nextFollowUpDate": "2026-11-02",
+      "nextFollowUpDate": null,
       "agreementStatus": "待回复",
-      "sourceShortfallAmount": 450000.0,
+      "sourceShortfallAmount": 420000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "供应商内部协商只能支持5万(目标20万)，11/2回复（微信10/30谈判记录截图）",
+      "negotiationNotes": "11/2回复可支持8万（目标20万，原5万），要求最新计算后再回复；尚未安排下次跟进日期；诉求到期货款按时支付（微信11/2 BOM谈判截图）",
       "confirmationDate": null
     },
     {
@@ -13233,7 +13285,7 @@
       "sourceRow": 45,
       "locator": "'采购5922清单'!A45:AB45",
       "plannedDate": "2026-11-02",
-      "actualDate": null,
+      "actualDate": "2026-11-02",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -13346,8 +13398,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-11-02",
+          "kind": "谈判结果",
+          "amount": 0.0,
+          "target": 500000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T45:V45"
+        }
+      ],
+      "nextStep": "供应商不支持返利；首谈：每年包工包料成本不高，加工成本支持不了，不支持返利（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 9527529.31870003,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.052479502636494826,
@@ -13361,15 +13422,19 @@
       "deliveryIssue": null,
       "qualityIssue": "是",
       "newProjectFlag": "否",
-      "actualAmount": null,
+      "actualAmount": 0.0,
       "sourceAchievementRate": 0.0,
-      "achievementRate": null,
+      "achievementRate": 0.0,
       "nextFollowUpDate": null,
-      "agreementStatus": null,
+      "agreementStatus": "供应商不支持返利",
       "sourceShortfallAmount": 500000.0,
-      "sourceTiming": null,
-      "negotiationNotes": null,
-      "confirmationDate": null
+      "sourceTiming": "按时谈判",
+      "negotiationNotes": "首谈：每年包工包料成本不高，加工成本支持不了，不支持返利（微信11/2 BOM谈判截图）",
+      "confirmationDate": "2026-11-02",
+      "progressSummary": "供应商不支持返利；首谈：每年包工包料成本不高，加工成本支持不了，不支持返利（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
+      "progressLocator": "'采购5922清单'!X45:AB45",
+      "nextStepLocator": "'采购5922清单'!X45:AB45"
     },
     {
       "id": "procurement-r50",
@@ -13544,7 +13609,7 @@
       "sourceRow": 47,
       "locator": "'采购5922清单'!A47:AB47",
       "plannedDate": "2026-11-02",
-      "actualDate": null,
+      "actualDate": "2026-11-02",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -14043,8 +14108,17 @@
           "locator": "'2027年量产新项目定点清单 1021'!A213:M213"
         }
       ],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-11-02",
+          "kind": "谈判结果",
+          "amount": null,
+          "target": 500000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T47:V47"
+        }
+      ],
+      "nextStep": "待回复；首谈：合作年限久、26年目标降本未达成，希望支持返利；诉求逾期货款支付、到期货款按时支付；11/4反馈（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-04",
       "annualReceiptAmount": 8373761.9042,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.05971031965325127,
@@ -14061,12 +14135,16 @@
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
-      "nextFollowUpDate": null,
-      "agreementStatus": null,
+      "nextFollowUpDate": "2026-11-04",
+      "agreementStatus": "待回复",
       "sourceShortfallAmount": 500000.0,
-      "sourceTiming": null,
-      "negotiationNotes": null,
-      "confirmationDate": null
+      "sourceTiming": "按时谈判",
+      "negotiationNotes": "首谈：合作年限久、26年目标降本未达成，希望支持返利；诉求逾期货款支付、到期货款按时支付；11/4反馈（微信11/2 BOM谈判截图）",
+      "confirmationDate": null,
+      "progressSummary": "待回复；首谈：合作年限久、26年目标降本未达成，希望支持返利；诉求逾期货款支付、到期货款按时支付；11/4反馈（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-04",
+      "progressAsOf": "2026-11-03",
+      "progressLocator": "'采购5922清单'!X47:AB47",
+      "nextStepLocator": "'采购5922清单'!X47:AB47"
     },
     {
       "id": "procurement-r52",
@@ -14209,13 +14287,13 @@
         {
           "date": "2026-10-30",
           "kind": "谈判结果",
-          "amount": null,
+          "amount": 40000.0,
           "target": 500000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T48:V48"
         }
       ],
-      "nextStep": "待回复；11/2反馈（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
+      "nextStep": "尚未签协议；11/2回复返利4万（目标50万），待签协议；诉求逾期货款支付（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 8331091.49,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.060016145615512856,
@@ -14229,19 +14307,19 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null,
-      "nextFollowUpDate": "2026-11-02",
-      "agreementStatus": "待回复",
-      "sourceShortfallAmount": 500000.0,
+      "actualAmount": 40000.0,
+      "sourceAchievementRate": 0.08,
+      "achievementRate": 0.08,
+      "nextFollowUpDate": null,
+      "agreementStatus": "尚未签协议",
+      "sourceShortfallAmount": 460000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "11/2反馈（微信10/30谈判记录截图）",
-      "progressSummary": "待回复；11/2反馈（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
-      "progressAsOf": "2026-11-02",
+      "negotiationNotes": "11/2回复返利4万（目标50万），待签协议；诉求逾期货款支付（微信11/2 BOM谈判截图）",
+      "progressSummary": "尚未签协议；11/2回复返利4万（目标50万），待签协议；诉求逾期货款支付（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X48:AB48",
       "nextStepLocator": "'采购5922清单'!X48:AB48",
-      "confirmationDate": null
+      "confirmationDate": "2026-11-02"
     },
     {
       "id": "procurement-r53",
@@ -14611,7 +14689,7 @@
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
       "progressSummary": "待回复；下次跟进日期：2026-10-30",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X49:AB49",
       "nextStepLocator": "'采购5922清单'!X49:AB49",
       "nextFollowUpDate": "2026-10-30",
@@ -14670,7 +14748,7 @@
       "nextFollowUpDate": null,
       "agreementStatus": "是，已签协议",
       "progressSummary": "是，已签协议；已盖章寄至公司",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X156:AB156",
       "nextStepLocator": "'采购5922清单'!X156:AB156",
       "sourceShortfallAmount": 0.0,
@@ -14976,13 +15054,13 @@
         {
           "date": "2026-10-29",
           "kind": "谈判结果",
-          "amount": 0.0,
+          "amount": 250000.0,
           "target": 500000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T50:V50"
         }
       ],
-      "nextStep": "供应商不支持返利；供应商不支持返点",
+      "nextStep": "尚未签协议；原10/29不支持返点，11/2多次商谈后确认返利25万（目标50万），待签协议；诉求2026年底前结清逾期货款、按时付款（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 6975435.01100001,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.07168011732766745,
@@ -14996,19 +15074,19 @@
       "deliveryIssue": null,
       "qualityIssue": "是",
       "newProjectFlag": "否",
-      "actualAmount": 0.0,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": 0.0,
-      "progressSummary": "供应商不支持返利；供应商不支持返点",
-      "progressAsOf": "2026-11-02",
+      "actualAmount": 250000.0,
+      "sourceAchievementRate": 0.5,
+      "achievementRate": 0.5,
+      "progressSummary": "尚未签协议；原10/29不支持返点，11/2多次商谈后确认返利25万（目标50万），待签协议；诉求2026年底前结清逾期货款、按时付款（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X50:AB50",
       "nextStepLocator": "'采购5922清单'!X50:AB50",
       "nextFollowUpDate": null,
-      "agreementStatus": "供应商不支持返利",
-      "sourceShortfallAmount": 500000.0,
+      "agreementStatus": "尚未签协议",
+      "sourceShortfallAmount": 250000.0,
       "sourceTiming": "未按时谈判",
-      "negotiationNotes": "供应商不支持返点",
-      "confirmationDate": "2026-10-29"
+      "negotiationNotes": "原10/29不支持返点，11/2多次商谈后确认返利25万（目标50万），待签协议；诉求2026年底前结清逾期货款、按时付款（微信11/2 BOM谈判截图）",
+      "confirmationDate": "2026-11-02"
     },
     {
       "id": "procurement-r56",
@@ -15342,7 +15420,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "超前谈判(计划11/2)；目标30万，供应商11/3回复（微信10/30谈判记录截图）",
       "progressSummary": "待回复；超前谈判(计划11/2)；目标30万，供应商11/3回复（微信10/30谈判记录截图）；下次跟进日期：2026-11-03",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X52:AB52",
       "nextStepLocator": "'采购5922清单'!X52:AB52",
       "confirmationDate": null
@@ -15889,13 +15967,13 @@
         {
           "date": "2026-10-29",
           "kind": "谈判结果",
-          "amount": null,
+          "amount": 250000.0,
           "target": 500000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T157:V157"
         }
       ],
-      "nextStep": "待回复；下次跟进日期：2026-11-02",
+      "nextStep": "尚未签协议；11/2反馈返利25万（目标50万），待签协议；奇瑞、小鹏项目支持；诉求逾期货款2个月内支付、到期款按时支付（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 6176488.32100002,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.0809521485372203,
@@ -15909,19 +15987,19 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null,
-      "nextFollowUpDate": "2026-11-02",
-      "agreementStatus": "待回复",
-      "progressSummary": "待回复；下次跟进日期：2026-11-02",
-      "progressAsOf": "2026-11-02",
+      "actualAmount": 250000.0,
+      "sourceAchievementRate": 0.5,
+      "achievementRate": 0.5,
+      "nextFollowUpDate": null,
+      "agreementStatus": "尚未签协议",
+      "progressSummary": "尚未签协议；11/2反馈返利25万（目标50万），待签协议；奇瑞、小鹏项目支持；诉求逾期货款2个月内支付、到期款按时支付（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X157:AB157",
       "nextStepLocator": "'采购5922清单'!X157:AB157",
-      "sourceShortfallAmount": 500000.0,
+      "sourceShortfallAmount": 250000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": null,
-      "confirmationDate": null
+      "negotiationNotes": "11/2反馈返利25万（目标50万），待签协议；奇瑞、小鹏项目支持；诉求逾期货款2个月内支付、到期款按时支付（微信11/2 BOM谈判截图）",
+      "confirmationDate": "2026-11-02"
     },
     {
       "id": "procurement-r60",
@@ -15934,7 +16012,7 @@
       "sourceRow": 54,
       "locator": "'采购5922清单'!A54:AB54",
       "plannedDate": "2026-11-02",
-      "actualDate": null,
+      "actualDate": "2026-11-02",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -16021,8 +16099,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-11-02",
+          "kind": "谈判结果",
+          "amount": null,
+          "target": 500000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T54:V54"
+        }
+      ],
+      "nextStep": "待回复；首谈：26年降本未达成、国产化颗粒持续推进份额增加；供应商无返利先例，需与老板沟通，11/3回复（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-03",
       "annualReceiptAmount": 5979066.4,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.08362509571728455,
@@ -16039,12 +16126,16 @@
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
-      "nextFollowUpDate": null,
-      "agreementStatus": null,
+      "nextFollowUpDate": "2026-11-03",
+      "agreementStatus": "待回复",
       "sourceShortfallAmount": 500000.0,
-      "sourceTiming": null,
-      "negotiationNotes": null,
-      "confirmationDate": null
+      "sourceTiming": "按时谈判",
+      "negotiationNotes": "首谈：26年降本未达成、国产化颗粒持续推进份额增加；供应商无返利先例，需与老板沟通，11/3回复（微信11/2 BOM谈判截图）",
+      "confirmationDate": null,
+      "progressSummary": "待回复；首谈：26年降本未达成、国产化颗粒持续推进份额增加；供应商无返利先例，需与老板沟通，11/3回复（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-03",
+      "progressAsOf": "2026-11-03",
+      "progressLocator": "'采购5922清单'!X54:AB54",
+      "nextStepLocator": "'采购5922清单'!X54:AB54"
     },
     {
       "id": "procurement-r61",
@@ -16721,7 +16812,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "11/3反馈（微信10/30谈判记录截图）",
       "progressSummary": "待回复；11/3反馈（微信10/30谈判记录截图）；下次跟进日期：2026-11-03",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X58:AB58",
       "nextStepLocator": "'采购5922清单'!X58:AB58",
       "confirmationDate": null
@@ -16910,13 +17001,13 @@
         {
           "date": "2026-10-29",
           "kind": "谈判结果",
-          "amount": 0.0,
+          "amount": 100000.0,
           "target": 500000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T158:V158"
         }
       ],
-      "nextStep": "供应商不支持返利；供应商不支持返点",
+      "nextStep": "尚未签协议；原10/29不支持返点，11/2多次商谈后确认返利10万（目标50万），待签协议；诉求逾期货款2个月内支付、到期款按时支付（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 4954537.63700001,
       "targetAmount": 500000.0,
       "targetRebateRate": 0.10091759042580443,
@@ -16930,19 +17021,19 @@
       "deliveryIssue": null,
       "qualityIssue": "是",
       "newProjectFlag": "否",
-      "actualAmount": 0.0,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": 0.0,
+      "actualAmount": 100000.0,
+      "sourceAchievementRate": 0.2,
+      "achievementRate": 0.2,
       "nextFollowUpDate": null,
-      "agreementStatus": "供应商不支持返利",
-      "progressSummary": "供应商不支持返利；供应商不支持返点",
-      "progressAsOf": "2026-11-02",
+      "agreementStatus": "尚未签协议",
+      "progressSummary": "尚未签协议；原10/29不支持返点，11/2多次商谈后确认返利10万（目标50万），待签协议；诉求逾期货款2个月内支付、到期款按时支付（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X158:AB158",
       "nextStepLocator": "'采购5922清单'!X158:AB158",
-      "sourceShortfallAmount": 500000.0,
+      "sourceShortfallAmount": 400000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "供应商不支持返点",
-      "confirmationDate": "2026-10-29"
+      "negotiationNotes": "原10/29不支持返点，11/2多次商谈后确认返利10万（目标50万），待签协议；诉求逾期货款2个月内支付、到期款按时支付（微信11/2 BOM谈判截图）",
+      "confirmationDate": "2026-11-02"
     },
     {
       "id": "procurement-r66",
@@ -17208,7 +17299,7 @@
       "sourceRow": 60,
       "locator": "'采购5922清单'!A60:AB60",
       "plannedDate": "2026-11-02",
-      "actualDate": null,
+      "actualDate": "2026-11-02",
       "agreedAmount": null,
       "realizedAmount": null,
       "realizedDate": null,
@@ -17256,8 +17347,17 @@
         }
       ],
       "projects": [],
-      "history": [],
-      "nextStep": null,
+      "history": [
+        {
+          "date": "2026-11-02",
+          "kind": "谈判结果",
+          "amount": 50000.0,
+          "target": 200000.0,
+          "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
+          "locator": "'采购5922清单'!T60:V60"
+        }
+      ],
+      "nextStep": "待回复；首谈：供应商先报5万，采购再申请按10万（目标20万）；截图称下周二回复，具体日期待确认；尚未安排跟进日期（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 4534700.101656,
       "targetAmount": 200000.0,
       "targetRebateRate": 0.044104349905512645,
@@ -17271,15 +17371,19 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null,
+      "actualAmount": 50000.0,
+      "sourceAchievementRate": 0.25,
+      "achievementRate": 0.25,
       "nextFollowUpDate": null,
-      "agreementStatus": null,
-      "sourceShortfallAmount": 200000.0,
-      "sourceTiming": null,
-      "negotiationNotes": null,
-      "confirmationDate": null
+      "agreementStatus": "待回复",
+      "sourceShortfallAmount": 150000.0,
+      "sourceTiming": "按时谈判",
+      "negotiationNotes": "首谈：供应商先报5万，采购再申请按10万（目标20万）；截图称下周二回复，具体日期待确认；尚未安排跟进日期（微信11/2 BOM谈判截图）",
+      "confirmationDate": null,
+      "progressSummary": "待回复；首谈：供应商先报5万，采购再申请按10万（目标20万）；截图称下周二回复，具体日期待确认；尚未安排跟进日期（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
+      "progressLocator": "'采购5922清单'!X60:AB60",
+      "nextStepLocator": "'采购5922清单'!X60:AB60"
     },
     {
       "id": "procurement-r68",
@@ -17304,13 +17408,13 @@
         {
           "date": "2026-10-30",
           "kind": "谈判结果",
-          "amount": null,
+          "amount": 100000.0,
           "target": 200000.0,
           "text": "主表记录首次谈判日期及当前返利金额；不代表后续谈判已结束。",
           "locator": "'采购5922清单'!T61:V61"
         }
       ],
-      "nextStep": "待回复；超前谈判(计划11/2)；目标20万，供应商11/2回复（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
+      "nextStep": "尚未签协议；11/2回复返利10万（目标20万），待签协议；预计26年采购额408万；诉求到期款按时支付（微信11/2 BOM谈判截图）",
       "annualReceiptAmount": 4080892.78990002,
       "targetAmount": 200000.0,
       "targetRebateRate": 0.049008883667561357,
@@ -17324,19 +17428,19 @@
       "deliveryIssue": null,
       "qualityIssue": null,
       "newProjectFlag": "否",
-      "actualAmount": null,
-      "sourceAchievementRate": 0.0,
-      "achievementRate": null,
-      "nextFollowUpDate": "2026-11-02",
-      "agreementStatus": "待回复",
-      "sourceShortfallAmount": 200000.0,
+      "actualAmount": 100000.0,
+      "sourceAchievementRate": 0.5,
+      "achievementRate": 0.5,
+      "nextFollowUpDate": null,
+      "agreementStatus": "尚未签协议",
+      "sourceShortfallAmount": 100000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "超前谈判(计划11/2)；目标20万，供应商11/2回复（微信10/30谈判记录截图）",
-      "progressSummary": "待回复；超前谈判(计划11/2)；目标20万，供应商11/2回复（微信10/30谈判记录截图）；下次跟进日期：2026-11-02",
-      "progressAsOf": "2026-11-02",
+      "negotiationNotes": "11/2回复返利10万（目标20万），待签协议；预计26年采购额408万；诉求到期款按时支付（微信11/2 BOM谈判截图）",
+      "progressSummary": "尚未签协议；11/2回复返利10万（目标20万），待签协议；预计26年采购额408万；诉求到期款按时支付（微信11/2 BOM谈判截图）",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X61:AB61",
       "nextStepLocator": "'采购5922清单'!X61:AB61",
-      "confirmationDate": null
+      "confirmationDate": "2026-11-02"
     },
     {
       "id": "procurement-r69",
@@ -17394,7 +17498,7 @@
           "locator": "'采购5922清单'!T62:V62"
         }
       ],
-      "nextStep": "待回复；需明确跟进日期：董事长在国外，预计下周回复；目标20万（微信10/30谈判记录截图）",
+      "nextStep": "待回复；董事长在国外，11/5回国面谈；目标20万；预计26年采购额360万（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-05",
       "annualReceiptAmount": 3684919.25,
       "targetAmount": 200000.0,
       "targetRebateRate": 0.05427527346766147,
@@ -17411,13 +17515,13 @@
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
-      "nextFollowUpDate": null,
+      "nextFollowUpDate": "2026-11-05",
       "agreementStatus": "待回复",
       "sourceShortfallAmount": 200000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "需明确跟进日期：董事长在国外，预计下周回复；目标20万（微信10/30谈判记录截图）",
-      "progressSummary": "待回复；需明确跟进日期：董事长在国外，预计下周回复；目标20万（微信10/30谈判记录截图）",
-      "progressAsOf": "2026-11-02",
+      "negotiationNotes": "董事长在国外，11/5回国面谈；目标20万；预计26年采购额360万（微信11/2 BOM谈判截图）",
+      "progressSummary": "待回复；董事长在国外，11/5回国面谈；目标20万；预计26年采购额360万（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-05",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X62:AB62",
       "nextStepLocator": "'采购5922清单'!X62:AB62",
       "confirmationDate": null
@@ -17556,7 +17660,7 @@
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
       "progressSummary": "待回复；11/4回复(原10/29承诺未反馈)（微信10/30谈判记录截图）；下次跟进日期：2026-11-04",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X63:AB63",
       "nextStepLocator": "'采购5922清单'!X63:AB63",
       "nextFollowUpDate": "2026-11-04",
@@ -17987,7 +18091,7 @@
           "locator": "'采购5922清单'!T65:V65"
         }
       ],
-      "nextStep": "待回复；供应商预计10/29反馈 (微信10/30截图)，已逾期需确认；下次跟进日期：2026-10-29",
+      "nextStep": "待回复；供应商内部再核算后11/4反馈（原10/29承诺已逾期）；预计26年采购额300万；货款按时支付（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-04",
       "annualReceiptAmount": 3017374.395,
       "targetAmount": 300000.0,
       "targetRebateRate": 0.09942418829334568,
@@ -18004,15 +18108,15 @@
       "actualAmount": null,
       "sourceAchievementRate": 0.0,
       "achievementRate": null,
-      "progressSummary": "待回复；供应商预计10/29反馈 (微信10/30截图)，已逾期需确认；下次跟进日期：2026-10-29",
-      "progressAsOf": "2026-11-02",
+      "progressSummary": "待回复；供应商内部再核算后11/4反馈（原10/29承诺已逾期）；预计26年采购额300万；货款按时支付（微信11/2 BOM谈判截图）；下次跟进日期：2026-11-04",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X65:AB65",
       "nextStepLocator": "'采购5922清单'!X65:AB65",
-      "nextFollowUpDate": "2026-10-29",
+      "nextFollowUpDate": "2026-11-04",
       "agreementStatus": "待回复",
       "sourceShortfallAmount": 300000.0,
       "sourceTiming": "按时谈判",
-      "negotiationNotes": "供应商预计10/29反馈 (微信10/30截图)，已逾期需确认",
+      "negotiationNotes": "供应商内部再核算后11/4反馈（原10/29承诺已逾期）；预计26年采购额300万；货款按时支付（微信11/2 BOM谈判截图）",
       "confirmationDate": null
     },
     {
@@ -18213,7 +18317,7 @@
       "nextFollowUpDate": "2026-10-30",
       "agreementStatus": "待回复",
       "progressSummary": "待回复；下次跟进日期：2026-10-30",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X67:AB67",
       "nextStepLocator": "'采购5922清单'!X67:AB67",
       "sourceShortfallAmount": 1384488.0,
@@ -18284,7 +18388,7 @@
       "nextFollowUpDate": null,
       "agreementStatus": "待回复",
       "progressSummary": "待回复；尚未安排跟进日期",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X68:AB68",
       "nextStepLocator": "'采购5922清单'!X68:AB68",
       "sourceShortfallAmount": 247136.0,
@@ -18341,7 +18445,7 @@
       "nextFollowUpDate": null,
       "agreementStatus": "待回复",
       "progressSummary": "待回复；尚未安排跟进日期",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X69:AB69",
       "nextStepLocator": "'采购5922清单'!X69:AB69",
       "sourceShortfallAmount": 435239.99999999994,
@@ -18783,7 +18887,7 @@
       "negotiationNotes": "首谈：待周一(11/2)回复 (谈判记录10/31)",
       "confirmationDate": null,
       "progressSummary": "待回复；首谈：待周一(11/2)回复 (谈判记录10/31)；下次跟进日期：2026-11-02",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X75:AB75",
       "nextStepLocator": "'采购5922清单'!X75:AB75"
     },
@@ -18840,7 +18944,7 @@
       "negotiationNotes": "首谈：待周一(11/2)回复 (谈判记录10/31)",
       "confirmationDate": null,
       "progressSummary": "待回复；首谈：待周一(11/2)回复 (谈判记录10/31)；下次跟进日期：2026-11-02",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X76:AB76",
       "nextStepLocator": "'采购5922清单'!X76:AB76"
     },
@@ -18897,7 +19001,7 @@
       "negotiationNotes": "首谈：都是低价竞标，没有返利；公司今年亏损近500万，集团公司筹划转让模具公司 (谈判记录10/31)",
       "confirmationDate": "2026-10-31",
       "progressSummary": "供应商不支持返利；首谈：都是低价竞标，没有返利；公司今年亏损近500万，集团公司筹划转让模具公司 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X77:AB77",
       "nextStepLocator": "'采购5922清单'!X77:AB77"
     },
@@ -20023,7 +20127,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "首谈：合同未约定返利、非标品价格锁定无空间；下周一向领导汇报后回复；质量问题按合同维修/赔偿；诉求：提前签框架协议约定返点 (谈判记录10/30)",
       "progressSummary": "待回复；首谈：合同未约定返利、非标品价格锁定无空间；下周一向领导汇报后回复；质量问题按合同维修/赔偿；诉求：提前签框架协议约定返点 (谈判记录10/30)；下次跟进日期：2026-11-03",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X102:AB102",
       "nextStepLocator": "'采购5922清单'!X102:AB102",
       "confirmationDate": null
@@ -20080,7 +20184,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "尚未安排跟进日期；首谈：低价中标保本，付银行承兑给1%、付现金给2%返利，金额待按付款方式确认；诉求：到期未付款项尽快支付 (谈判记录10/30)",
       "progressSummary": "待回复；尚未安排跟进日期；首谈：低价中标保本，付银行承兑给1%、付现金给2%返利，金额待按付款方式确认；诉求：到期未付款项尽快支付 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X103:AB103",
       "nextStepLocator": "'采购5922清单'!X103:AB103",
       "confirmationDate": null
@@ -20137,7 +20241,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "首谈：前面项目无返利空间；新项目可先约定返利要求；诉求：退火炉质量问题协调解决 (谈判记录10/30)",
       "progressSummary": "供应商不支持返利；首谈：前面项目无返利空间；新项目可先约定返利要求；诉求：退火炉质量问题协调解决 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X104:AB104",
       "nextStepLocator": "'采购5922清单'!X104:AB104",
       "confirmationDate": "2026-10-30"
@@ -20194,7 +20298,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "首谈：已向公司主要领导汇报，无法返利 (谈判记录10/30)",
       "progressSummary": "供应商不支持返利；首谈：已向公司主要领导汇报，无法返利 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X105:AB105",
       "nextStepLocator": "'采购5922清单'!X105:AB105",
       "confirmationDate": "2026-10-30"
@@ -20251,7 +20355,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "首谈：招标利润薄，前面项目无返利空间；新项目可先约定返利要求 (谈判记录10/30)",
       "progressSummary": "供应商不支持返利；首谈：招标利润薄，前面项目无返利空间；新项目可先约定返利要求 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X106:AB106",
       "nextStepLocator": "'采购5922清单'!X106:AB106",
       "confirmationDate": "2026-10-30"
@@ -20308,7 +20412,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "尚未安排跟进日期；首谈：无返利先例、亏钱项目也在做；现金贴现部分可返2%，金额待确认；诉求：签战略合作框架协议，约定合同金额与返利挂钩 (谈判记录10/30)",
       "progressSummary": "待回复；尚未安排跟进日期；首谈：无返利先例、亏钱项目也在做；现金贴现部分可返2%，金额待确认；诉求：签战略合作框架协议，约定合同金额与返利挂钩 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X107:AB107",
       "nextStepLocator": "'采购5922清单'!X107:AB107",
       "confirmationDate": null
@@ -20366,7 +20470,7 @@
       "negotiationNotes": "首谈：价格很低，没有返利空间；企业存活都难，前面项目没办法返利；后面项目要先约定返利，报价时预留空间；也不接受现金支付给返利 (谈判记录10/31)",
       "confirmationDate": "2026-10-31",
       "progressSummary": "供应商不支持返利；首谈：价格很低，没有返利空间；企业存活都难，前面项目没办法返利；后面项目要先约定返利，报价时预留空间；也不接受现金支付给返利 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X108:AB108",
       "nextStepLocator": "'采购5922清单'!X108:AB108"
     },
@@ -20423,7 +20527,7 @@
       "negotiationNotes": "首谈：低价中标，基本是保本在做，没有返利空间 (谈判记录10/31)",
       "confirmationDate": "2026-10-31",
       "progressSummary": "供应商不支持返利；首谈：低价中标，基本是保本在做，没有返利空间 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X109:AB109",
       "nextStepLocator": "'采购5922清单'!X109:AB109"
     },
@@ -20479,7 +20583,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "尚未安排跟进日期；首谈：无返利先例；现金贴现部分可返2%，金额待确认（与福丰同一负责人史总） (谈判记录10/30)",
       "progressSummary": "待回复；尚未安排跟进日期；首谈：无返利先例；现金贴现部分可返2%，金额待确认（与福丰同一负责人史总） (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X110:AB110",
       "nextStepLocator": "'采购5922清单'!X110:AB110",
       "confirmationDate": null
@@ -20537,7 +20641,7 @@
       "negotiationNotes": "首谈：不愿意接受谈判，说是好久一个项目都没有中；与芜湖中卓是同一家 (谈判记录10/31)",
       "confirmationDate": "2026-10-31",
       "progressSummary": "供应商不支持返利；首谈：不愿意接受谈判，说是好久一个项目都没有中；与芜湖中卓是同一家 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X117:AB117",
       "nextStepLocator": "'采购5922清单'!X117:AB117"
     },
@@ -20594,7 +20698,7 @@
       "negotiationNotes": "尚未安排跟进日期；首谈：价格低、都是低价中标，亏损项目也在做，无法返利；以后项目可沟通；部分现金贴现2%可以，金额待确认 (谈判记录10/31)",
       "confirmationDate": null,
       "progressSummary": "待回复；尚未安排跟进日期；首谈：价格低、都是低价中标，亏损项目也在做，无法返利；以后项目可沟通；部分现金贴现2%可以，金额待确认 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X112:AB112",
       "nextStepLocator": "'采购5922清单'!X112:AB112"
     },
@@ -20651,7 +20755,7 @@
       "negotiationNotes": "尚未安排跟进日期；首谈时间补填10/31，汇总_工装设备1031仅列入、谈判记录10/31无内容，缺明确回复，需留培杨补谈判记录并确认回复／跟进日期",
       "confirmationDate": null,
       "progressSummary": "待回复；尚未安排跟进日期；首谈时间补填10/31，汇总_工装设备1031仅列入、谈判记录10/31无内容，缺明确回复，需留培杨补谈判记录并确认回复／跟进日期",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X113:AB113",
       "nextStepLocator": "'采购5922清单'!X113:AB113"
     },
@@ -20708,7 +20812,7 @@
       "negotiationNotes": "尚未安排跟进日期；超前谈判(原目标时间11/6)；首谈：只有一个项目，价格很低，没办法返利 (谈判记录10/31)",
       "confirmationDate": null,
       "progressSummary": "待回复；尚未安排跟进日期；超前谈判(原目标时间11/6)；首谈：只有一个项目，价格很低，没办法返利 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X114:AB114",
       "nextStepLocator": "'采购5922清单'!X114:AB114"
     },
@@ -20765,7 +20869,7 @@
       "negotiationNotes": "首谈：价格很低、利润薄，比其他同类客户报价低很多，以前的项目没办法返利；平时设备额外改动也没增加收费 (谈判记录10/31)",
       "confirmationDate": "2026-10-31",
       "progressSummary": "供应商不支持返利；首谈：价格很低、利润薄，比其他同类客户报价低很多，以前的项目没办法返利；平时设备额外改动也没增加收费 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X115:AB115",
       "nextStepLocator": "'采购5922清单'!X115:AB115"
     },
@@ -20822,7 +20926,7 @@
       "negotiationNotes": "首谈：不愿意接受谈判 (谈判记录10/31)",
       "confirmationDate": "2026-10-31",
       "progressSummary": "供应商不支持返利；首谈：不愿意接受谈判 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X116:AB116",
       "nextStepLocator": "'采购5922清单'!X116:AB116"
     },
@@ -20879,7 +20983,7 @@
       "negotiationNotes": "首谈：不愿意接受谈判，已经好久一个项目都没有中；与芜湖中卓是同一公司 (谈判记录10/31)",
       "confirmationDate": "2026-10-31",
       "progressSummary": "供应商不支持返利；首谈：不愿意接受谈判，已经好久一个项目都没有中；与芜湖中卓是同一公司 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X111:AB111",
       "nextStepLocator": "'采购5922清单'!X111:AB111"
     },
@@ -20936,7 +21040,7 @@
       "negotiationNotes": "首谈：以前的项目没办法返利；以后项目可沟通，最好提前告知返利条件，报价时可考虑 (谈判记录10/31)",
       "confirmationDate": "2026-10-31",
       "progressSummary": "供应商不支持返利；首谈：以前的项目没办法返利；以后项目可沟通，最好提前告知返利条件，报价时可考虑 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X118:AB118",
       "nextStepLocator": "'采购5922清单'!X118:AB118"
     },
@@ -20993,7 +21097,7 @@
       "negotiationNotes": "首谈：价格很低，基本没有利润，没有办法返利 (谈判记录10/31)",
       "confirmationDate": "2026-10-31",
       "progressSummary": "供应商不支持返利；首谈：价格很低，基本没有利润，没有办法返利 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X119:AB119",
       "nextStepLocator": "'采购5922清单'!X119:AB119"
     },
@@ -21050,7 +21154,7 @@
       "negotiationNotes": "首谈：国企，无法返利 (汇总_工装设备1031；谈判记录10/31无此条)",
       "confirmationDate": "2026-10-31",
       "progressSummary": "供应商不支持返利；首谈：国企，无法返利 (汇总_工装设备1031；谈判记录10/31无此条)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X120:AB120",
       "nextStepLocator": "'采购5922清单'!X120:AB120"
     },
@@ -21107,7 +21211,7 @@
       "negotiationNotes": "尚未安排跟进日期；首谈时间补填10/31，汇总_工装设备1031仅列入、谈判记录10/31无内容，缺明确回复，需留培杨补谈判记录并确认回复／跟进日期",
       "confirmationDate": null,
       "progressSummary": "待回复；尚未安排跟进日期；首谈时间补填10/31，汇总_工装设备1031仅列入、谈判记录10/31无内容，缺明确回复，需留培杨补谈判记录并确认回复／跟进日期",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X121:AB121",
       "nextStepLocator": "'采购5922清单'!X121:AB121"
     },
@@ -21164,7 +21268,7 @@
       "negotiationNotes": "首谈：只做了一个母线工程，铜产品没什么利润，只有点人工，没办法返利 (谈判记录10/31)",
       "confirmationDate": "2026-10-31",
       "progressSummary": "供应商不支持返利；首谈：只做了一个母线工程，铜产品没什么利润，只有点人工，没办法返利 (谈判记录10/31)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X122:AB122",
       "nextStepLocator": "'采购5922清单'!X122:AB122"
     },
@@ -21221,7 +21325,7 @@
       "negotiationNotes": "尚未安排跟进日期；首谈：不同意返利，可以部分接受现金1%折扣，金额待确认 (汇总_工装设备1031；谈判记录10/31无此条)",
       "confirmationDate": null,
       "progressSummary": "待回复；尚未安排跟进日期；首谈：不同意返利，可以部分接受现金1%折扣，金额待确认 (汇总_工装设备1031；谈判记录10/31无此条)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X123:AB123",
       "nextStepLocator": "'采购5922清单'!X123:AB123"
     },
@@ -21278,7 +21382,7 @@
       "negotiationNotes": "尚未安排跟进日期；首谈时间补填10/31，汇总_工装设备1031仅列入、谈判记录10/31无内容，缺明确回复，需留培杨补谈判记录并确认回复／跟进日期",
       "confirmationDate": null,
       "progressSummary": "待回复；尚未安排跟进日期；首谈时间补填10/31，汇总_工装设备1031仅列入、谈判记录10/31无内容，缺明确回复，需留培杨补谈判记录并确认回复／跟进日期",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X124:AB124",
       "nextStepLocator": "'采购5922清单'!X124:AB124"
     },
@@ -21964,7 +22068,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "首谈答应返利5万(约0.5%)；若缩短账期，减少的资金成本返还公司；诉求27年续签/缩账期/现金付款 (谈判记录10/30)",
       "progressSummary": "尚未签协议；首谈答应返利5万(约0.5%)；若缩短账期，减少的资金成本返还公司；诉求27年续签/缩账期/现金付款 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X139:AB139",
       "nextStepLocator": "'采购5922清单'!X139:AB139",
       "confirmationDate": "2026-10-30"
@@ -22018,7 +22122,7 @@
       "nextFollowUpDate": null,
       "agreementStatus": "尚未签协议",
       "progressSummary": "尚未签协议；第二次谈：增加2万，合计20万；货款已结清 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X140:AB140",
       "nextStepLocator": "'采购5922清单'!X140:AB140",
       "sourceShortfallAmount": 64332.79450000002,
@@ -22078,7 +22182,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "首谈：跟财务核算，下周一回复；诉求长春线成本重核/缩账期30天/现金付款/27年续签 (谈判记录10/30)",
       "progressSummary": "待回复；首谈：跟财务核算，下周一回复；诉求长春线成本重核/缩账期30天/现金付款/27年续签 (谈判记录10/30)；下次跟进日期：2026-11-03",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X141:AB141",
       "nextStepLocator": "'采购5922清单'!X141:AB141",
       "confirmationDate": null
@@ -22132,7 +22236,7 @@
       "nextFollowUpDate": "2026-11-04",
       "agreementStatus": "待回复",
       "progressSummary": "待回复；第二次谈：26年无法返利；25年部分财务核算中，下周二答复；若货款改现金支付可给1%；诉求续签27年/缩账期60天 (谈判记录10/30)；下次跟进日期：2026-11-04",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X142:AB142",
       "nextStepLocator": "'采购5922清单'!X142:AB142",
       "sourceShortfallAmount": 158631.9768,
@@ -22192,7 +22296,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "尚未安排跟进日期；首谈：嘉利业务亏损，25年让财务核算，暂未明确答应返利；提议账期60/30天或现金支付，省下资金成本作返利 (谈判记录10/30)",
       "progressSummary": "待回复；尚未安排跟进日期；首谈：嘉利业务亏损，25年让财务核算，暂未明确答应返利；提议账期60/30天或现金支付，省下资金成本作返利 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X143:AB143",
       "nextStepLocator": "'采购5922清单'!X143:AB143",
       "confirmationDate": null
@@ -22246,7 +22350,7 @@
       "nextFollowUpDate": null,
       "agreementStatus": "供应商不支持返利",
       "progressSummary": "供应商不支持返利；坚决不返 (微信10/30 留培杨)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X144:AB144",
       "nextStepLocator": "'采购5922清单'!X144:AB144",
       "sourceShortfallAmount": 151213.7524,
@@ -22297,7 +22401,7 @@
       "sourceTiming": null,
       "negotiationNotes": "10/30计划谈判，未见谈判记录",
       "progressSummary": "10/30计划谈判，未见谈判记录",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X145:AB145",
       "nextStepLocator": "'采购5922清单'!X145:AB145",
       "confirmationDate": null
@@ -22351,7 +22455,7 @@
       "nextFollowUpDate": null,
       "agreementStatus": "供应商不支持返利",
       "progressSummary": "供应商不支持返利；第二次谈：明确不同意返利 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X146:AB146",
       "nextStepLocator": "'采购5922清单'!X146:AB146",
       "sourceShortfallAmount": 69756.8,
@@ -22411,7 +22515,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "尚未安排跟进日期；首谈：让财务测算，很难返利 (谈判记录10/30)",
       "progressSummary": "待回复；尚未安排跟进日期；首谈：让财务测算，很难返利 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X147:AB147",
       "nextStepLocator": "'采购5922清单'!X147:AB147",
       "confirmationDate": null
@@ -22468,7 +22572,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "尚未安排跟进日期；首谈：让财务测算，很难返利 (谈判记录10/30)",
       "progressSummary": "待回复；尚未安排跟进日期；首谈：让财务测算，很难返利 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X148:AB148",
       "nextStepLocator": "'采购5922清单'!X148:AB148",
       "confirmationDate": null
@@ -22525,7 +22629,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "首谈：业务量减少，26年降价后已是成本线，无返利空间 (谈判记录10/30)",
       "progressSummary": "供应商不支持返利；首谈：业务量减少，26年降价后已是成本线，无返利空间 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X149:AB149",
       "nextStepLocator": "'采购5922清单'!X149:AB149",
       "confirmationDate": "2026-10-30"
@@ -22582,7 +22686,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "首谈：上市公司，明确给不了返利 (谈判记录10/30)",
       "progressSummary": "供应商不支持返利；首谈：上市公司，明确给不了返利 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X150:AB150",
       "nextStepLocator": "'采购5922清单'!X150:AB150",
       "confirmationDate": "2026-10-30"
@@ -22639,7 +22743,7 @@
       "sourceTiming": "按时谈判",
       "negotiationNotes": "首谈：新供应商，合作尚不稳定，暂不考虑谈返利 (谈判记录10/30)",
       "progressSummary": "供应商不支持返利；首谈：新供应商，合作尚不稳定，暂不考虑谈返利 (谈判记录10/30)",
-      "progressAsOf": "2026-11-02",
+      "progressAsOf": "2026-11-03",
       "progressLocator": "'采购5922清单'!X151:AB151",
       "nextStepLocator": "'采购5922清单'!X151:AB151",
       "confirmationDate": "2026-10-30"
@@ -22984,16 +23088,16 @@
     "uniqueSupplierCount": 157,
     "targetAmount": 59172954.81881259,
     "targetFilled": 157,
-    "actualAmount": 7673512.3376,
-    "actualAmountFilled": 39,
-    "actualDateFilled": 78,
+    "actualAmount": 10849120.0,
+    "actualAmountFilled": 49,
+    "actualDateFilled": 86,
     "plannedDateFilled": 142,
     "owners": [
       {
         "owner": "伍梦华",
         "count": 21,
         "targetAmount": 13300000.0,
-        "actualAmount": 3700000.0
+        "actualAmount": 4000000.0
       },
       {
         "owner": "张西堂",
@@ -23005,7 +23109,7 @@
         "owner": "张颂元",
         "count": 12,
         "targetAmount": 5700000.0,
-        "actualAmount": 2000000.0
+        "actualAmount": 2100000.0
       },
       {
         "owner": "朱昌玲",
@@ -23029,7 +23133,7 @@
         "owner": "梅开",
         "count": 2,
         "targetAmount": 2500000.0,
-        "actualAmount": null
+        "actualAmount": 1000000.0
       },
       {
         "owner": "留培杨",
@@ -23047,13 +23151,13 @@
         "owner": "胡剑卿",
         "count": 20,
         "targetAmount": 14100000.0,
-        "actualAmount": 50000.0
+        "actualAmount": 80000.0
       },
       {
         "owner": "胡志辉",
         "count": 13,
         "targetAmount": 9500000.0,
-        "actualAmount": 1294392.3376
+        "actualAmount": 2690000.0
       },
       {
         "owner": "蓝水燕",
@@ -23065,7 +23169,7 @@
         "owner": "薛立柱",
         "count": 4,
         "targetAmount": 2100000.0,
-        "actualAmount": 0.0
+        "actualAmount": 350000.0
       },
       {
         "owner": "黄东欢",
@@ -23124,8 +23228,8 @@
     "thisWeek": {
       "start": "2026-11-02",
       "end": "2026-11-08",
-      "plannedCount": 74,
-      "targetAmount": 30832434.71400557
+      "plannedCount": 70,
+      "targetAmount": 28132434.71400557
     },
     "nextWeek": {
       "start": "2026-11-09",
