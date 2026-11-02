@@ -676,6 +676,14 @@ const planDates=r=>[...new Set([r.plannedDate,r.nextFollowUpDate].filter(Boolean
 function periodOptions(){const dates=detailScope.flatMap(r=>[...planDates(r),r.actualDate,r.confirmationDate].filter(Boolean)).concat(ASOF,today,state.period).sort();let all=[];for(let d=dates[0];d<=dates.at(-1);d=add(d,1))all.push(d);if(state.periodMode==='week')all=[...new Set(all.map(monday))];return all}
 function periodRows(rs){rs=[...new Map(rs.map(r=>[r.id,r])).values()];if(state.periodMode==='unscheduled')return rs.filter(r=>!planDates(r).length);if(state.periodMode==='all')return rs;return rs.filter(r=>planDates(r).some(d=>state.periodMode==='day'?d===state.period:d>=state.period&&d<=add(state.period,6)))}
 const selectedPlan=()=>listRows(periodRows(base())).sort(dateSort);
+function targetPlanRows(rs){
+ const unique=[...new Map(rs.map(r=>[r.id,r])).values()];
+ if(state.periodMode==='all')return unique;
+ if(state.periodMode==='unscheduled')return unique.filter(r=>!r.plannedDate);
+ return unique.filter(r=>r.plannedDate&&(state.periodMode==='day'?r.plannedDate===state.period:r.plannedDate>=state.period&&r.plannedDate<=add(state.period,6)));
+}
+const selectedTargetPlan=()=>listRows(targetPlanRows(base())).sort(dateSort);
+
 function periodProgress(){
  if(!['day','week'].includes(state.periodMode))return '';
  const period={start:state.period,end:state.periodMode==='week'?add(state.period,6):state.period};
@@ -687,7 +695,7 @@ function periodProgress(){
   return `<article class="kpi" data-period-metric="${kind}"><div class="label">本期${REBATE_LABELS[kind]}</div><div class="value"><button class="metric-link" data-overview-drill="${key}">${money(b[kind])}<small>万元</small></button></div><div class="foot">${n} 家贡献 · ${REBATE_NOTES[kind]}</div></article>`;
  }).join('');
  const undated=rows.filter(r=>{const v=rebateBuckets(r);return v.won+v.shortfall+v.pending>0&&!(v.waiting?r.actualDate:r.confirmationDate)}).length;
- return `<section class="section period-results"><h3>本期实际谈判成果</h3><p class="panel-note">${dateText(period.start)}${period.end!==period.start?' — '+dateText(period.end):''} · 首次谈判 ${talked.length} 家 · 回复确认 ${confirmed.length} 家</p><div class="kpis rebate-progress">${cards}</div><p class="panel-note">已确认的达成金额与缺口按回复确认日归属；待回复的暂计金额与剩余差额按首次谈判日归属。确认后从原谈判期移至确认期，不重复计入。下方推进计划另按目标／跟进日期排列。${undated?`另有 ${undated} 家金额归属日期待补，未计入期间成果。`:''}</p></section>`;
+ return `<section class="section period-results"><h3>本期实际谈判成果</h3><p class="panel-note">${dateText(period.start)}${period.end!==period.start?' — '+dateText(period.end):''} · 首次谈判 ${talked.length} 家 · 回复确认 ${confirmed.length} 家</p><div class="kpis rebate-progress">${cards}</div><p class="panel-note">已确认的达成金额与缺口按回复确认日归属；待回复的暂计金额与剩余差额按首次谈判日归属。确认后从原谈判期移至确认期，不重复计入。上方预计谈判进度按目标完成日统计；下方清单另保留跟进任务。${undated?`另有 ${undated} 家金额归属日期待补，未计入期间成果。`:''}</p></section>`;
 }
 function periodContribution(entry){
  const rows=scopeRecords(entry.ids,false),{period,kind}=entry;
@@ -700,8 +708,8 @@ function periodContribution(entry){
 }
 
 function planView(){
- const list=selectedPlan(),m=stats(list),dated=['day','week'].includes(state.periodMode),denominator=sum(detailScope,'targetAmount');
- return `<div class="panel period-controls"><label class="field-label">查看粒度<select id="periodMode">${[['day','每日进度'],['week','每周进度'],['unscheduled','待排期'],['all','全部目标排期']].map(([k,v])=>`<option value="${k}" ${state.periodMode===k?'selected':''}>${v}</option>`).join('')}</select></label>${dated?`<label class="field-label">${state.periodMode==='day'?'目标／跟进日期（北京时间）':'目标／跟进周（周一至周日）'}<select id="periodValue">${periodOptions().map(d=>`<option value="${d}" ${d===state.period?'selected':''}>${dateText(d)}${state.periodMode==='week'?' — '+dateText(add(d,6)):''}${(state.periodMode==='week'?d===monday(today):d===today)?(state.periodMode==='week'?' · 本周':' · 今日'):''}</option>`).join('')}</select></label>`:''}<button class="ghost" data-today>返回今日</button></div>${listControls('plan')}${periodProgress()}<div class="section kpis">${kpi('本期间需推进供应商',m.n+'<small>家</small>',`${new Set(list.map(r=>r.owner)).size} 位负责人 · 含 ${list.filter(followUp).length} 家已谈后续跟进；每家仅计一次`)}${kpi('本期间计划返利目标',money(m.n?m.target:0)+'<small>万元</small>',`${m.n-m.targetFilled} 家目标待补；按目标或下次跟进日期归集`)}${kpi(isPersonal()?'计划目标占本人目标':'计划目标占本账号范围目标',percent(ratio(m.n?m.target:0,denominator)),`分母为${scopeLabel()}已分配目标 ${money(denominator)} 万元`)}${kpi('本批供应商已记录返利',m.amountFilled?money(m.amount)+'<small>万元</small>':'待回填',`${m.talked} 家有谈判记录；${m.amountFilled?'达成 '+percent(m.rate):'实际金额尚未回填'}`,drillButton(list,'查看本批成果 →'))}</div>${notice('计划金额为选中供应商的返利目标，不代表已承诺取得的金额。按目标完成日或下次跟进日期纳入计划，同一期间每家只计一次；本批成果是截至快照日的累计金额，不是本日／本周新增返利。')}${section('本期间供应商与负责人','按目标完成时间排序；筛选同时作用于上方期间统计。',masterTable(list,'本期间供应商返利清单'))}`;
+ const list=selectedPlan(),targets=selectedTargetPlan(),m=stats(targets),extra=list.filter(r=>!targets.some(t=>t.id===r.id)),dated=['day','week'].includes(state.periodMode),denominator=sum(detailScope,'targetAmount');
+ return `<div class="panel period-controls"><label class="field-label">查看粒度<select id="periodMode">${[['day','每日进度'],['week','每周进度'],['unscheduled','待排期'],['all','全部目标排期']].map(([k,v])=>`<option value="${k}" ${state.periodMode===k?'selected':''}>${v}</option>`).join('')}</select></label>${dated?`<label class="field-label">${state.periodMode==='day'?'目标／跟进日期（北京时间）':'目标／跟进周（周一至周日）'}<select id="periodValue">${periodOptions().map(d=>`<option value="${d}" ${d===state.period?'selected':''}>${dateText(d)}${state.periodMode==='week'?' — '+dateText(add(d,6)):''}${(state.periodMode==='week'?d===monday(today):d===today)?(state.periodMode==='week'?' · 本周':' · 今日'):''}</option>`).join('')}</select></label>`:''}<button class="ghost" data-today>返回今日</button></div>${listControls('plan')}<section class="section expected-plan"><h3>本期预计谈判进度</h3><p class="panel-note">按所选日期／周内的目标完成日统计预计谈判供应商及返利目标；已开展首谈的供应商仍按原目标日期纳入，每家仅计一次。</p><div class="section kpis">${kpi('预计谈判供应商',m.n+'<small>家</small>',`${new Set(targets.map(r=>r.owner)).size} 位负责人 · 含 ${m.talked} 家已开展首谈；每家仅计一次`)}${kpi('预计谈判返利目标',money(m.n?m.target:0)+'<small>万元</small>',`${m.n-m.targetFilled} 家目标待补；按目标完成日归集`)}${kpi(isPersonal()?'计划目标占本人目标':'计划目标占本账号范围目标',percent(ratio(m.n?m.target:0,denominator)),`分母为${scopeLabel()}已分配目标 ${money(denominator)} 万元`)}${kpi('本批供应商已记录返利',m.amountFilled?money(m.amount)+'<small>万元</small>':'待回填',`${m.talked} 家有谈判记录；${m.amountFilled?'达成 '+percent(m.rate):'实际金额尚未回填'}`,drillButton(targets,'查看本批成果 →'))}</div><p class="panel-note">计划金额为本期目标完成日对应供应商的返利目标；本批已记录返利为这些供应商截至数据截止日的累计成果。${extra.length?`另有 ${extra.length} 家仅安排本期跟进，保留于下方清单，不加入上述预计家数与目标金额。`:''}</p></section>${periodProgress()}${section('本期间供应商与负责人',`目标完成日对应 ${targets.length} 家${extra.length?'；另外 '+extra.length+' 家本期跟进':''}。清单按供应商去重，目标与下次跟进日期分别保留。`,masterTable(list,'本期间供应商返利清单'))}`;
 }
 function contribution(key){
  const entry=drillGroups.get(key);if(!accessAccount||!entry)return;

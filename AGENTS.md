@@ -108,3 +108,7 @@ AB is 回复确认日期, separate from T first negotiation and X follow-up. Pre
 ## Approved 2026-11-02 outcome definitions (supersede older buckets)
 
 Follow the user's screenshot and 谈判每日清单. Positive U with Y待回复 is provisional won; only max(F-U,0) is pending, never shortfall. Final confirmed amounts (signed or 尚未签协议 with known final amount) are won and their remaining target balance is shortfall. Explicit refusal cancels provisional won and puts the full target in shortfall. Null amounts stay null in source. Period attribution uses AB for confirmed won/shortfall, T for provisional won/pending; never substitute I or X. On confirmation, current snapshot results move to AB, not counted in both periods. Missing attribution dates must not be inferred. Preserve I/X-deduplicated planning alongside the period results. Period dialogs/CSV show period contributions in the same master schema and stay inside account detail scope. Overview personal drilldowns remain aggregate-only.
+
+## 03 expected-plan priority
+
+Lead 03 with 本期预计谈判进度. Its count, target F, target share and cohort-result drilldown use only I target deadlines in the selected day/week. Keep I/X-deduplicated task lists, but explicitly separate X-only follow-ups from those expected-plan KPIs. Keep T/AB actual outcomes as a separate later section. Do not regress this distinction when refreshing data.
