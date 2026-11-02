@@ -382,5 +382,5 @@ html[data-presentation=mobile] #logoutBtn{font-size:16px;min-height:44px}
 @media(max-width:767px){html:not([data-presentation=browser]) .login-layout{grid-template-columns:minmax(0,1fr)}}
 
 /* Three distinct monetary progress buckets; retain the two target cards. */
-.overview-section .rebate-progress{grid-template-columns:repeat(3,minmax(0,1fr))}
-html[data-presentation=mobile] .overview-section .rebate-progress{grid-template-columns:minmax(0,1fr)}
+.overview-section .rebate-progress,.period-results .rebate-progress{grid-template-columns:repeat(3,minmax(0,1fr))}
+html[data-presentation=mobile] .overview-section .rebate-progress,html[data-presentation=mobile] .period-results .rebate-progress{grid-template-columns:minmax(0,1fr)}

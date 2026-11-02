@@ -37,6 +37,8 @@ def main():
     check(bool(actuals) or summary['actualAmount'] is None, 'Missing actuals incorrectly represented as zero')
     check(not actuals or abs(sum(actuals)-summary['actualAmount']) < .01, 'Actual total mismatch')
     for row in rows:
+        if row.get('confirmationDate'):
+            date.fromisoformat(row['confirmationDate'])
         override = row.get('rebateProgressOverride')
         if override:
             check(override.get('asOf') == meta['asOf'], 'Expired progress classification')

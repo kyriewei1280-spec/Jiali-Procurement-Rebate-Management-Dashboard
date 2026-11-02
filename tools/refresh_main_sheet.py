@@ -21,6 +21,9 @@ FIELDS = {
     'sourceAchievementRate':'V',
 }
 
+# Reviewed against the 2026-11-02 main sheet; retain this supplier's stable ID.
+REVIEWED_RENAMES = {'芜湖中卓智能科技有限公司':'芜湖中卓智能科技股份有限公司'}
+
 
 def refresh(source, sheet, asof):
     date.fromisoformat(asof)
@@ -44,19 +47,26 @@ def refresh(source, sheet, asof):
     if has_follow_up:
         assert str(rows[1].get(agreement_col,'')).startswith('是否已签协议'), 'Review changed agreement status column'
         fields.update(nextFollowUpDate=follow_col,agreementStatus=agreement_col)
-    endcol = 'AA' if extended else 'X' if has_follow_up else 'V'
+    has_confirmation = str(rows[1].get('AB','')).startswith('回复确认日期')
+    if has_confirmation:
+        assert extended, 'Confirmation date requires the reviewed extended layout'
+        fields['confirmationDate'] = 'AB'
+    endcol = 'AB' if has_confirmation else 'AA' if extended else 'X' if has_follow_up else 'V'
     suppliers = [(i,v) for i,v in rows.items() if i>1 and v.get('C')]
     byname = {norm(v['C']):(i,v) for i,v in suppliers}
     assert len(byname)==len(suppliers), 'Duplicate supplier names require review'
-    assert set(byname)=={norm(r['supplier']) for r in data['records']}, 'Supplier membership changed; review supporting associations first'
+    def source_name(name):
+        return norm(REVIEWED_RENAMES.get(name,name)) if norm(name) not in byname else norm(name)
+    assert set(byname)=={source_name(r['supplier']) for r in data['records']}, 'Supplier membership changed; review supporting associations first'
     changes = []
     for r in data['records']:
         # Snapshot-specific manual classifications require review on the next import.
         r.pop('rebateProgressOverride',None)
-        i,v = byname[norm(r['supplier'])]
+        previous_name = r['supplier']
+        i,v = byname[source_name(previous_name)]
         changed = []
         for key,col in fields.items():
-            value = iso(v.get(col)) if key in ('plannedDate','actualDate','nextFollowUpDate') else v.get(col)
+            value = iso(v.get(col)) if key in ('plannedDate','actualDate','nextFollowUpDate','confirmationDate') else v.get(col)
             if value != r.get(key):
                 changed.append(key)
             r[key] = value
@@ -64,6 +74,9 @@ def refresh(source, sheet, asof):
             changes.append({'id':r['id'], 'fields':changed})
         r.update(workstream='BOM' if r['substream']=='BOM' else 'non-BOM',
                  sourceSheet=sheet, sourceRow=i, locator=f"'{sheet}'!A{i}:{endcol}{i}")
+        if r['supplier'] != previous_name:
+            data['metadata'].setdefault('identityUpdates',[]).append(dict(id=r['id'],previousName=previous_name,
+                name=r['supplier'],asOf=asof,locator=f"'{sheet}'!C{i}",sourceFile=source.name))
         if has_follow_up:
             # Current structured status supersedes older narrative interpretations.
             # Dated notes remain in history; a follow-up appointment is not a negotiation event.

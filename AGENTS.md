@@ -100,3 +100,11 @@ The user requested a new local HTML refresh. The current T header is 第一次�
 ## 2026-11-02 source layout
 
 The latest source has W=未达成金额, X=下次跟进日期, Y=agreement/reply status, Z=timing annotation, AA=notes. Resolve columns by the validated layout; never treat W money as a date. Preserve sourceShortfallAmount/sourceTiming/negotiationNotes and metadata.sourceColumns. W is MAX(F-U,0) for all suppliers, including pending and unnegotiated, so do not sum W as the overview shortfall bucket. Continue the reviewed per-status bucketing. The two 10/30 overrides have expired; 绅陆 now has T=10/30, while 康涵 has no actual record. Do not silently restore those old overrides. The filename's 11/2 data version does not advance the online Beijing calendar date.
+
+## 2026-11-02 confirmation dates and reviewed name correction
+
+AB is 回复确认日期, separate from T first negotiation and X follow-up. Preserve its source value as confirmationDate and include it in all shared master tables, profile details and exports; do not infer missing AB from T or treat AB alone as a new negotiation. The reviewed source correction renames 芜湖中卓智能科技有限公司 to 芜湖中卓智能科技股份有限公司 while retaining procurement-r124. 无锡中卓 remains procurement-r118. Keep them as two main-sheet records with their respective updated E/F/G/L values; do not merge based on narrative affiliation. Preserve identityUpdates and associated history/quality/project records.
+
+## Approved 2026-11-02 outcome definitions (supersede older buckets)
+
+Follow the user's screenshot and 谈判每日清单. Positive U with Y待回复 is provisional won; only max(F-U,0) is pending, never shortfall. Final confirmed amounts (signed or 尚未签协议 with known final amount) are won and their remaining target balance is shortfall. Explicit refusal cancels provisional won and puts the full target in shortfall. Null amounts stay null in source. Period attribution uses AB for confirmed won/shortfall, T for provisional won/pending; never substitute I or X. On confirmation, current snapshot results move to AB, not counted in both periods. Missing attribution dates must not be inferred. Preserve I/X-deduplicated planning alongside the period results. Period dialogs/CSV show period contributions in the same master schema and stay inside account detail scope. Overview personal drilldowns remain aggregate-only.
