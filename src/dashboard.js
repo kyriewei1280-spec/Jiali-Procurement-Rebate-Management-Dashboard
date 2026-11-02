@@ -445,12 +445,13 @@ function populateScopeFilters(){
  $('ownerFilter').disabled=isPersonal();$('ownerFilter').value=state.owner;$('workstreamFilter').value=state.workstream;
 }
 function changeAccess(account){
+ const requestedView=location.hash.slice(1);
  accessAccount=account;
  const roles={'overall-admin':()=>true,'mold-admin':r=>r.substream==='non-BOM 模具','operations-admin':r=>r.workstream==='non-BOM'&&['non-BOM 工装','non-BOM 设备','non-BOM 工装设备','non-BOM 物流'].includes(r.substream),'owner':r=>r.owner===account.owner};
  detailScope=account&&roles[account.role]?DATA.records.filter(roles[account.role]):[];
  if(isPersonal()){const scopes=new Set(detailScope.map(r=>r.workstream==='BOM'?'BOM':r.substream));overviewScope=DATA.records.filter(r=>scopes.has(r.workstream==='BOM'?'BOM':r.substream))}else overviewScope=detailScope;
  detailIds=new Set(detailScope.map(r=>r.id));overviewIds=new Set(overviewScope.map(r=>r.id));visibleOwners=new Set(detailScope.map(r=>r.owner));
- resetWorkspace();populateScopeFilters();render();window.scrollTo(0,0);
+ resetWorkspace();if(account&&['overview','owners','plan','suppliers'].includes(requestedView))state.view=requestedView;populateScopeFilters();render();window.scrollTo(0,0);
 }
 $('workstreamFilter').onchange=e=>{state.workstream=e.target.value;state.page=1;render()};$('ownerFilter').onchange=e=>{state.owner=isPersonal()?accessAccount.owner:e.target.value;state.page=1;render()};
 $('resetBtn').onclick=()=>{refreshCalendar(false);const view=state.view;resetWorkspace();state.view=view;populateScopeFilters();render()};
