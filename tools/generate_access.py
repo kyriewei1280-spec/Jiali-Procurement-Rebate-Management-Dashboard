@@ -80,6 +80,13 @@ def main():
     private['accounts'] = accounts
     write_json(private_path, private)
     public_accounts = [{**{k: v for k, v in a.items() if k not in {'password', 'scope'}}, 'hash': encoded_hash(a['password'], private['salt'])} for a in accounts]
+    existing_access = json.loads((ROOT / 'data/access.json').read_text(encoding='utf-8')) if (ROOT / 'data/access.json').exists() else {}
+    existing_by_id = {a['id']: a for a in existing_access.get('accounts', [])}
+    if existing_access.get('salt') == private['salt']:
+        for account in public_accounts:
+            alternates = existing_by_id.get(account['id'], {}).get('alternateHashes')
+            if alternates:
+                account['alternateHashes'] = alternates
     public = {'schemaVersion': 1, 'version': private['version'], 'algorithm': 'PBKDF2-SHA256', 'iterations': ITERATIONS, 'salt': private['salt'], 'sessionHours': 12, 'accounts': public_accounts}
     write_json(ROOT / 'data/access.json', public)
     headers = ['账号', '人员 / 管理员', '密码', '显示范围']

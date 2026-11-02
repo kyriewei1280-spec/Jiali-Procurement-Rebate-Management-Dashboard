@@ -79,7 +79,7 @@
     try {
       const hash = await derive(candidate);
       if (attempt !== operation) return;
-      const match = config.accounts.find(a=>a.hash===hash);
+      const match = config.accounts.find(a=>a.hash===hash||(a.alternateHashes||[]).includes(hash));
       if (!match) {
         failedAttempts++; setBusy(false); error('密码不正确，请检查大小写和短横线后重试。');
         byId('loginPassword').select();

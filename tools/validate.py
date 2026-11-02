@@ -72,10 +72,13 @@ def main():
     accounts = access['accounts']
     check(len({a['id'] for a in accounts}) == len(accounts), 'Duplicate access account IDs')
     check(len({a['hash'] for a in accounts}) == len(accounts), 'Duplicate access password hashes')
-    check(all(set(a) <= {'id', 'label', 'role', 'owner', 'hash'} for a in accounts), 'Unexpected public account field')
+    check(all(set(a) <= {'id', 'label', 'role', 'owner', 'hash', 'alternateHashes'} for a in accounts), 'Unexpected public account field')
     check(all(re.fullmatch(r'[0-9a-f]{64}', a['hash']) for a in accounts), 'Invalid password verifier')
     check(access['algorithm'] == 'PBKDF2-SHA256' and access['iterations'] == 210000, 'Unexpected password derivation')
     check(re.fullmatch(r'[0-9a-f]{48}', access['salt']) is not None and access['sessionHours'] == 12, 'Invalid login configuration')
+    verifiers = [value for a in accounts for value in [a['hash'], *a.get('alternateHashes', [])]]
+    check(all(re.fullmatch(r'[0-9a-f]{64}', value) for value in verifiers), 'Invalid alternate password verifier')
+    check(len(verifiers) == len(set(verifiers)), 'Password verifier assigned more than once')
     owner_accounts = [a for a in accounts if a['role'] == 'owner']
     named_owners = {r['owner'] for r in rows if r.get('owner') and r['owner'].strip().upper() not in {'NA', 'N/A', '未填', '待确认'}}
     check({a['owner'] for a in owner_accounts} == named_owners and len(owner_accounts) == len(named_owners), 'Owner login coverage differs from source')

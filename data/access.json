@@ -10,7 +10,10 @@
       "id": "admin-all",
       "label": "采购总体管理员",
       "role": "overall-admin",
-      "hash": "4e023f5e5cd99f2d93c9f9e91d9d15496d3cb17dfba7fc238f047c3c7bd9d62d"
+      "hash": "4e023f5e5cd99f2d93c9f9e91d9d15496d3cb17dfba7fc238f047c3c7bd9d62d",
+      "alternateHashes": [
+        "dd276a91cd864ecde31f0ac0925ec3e85d1bfc7c873f95d4b82585f275d9ded3"
+      ]
     },
     {
       "id": "admin-mold",
