@@ -198,7 +198,9 @@ const VIEW_GUIDE=[
 ];
 const categorySelection={BOM:'all','non-BOM':'all'};
 let masterFocus=null;
-const started=r=>known(r)||(r.negotiationDate&&r.negotiationDate<=ASOF)||(r.history||[]).some(h=>h.date&&h.date<=ASOF&&['谈判中','已开展谈判'].includes(h.kind));
+// Explicit reply status is negotiation evidence even when the first-talk date is missing.
+// Keep missing dates blank: this evidence does not assign a day or prove on-time negotiation.
+const started=r=>known(r)||(!r.actualDate&&/^(待回复|尚未签协议|是，已签协议|金额已确认|供应商不支持返利)$/.test(r.agreementStatus||''))||(r.negotiationDate&&r.negotiationDate<=ASOF)||(r.history||[]).some(h=>h.date&&h.date<=ASOF&&['谈判中','已开展谈判'].includes(h.kind));
 // Y is the latest agreement status; an unsigned agreement is not a refusal.
 function refusedRebate(r){return /不支持(?:返利|返点)|拒绝(?:支持)?(?:返利|返点)/.test(r.agreementStatus||'')}
 // A dated, user-approved classification does not manufacture negotiation evidence.
