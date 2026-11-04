@@ -402,6 +402,19 @@ html[data-presentation=mobile] .login-theme{top:16px}
 html[data-presentation=mobile] .login-brand{padding-right:140px;min-height:44px}
 html[data-presentation=mobile] .theme-toggle{font-size:16px}
 html[data-presentation=mobile] .topmeta>.theme-toggle{order:3;margin-left:auto}
+
+/* Stronger traffic signals: distinct row tints and outlined textual badges. */
+html[data-theme=light] .traffic-green{--traffic-odd:#c6edcf;--traffic-even:#b2e3be;--traffic-hover:#abe0b8;--traffic-accent:#0b5223}
+html[data-theme=light] .traffic-yellow{--traffic-odd:#ffedaa;--traffic-even:#ffe38a;--traffic-hover:#ffda66;--traffic-accent:#704600}
+html[data-theme=light] .traffic-red{--traffic-odd:#ffd6d6;--traffic-even:#ffc6c6;--traffic-hover:#ffbebe;--traffic-accent:#a41414}
+html[data-theme=dark] .traffic-green{--traffic-odd:#173e27;--traffic-even:#1d4930;--traffic-hover:#25583b;--traffic-accent:#a4f4ab}
+html[data-theme=dark] .traffic-yellow{--traffic-odd:#493a13;--traffic-even:#54441a;--traffic-hover:#625020;--traffic-accent:#ffe18a}
+html[data-theme=dark] .traffic-red{--traffic-odd:#4a2028;--traffic-even:#572732;--traffic-hover:#67303d;--traffic-accent:#ffb7bb}
+.traffic-badge{padding:4px 9px;border:1.5px solid currentColor;border-radius:6px;font-weight:750;line-height:1.4}
+.traffic-dot{width:12px;height:12px}
+table tbody tr.traffic-row>td:first-child{box-shadow:inset 4px 0 0 var(--traffic-accent)}
+html[data-presentation=mobile] .mobile-record-card.traffic-row{border-left:4px solid var(--traffic-accent)}
+
 </style></head>
 <body>
 <section id="loginScreen" class="login-screen shell" aria-labelledby="loginTitle">
