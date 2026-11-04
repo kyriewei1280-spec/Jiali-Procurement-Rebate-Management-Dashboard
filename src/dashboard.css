@@ -399,3 +399,4 @@ html[data-theme=light] .table-scroll{scrollbar-color:#9eafb8 #edf2f5}
 html[data-presentation=mobile] .login-theme{top:16px}
 html[data-presentation=mobile] .login-brand{padding-right:140px;min-height:44px}
 html[data-presentation=mobile] .theme-toggle{font-size:16px}
+html[data-presentation=mobile] .topmeta>.theme-toggle{order:3;margin-left:auto}
