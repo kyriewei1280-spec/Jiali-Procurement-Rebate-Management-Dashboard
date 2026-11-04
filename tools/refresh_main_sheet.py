@@ -74,6 +74,8 @@ def refresh(source, sheet, asof):
             changes.append({'id':r['id'], 'fields':changed})
         r.update(workstream='BOM' if r['substream']=='BOM' else 'non-BOM',
                  sourceSheet=sheet, sourceRow=i, locator=f"'{sheet}'!A{i}:{endcol}{i}")
+        # Preserve non-date scheduling labels without manufacturing a deadline.
+        r['plannedDateLabel'] = v.get('I') if isinstance(v.get('I'),str) and not r['plannedDate'] else None
         if r['supplier'] != previous_name:
             data['metadata'].setdefault('identityUpdates',[]).append(dict(id=r['id'],previousName=previous_name,
                 name=r['supplier'],asOf=asof,locator=f"'{sheet}'!C{i}",sourceFile=source.name))
