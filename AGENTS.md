@@ -112,3 +112,7 @@ Follow the user's screenshot and 谈判每日清单. Positive U with Y待回复 
 ## 03 expected-plan priority
 
 Lead 03 with 本期预计谈判进度. Its count, target F, target share and cohort-result drilldown use only I target deadlines in the selected day/week. Keep I/X-deduplicated task lists, but explicitly separate X-only follow-ups from those expected-plan KPIs. Keep T/AB actual outcomes as a separate later section. Do not regress this distinction when refreshing data.
+
+## Approved large typography update
+
+The user explicitly requested larger, readable type for older readers. Browser zoom is now 1, superseding the former .67 setting. Keep body at 24px and visible labels, controls, table text and secondary text at least 22px. Mobile uses single-column metric and fact layouts; allow local table/nav scrolling. Size contribution dialogs directly in viewport units without .67 compensation.
