@@ -475,3 +475,14 @@ window.addEventListener('online',()=>{refreshCalendar();void syncNetworkClock()}
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)resumeCalendar()});
 void syncNetworkClock();
 
+
+// Theme is a presentation preference, independent of identity and dashboard state.
+(() => {
+ function applyTheme(theme,remember=false){
+  document.documentElement.dataset.theme=theme;
+  document.querySelectorAll('[data-theme-toggle]').forEach(button=>{const dark=theme==='dark';button.textContent=dark?'浅色模式':'深色模式';button.setAttribute('aria-label',dark?'切换为浅色模式':'切换为深色模式');button.setAttribute('aria-pressed',String(dark))});
+  if(remember)try{localStorage.setItem('jiali-dashboard-theme',theme)}catch{}
+ }
+ document.querySelectorAll('[data-theme-toggle]').forEach(button=>button.addEventListener('click',()=>applyTheme(document.documentElement.dataset.theme==='dark'?'light':'dark',true)));
+ applyTheme(document.documentElement.dataset.theme==='dark'?'dark':'light');
+})();

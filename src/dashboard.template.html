@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>采购降本 · 日清日结看板</title><style>/*__STYLES__*/</style></head>
+<html lang="zh-CN" data-theme="light">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>采购降本 · 日清日结看板</title><script>try{const theme=localStorage.getItem('jiali-dashboard-theme');document.documentElement.dataset.theme=theme==='dark'?'dark':'light'}catch{document.documentElement.dataset.theme='light'}</script><style>/*__STYLES__*/</style></head>
 <body>
 <section id="loginScreen" class="login-screen shell" aria-labelledby="loginTitle">
+ <div class="login-theme"><button type="button" class="ghost theme-toggle" data-theme-toggle aria-label="切换为深色模式" aria-pressed="false">深色模式</button></div>
  <div class="login-brand"><div class="brand-mark" aria-hidden="true">采</div><span>采购降本管理</span></div>
  <div class="login-layout">
   <div class="login-intro"><p class="eyebrow">PROCUREMENT · YOUR WORKSPACE</p><h1 id="loginTitle">进入你的<br>采购工作台。</h1><p>输入分配给你的密码，查看对应的采购进展、谈判计划和供应商清单。</p><div class="login-modules" aria-label="工作台内容"><span><b>01</b>整体进展</span><span><b>02</b>负责人进展</span><span><b>03</b>谈判议程</span><span><b>04</b>供应商清单</span></div></div>
@@ -12,7 +13,7 @@
 </section>
 <div id="dashboardShell" hidden>
 <header class="topbar shell">
- <div class="topline"><div class="identity"><div class="brand-mark" aria-hidden="true">采</div><div><strong>采购降本管理</strong><small>PROCUREMENT PERFORMANCE</small></div></div><div class="topmeta"><div class="account-controls"><span id="accountLabel"></span><button type="button" id="logoutBtn" class="ghost">退出登录</button></div><div class="presentation-switch" role="group" aria-label="显示模式"><button type="button" data-presentation-choice="browser" aria-pressed="true">Browser</button><button type="button" data-presentation-choice="mobile" aria-pressed="false">Mobile</button></div></div></div>
+ <div class="topline"><div class="identity"><div class="brand-mark" aria-hidden="true">采</div><div><strong>采购降本管理</strong><small>PROCUREMENT PERFORMANCE</small></div></div><div class="topmeta"><button type="button" class="ghost theme-toggle" data-theme-toggle aria-label="切换为深色模式" aria-pressed="false">深色模式</button><div class="account-controls"><span id="accountLabel"></span><button type="button" id="logoutBtn" class="ghost">退出登录</button></div><div class="presentation-switch" role="group" aria-label="显示模式"><button type="button" data-presentation-choice="browser" aria-pressed="true">Browser</button><button type="button" data-presentation-choice="mobile" aria-pressed="false">Mobile</button></div></div></div>
  <div class="nav-wrap" role="region" aria-label="看板页面导航" tabindex="0"><nav class="nav" aria-label="主导航"><button class="active" data-view="overview" aria-current="page"><em>01</em>整体谈判进展</button><button data-view="owners"><em>02</em>负责人进展</button><button data-view="plan"><em>03</em>每日 / 每周进度</button><button data-view="suppliers"><em>04</em>供应商返利清单</button></nav></div>
 </header>
 <main class="shell">
